@@ -484,6 +484,162 @@ font-weight: 500;
   }
 
 
+ /* When user login web site */
+
+
+.user{
+	border-radius: 50%;
+}
+
+  .sub-menu-wrap {
+	position:absolute;
+	top: 95%;
+	right: 0%;
+	width: 320px;
+	max-height: 0px;
+	overflow: hidden;
+	transition: max-height 0.5s;
+	
+  }
+  .sub-menu-wrap.open-menu {
+	max-height: 450px;
+	
+  }
+  .sub-menu {
+	background:#EDE9F9;
+	padding: 20px;
+	margin: 10px;
+	border-radius: 10%;
+	
+  }
+  .user-info {
+	display: flex;
+	align-items: center;
+  }
+  .user-info h3 {
+	font-weight: 500;
+  }
+  .user-info img {
+	width: 60px;
+	border-radius: 50%;
+	margin-right: 15px;
+  }
+  .sub-menu hr {
+	border: 0;
+	height: 1px;
+	width: 100%;
+	background: #ccc;
+	margin: 15px 0 10px;
+  }
+  .sub-menu-link {
+	display: flex;
+	align-items: center;
+	text-decoration: none;
+	color: #525252;
+	margin: 12px 0;
+  }
+  .sub-menu-link p {
+	width: 100%;
+	font-family: 'Roboto', sans-serif;
+	margin-top: 18px;
+  }
+  .sub-menu-link img {
+	width: 40px;
+	background: #e5e5e5;
+	border-radius: 50%;
+	padding: 8px;
+	margin-right: 15px;
+  }
+  .sub-menu-link span {
+	font-size: 22px;
+	transition: transform 0.5s;
+  }
+  .sub-menu-link:hover span {
+	transform: translateX(5px);
+  }
+  .sub-menu-link:hover p {
+	font-weight: 600;
+	color: #BA68C8;
+	
+  }
+/*Sub menu end*/  
+
+/*About Us Page Start*/
+
+.text2{
+    margin-top: 0;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+	margin-top: 15px; padding: 0;
+    box-sizing: border-box;
+    text-transform: capitalize;
+    transition: all .2s linear;
+    font-family: Verdana, Geneva, Tahoma, sans-serif ;
+}
+.card{
+    height: 650px;
+    width: 400px;
+    margin: 20px;
+    box-shadow: 0 3px 5px #000;
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: center;
+    background-color: #222;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+.card .bg-image img{
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+    clip-path: polygon(0 0 , 100% 0%,100% 70%,45% 100%, 0 70%) ;
+    
+
+}
+.card .pic img{
+    height: 300px;
+    width: 300px;
+    border-radius: 50% ;
+    border: 5px solid #222;
+    margin-top: -150px;
+    position: relative;
+}
+.card .info h3{
+    color: #f0f0f0;
+    font-size: 20px;
+    padding: 10px 0;
+
+}
+.card .info span{
+    font-size: 15px;
+    color:#AAC4FF;
+    font-family: 'Roboto Condensed', sans-serif;
+
+}
+.card .info p{
+    font-size: 13px;
+    padding: 10px 20px;
+    color: #999;
+}
+.card .info .iconss a{
+    font-size: 50px;
+    text-decoration: none;
+    color: #e74c3c;
+    margin-top: 20px;
+    padding:  0  5px;
+
+}
+.iconss{
+    font-size: 30px;
+}
+
+.iconss a:hover{
+    color:#f0f0f0 ;
+}
+
 
 
 
