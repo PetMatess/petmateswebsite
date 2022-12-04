@@ -1,2 +1,3 @@
 # petmateswebsite
-this is website part of projecr
+
+Frontend Build System Codes for petmates.com Project
