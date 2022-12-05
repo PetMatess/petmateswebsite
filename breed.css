@@ -1,0 +1,158 @@
+@media (min-width: 768px) and (max-width: 1024px) {
+    .breed-card-type-grid {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+}
+
+.breed-card-type-grid {
+    align-items: stretch;
+    position: relative;
+    padding: 20px;
+}
+
+.breed-card-type-grid .grid-col .breed-type-card {
+    display: flex;
+    flex-direction: column;
+    height: calc(100% - 5px);
+}
+
+.breed-type-card {
+    border-bottom: 5px solid #B386EF;
+    border-top: 1px solid #dedede;
+    box-shadow: 0 2px 2px 0 rgb(0 0 0 / 50%);
+    max-width: 300px;
+}
+
+.mra {
+    margin-right: auto;
+}
+
+.mla {
+    margin-left: auto;
+}
+
+.relative {
+    position: relative;
+}
+
+.d-block {
+    display: block;
+}
+
+.media-wrap,
+.media-wrap img {
+    max-width: 100%;
+}
+
+.media-wrap {
+    background-color: #f8f8f8;
+    position: relative;
+    
+}
+
+.breed-type-card__title {
+    padding-bottom: 0;
+}
+
+.py3 {
+    padding-bottom: 16px;
+}
+
+.px3 {
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+.mb0 {
+    margin-bottom: 0;
+}
+
+.mt0 {
+    margin-top: 0;
+}
+
+.f-25 {
+    font-size: 1.5625rem;
+}
+
+.breed-card-type-card__title {
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+.breed-card-type-card__content {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding-top: 3px;
+    
+}
+
+.mt1 {
+    margin-top: 4px;
+}
+
+.f-16 {
+    font-size: 1rem;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    text-transform: none;
+}
+
+@media (min-width: 768px) {
+    .f-16 .mt1 p {
+        line-height: 1.3125;
+        margin-bottom: 10px;
+        display: block;
+        margin-block-start: 1em;
+        margin-block-end: 1em;
+    }
+}
+
+.link-with-arrow {
+    font-family: Lato;
+    font-size: .8125rem;
+    font-weight: 700;
+    position: relative;
+    text-transform: uppercase;
+}
+
+.mbauto {
+    
+    color: #B386EF;
+}
+
+.mbauto:hover {
+    color: #682773;
+}
+
+.link-with-arrow:after {
+    border-right: 2px solid #B386EF;
+    border-top: 2px solid #B386EF;
+    content: "";
+    display: inline-block;
+    height: 7px;
+    margin-left: 5px;
+    margin-top: -3px;
+    position: relative;
+    top: -1px;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    vertical-align: middle;
+    width: 7px;
+}
+
+.mt3 {
+    margin-top: 16px;
+}
+
+.pt2 {
+    padding-top: 8px;
+}
+
+.bt-shady {
+    border-top: 1px solid #dedede;
+}
