@@ -93,15 +93,17 @@
                 <h2 id="Title">Sign In</h2>
                 <form action="">
                 <label>
+                  <!-- burada e mail ve paswora ulaşmak için  için id veriyoruz Dolayısıyla İD tanımlıyoruz-->
                   <span>Email Address</span>
-                  <input type="email" name="email">
+                  <input type="email" name="email" id="signinemail">
                 </label>
                 <label>
                   <span>Password</span>
-                  <input type="password" name="password">
+                  <input type="password" name="password" id="signinpassword">
                 </label>
               </form>
-                <button class="submit" type="button">Sign In</button>
+              <!-- burada aubmit için aksiyon veriyoruz Dolayısıyla İD tanımlıyoruz-->
+                <button class="submit" type="button" id="signin">Sign In</button>
                 <p class="forgot-pass">Forgot Password ?</p>
         
                 <div class="social-media">
@@ -137,26 +139,26 @@
                   <form action="">
                   <label>
                     <span>Name</span>
-                    <input type="text">
+                    <input type="text" id="signupname">
                   </label>
                   <label>
                     <span>Surname</span>
-                    <input type="text">
+                    <input type="text" id="signupsurname">
                   </label>
                   <label>
                     <span>Email</span>
-                    <input type="email">
+                    <input type="email" id="signupemail">
                   </label>
                   <label>
                     <span>Password</span>
-                    <input type="password">
+                    <input type="password" id="signuppassword">
                   </label>
                   <label>
                     <span>Confirm Password</span>
-                    <input type="password">
+                    <input type="password"  id="signupcpassword">
                   </label>
                 </form>
-                  <button type="button" class="submit">Sign Up Now</button>
+                  <button type="button" class="submit" id="signup">Sign Up Now</button>
                 </div>
               </div>
             </div>
