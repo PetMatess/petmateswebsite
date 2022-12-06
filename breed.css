@@ -9,7 +9,7 @@
 .breed-card-type-grid {
     align-items: stretch;
     position: relative;
-    padding: 20px;
+    padding: 30px;
 }
 
 .breed-card-type-grid .grid-col .breed-type-card {
@@ -98,7 +98,7 @@
 
 .f-16 {
     font-size: 1rem;
-    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     text-transform: none;
 }
 
@@ -145,14 +145,18 @@
     width: 7px;
 }
 
-.mt3 {
-    margin-top: 16px;
+.custom-checkbox .custom-control-input:checked ~ .custom-control-label::before {
+    background-color: #B386EF !important;
 }
 
-.pt2 {
-    padding-top: 8px;
+.custom-checkbox .custom-control-input:checked:focus ~ .custom-control-label::before {
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.274), 0 0 0 0.2rem #B386EF
 }
 
-.bt-shady {
-    border-top: 1px solid #dedede;
+.custom-checkbox .custom-control-input:focus ~ .custom-control-label::before {
+    box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.274), 0 0 0 0.2rem rgba(0, 0, 0, 0.25)
+}
+
+.custom-checkbox .custom-control-input:active ~ .custom-control-label::before {
+    background-color: rgba(255, 255, 255, 0.274);
 }
