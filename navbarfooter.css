@@ -745,21 +745,23 @@ button {
     float: left;
     width: 100%;
     border-radius: 6px;
-}
-}
+}   
+
 /* search button end*/
 
 .bree{
-	color: #b386ef;
-	text-align: center;
-  padding-top: 10px;
+    color: #b386ef;
+    text-align: center;
+    padding-top: 0.1px;
+    font-weight: bolder;
+    font-size: x-large;	
 }
-
+	
 .card-text {
-  font-family: 'Maven Pro';
+    font-family: 'Maven Pro';
 }
 
 .card-title {
-  font-family: Tienne;
+    font-family: Tienne;
 }
 
