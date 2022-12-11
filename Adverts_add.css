@@ -1,0 +1,384 @@
+body {
+  font-family: "Montserrat" sans-serif;
+}
+
+@media only screen and (min-width: 1200px) {
+  .nav-item>.nav-link {
+    padding: 5px 20px !important;
+    display: block !important;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .header-inner {
+    background-color: white !important;
+  }
+
+  .nav-item>.nav-link {
+    color: black !important;
+  }
+
+  .logo {
+    color: #000 !important;
+    font-weight: 600 !important;
+  }
+
+  .content-banner .first-title {
+    font-size: 30px !important;
+  }
+}
+
+.header-inner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 99;
+  background-image: url(img/banner2.2.jpg);
+  background-position: center center;
+}
+
+.logo {
+  color: #ffffff;
+}
+
+.logofont {
+  font-family: "Kalam", cursive;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 64px;
+}
+
+.logoimg {
+  width: 150px;
+  margin: -3px 5px 0px 0px;
+}
+
+.logobottom {
+  font-family: "JejuMyeongjo", cursive;
+  font-style: normal;
+  font-weight: 200;
+  font-size: 28px;
+  position: absolute;
+  left: 250px;
+  top: 100px;
+}
+
+.nav-item .nav-link {
+  display: block;
+  line-height: 36px;
+  text-transform: capitalize;
+  font-size: 16px;
+  font-weight: 500;
+  color: #ffffff;
+  transition: 0.15s;
+}
+
+.nav-item .nav-link:hover {
+  color: #b386ef;
+}
+
+.header-btn {
+  color: #ffffff;
+  border-radius: 30px;
+  background-color: gray;
+  border: none;
+  font-weight: 500;
+  outline: none;
+  font-size: 15px;
+  padding: 7px 22px;
+  transition: 0.5s;
+}
+
+.header-btn:hover {
+  background-color: #b386ef;
+  cursor: pointer;
+}
+
+.navbar-scroll {
+  background-color: #ffffff;
+  padding: 0;
+  position: fixed;
+  top: 0;
+  z-index: 99;
+  box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.4);
+  transition-duration: 0.6s;
+  background-image: none;
+}
+
+.navbar-scroll .nav-item .nav-link {
+  color: black;
+}
+
+.navbar-scroll .nav-item .nav-link:hover {
+  color: #b386ef;
+}
+
+.navbar-scroll .logofont {
+  font-family: "Kalam", cursive;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 28px;
+}
+
+.navbar-scroll .logoimg {
+  width: 60px;
+  margin: -3px 5px 0px 0px;
+}
+
+.navbar-scroll .logobottom {
+  font-family: "JejuMyeongjo", cursive;
+  font-style: normal;
+  font-weight: 200;
+  font-size: 12px;
+  position: absolute;
+  left: 110px;
+  top: 48px;
+}
+
+.navbar-scroll .header-btn {
+  color: #ffffff;
+  background-color: gray;
+}
+
+.navbar-scroll .header-btn:hover {
+  color: #ffffff;
+  background-color: #b386ef;
+}
+
+.navbar-scroll .logo {
+  color: #000;
+  font-weight: 500;
+}
+
+.footer {
+  box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.4);
+  background-color: #b386ef;
+}
+
+
+
+
+
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Kalam&family=Roboto+Condensed:ital@1&display=swap');
+
+
+main {
+  height: 70vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+}
+
+.stepper {
+  width: 50rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 5%;
+}
+
+.step--1,
+.step--2,
+.step--3,
+.step--4,
+.step--5 {
+  width: 5rem;
+  padding: 0.5rem 0;
+  background: #b386ef;
+  color: #fff;
+  text-align: center;
+}
+
+.step--1,
+.step--2,
+.step--3,
+.step--4 {
+  border-right: 1px solid rgb(212, 209, 209);
+}
+
+.form {
+  background: #fff;
+  text-align: center;
+  position: absolute;
+  width: 50rem;
+  box-shadow: 0.2rem 0.2rem 0.5rem rgba(51, 51, 51, 0.2);
+  display: none;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+.form--header-container {
+  background: linear-gradient(to right, rgb(51, 51, 51), #b386ef);
+  color: #fff;
+  height: 6rem;
+  padding: 1rem 0;
+  margin-bottom: 2rem;
+}
+
+.form--header-title {
+  font-size: 1.4rem;
+}
+
+.form--header-text {
+  padding: 0.5rem 0;
+}
+
+input[type='text'] {
+  padding: 0.8rem;
+  margin: auto;
+  margin-top: 0.5rem;
+  width: 40rem;
+  display: block;
+  border-radius: 0.5rem;
+  outline: none;
+  border: 1px solid #bdbdbb;
+}
+
+.form-select {
+  padding: 0.8rem;
+  margin: auto;
+  margin-top: 0.5rem;
+  width: 40rem;
+  display: block;
+  border-radius: 0.5rem;
+  outline: none;
+  border: 1px solid #bdbdbb;
+}
+
+.birthday {
+  padding: 0.8rem;
+  margin: auto;
+  margin-top: 0.5rem;
+  width: 40rem;
+  display: block;
+  border-radius: 0.5rem;
+  outline: none;
+  border: 1px solid #bdbdbb;
+
+}
+
+.Date {
+  padding-top: 10px;
+  font-weight: 15px;
+  color: #b386ef;
+  font-family: 'Kalam', cursive;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+.desc {
+  height: 100px;
+}
+
+
+
+
+
+
+#fileID {
+  padding: 0.8rem;
+  margin: auto;
+  margin-top: 0.5rem;
+  width: 40rem;
+  display: block;
+  border-radius: 0.5rem;
+  outline: none;
+  border: 1px solid #bdbdbb;
+}
+
+.form__btn {
+  background: #b386ef;
+  color: #fff;
+  outline: none;
+  border: none;
+  padding: 0.5rem 0.7rem;
+  width: 7rem;
+  margin: 1rem auto;
+  border-radius: 0.9rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.5s ease-in-out;
+
+}
+
+.form--message-text {
+  width: 25rem;
+  background: #b386ef;
+  color: #444;
+  padding: 2rem 1rem;
+  text-align: center;
+  font-size: 1.4rem;
+  box-shadow: 0.2rem 0.2rem 0.5rem rgba(51, 51, 51, 0.2);
+  animation: fadeIn 0.8s;
+  border-radius: 1rem;
+}
+
+.form-active {
+  z-index: 1000;
+  display: block;
+  background-color: #EFEFEF;
+  margin-top: 20px;
+}
+
+.form-active-animate {
+  animation: moveRight 1s;
+}
+
+.form-active-animate {
+  animation: moveLeft 1s;
+}
+
+.form-inactive {
+  display: block;
+  animation: moveLeft 1s;
+}
+
+.step-active {
+  background: #666;
+  color: #fff;
+  border: 1px solid #666;
+}
+
+@keyframes moveRight {
+  0% {
+    transform: translateX(-27rem) scale(0.9);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0rem) scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes moveLeft {
+  0% {
+    transform: translateX(0rem) scale(1);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateX(27rem) scale(0.9);
+    opacity: 0;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+
