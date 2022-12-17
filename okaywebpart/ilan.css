@@ -1,0 +1,38 @@
+.type-bar{
+    padding: 5px 25px !important;
+    color: #000000;
+    width:150px;
+    height: 50px;
+    background: #D9D9D9;
+    border-radius: 32px;
+}
+.index-test{
+
+font-family: 'Kadwa';
+font-style: normal;
+font-weight: 400;
+font-size: 20px;
+line-height: 22px;
+/* identical to box height */
+
+color: #000000;
+}
+.index-img{
+    
+width: 30px;
+height: 30px;
+
+}
+
+.cardimg{
+    
+    border-radius: 20px 20px 0px 0px;
+    max-height: 200px;
+}
+.cardtitle{
+    font-size: 20px;
+    
+}
+.cardcity{
+    font-size: 15px;
+}

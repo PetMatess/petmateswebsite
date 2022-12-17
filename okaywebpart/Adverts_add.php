@@ -17,8 +17,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@300&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="Adverts_add.css">
- 
+  <link rel="stylesheet" href="/Adverts_add.css">
 
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Kalam:wght@300&display=swap');
@@ -55,34 +54,48 @@
       </button>
 
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav m-auto">
+      <ul class="navbar-nav m-auto">
           <li class="nav-item active">
-            <a class="nav-link" href="#">Home<span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="ilanw.php">Home<span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">section2</a>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-              aria-haspopup="true" aria-expanded="false">
-              açilan pencere
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="#">bişi bişi</a>
-              <a class="dropdown-item" href="#">bişi bişi2n</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">bişi bişi3</a>
-            </div>
+            <a class="nav-link" href="Breedw.php">Breed</a>
+          <li class="nav-item">
+            <a class="nav-link" href="Newsw.php">News</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Blog</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">aboutus</a>
+            <a class="nav-link" href="About_Usw.php">About US</a>
           </li>
         </ul>
-        <form class="form-inline my-2 my-lg-0">
-          <button class="header-btn my-2 my-sm-0" type="submit">log in</button>
-        </form>
+          <img src="img/WhatsApp-Profil-Resmi-29.webp" class="user" onclick="toggleMenu()"  style="height:90px; width: 90px;"/>
+    <div class="sub-menu-wrap" id="subMenu">
+        <div class="sub-menu">
+            <div class="user-info">
+               <img src="img/WhatsApp-Profil-Resmi-29.webp" >
+                <h3><?php echo "$name" ?> </h3>
+            </div>
+            <hr />
+
+            <a href="user_edit.php" class="sub-menu-link">
+                <img src="img/pencil.png" >
+                <p>Edit Profile</p>
+                <span>></span>
+            </a>
+            
+
+            <a href="#" class="sub-menu-link">
+              <img src="img/privacy.png" >
+                <p>Privacy</p>
+                <span>></span>
+            </a>
+
+            <a href="logout.php" class="sub-menu-link">
+              <img src="img/logout.png" >
+                <p>Logout</p>
+                <span>></span>
+            </a>
+        </div>
+    </div>
       </div>
       </nav>
     </div>
@@ -100,13 +113,14 @@
           <div class="step--3">Step 3</div>
           <div class="step--4">Success</div>
         </div>
-        <form class="form form-active">
+
+        <form class="form form-active" id="form1">
           <div class="form--header-container">
             <h1 class="form--header-title">
               Hello
             </h1>
 
-           
+
           </div>
           <h6 class="Date">Pet Name</h6>
           <input type="text" placeholder="Pet Name" />
@@ -117,26 +131,54 @@
             <option value="1">Female</option>
             <option value="2">Male</option>
             <option value="3"> Other</option>
+            <option value="3"> Other</option>
+            <option value="3"> Other</option>
+            <option value="3"> Other</option>
+            <option value="3"> Other</option>
+            <option value="3"> Other</option>
+            <option value="3"> Other</option>
+            <option value="3"> Other</option>
+
+
+            <option value="3"> Other</option>
+
+            <option value="3"> Other</option>
+            <option value="3"> Other</option>
+            <option value="3"> Other</option>
+            <option value="3"> Other</option>
+            <option value="3"> Other</option>
+            <option value="3"> Other</option>
+            <option value="3"> Other</option>
+
+            <option value="3"> Other</option>
+            <option value="3"> Other</option>
+            v
+            <option value="3"> Other</option>
+            <option value="3"> Other</option>
+            <option value="3"> Other</option>
+            <option value="3"> Other</option>
+            <option value="3"> Other</option>
+            <option value="3"> Other</option>
+            <option value="3"> Other</option>
+            <option value="3"> Other</option>
+            <option value="3"> Other</option>
+            <var><option value="3"> Other</option>
+            <option value="3"> Other</option></var>
+            <option value="3"> Other</option>
+
+            <option value="3"> Other</option>
+            <option value="3"> Other</option>
+            <option value="3"> Other</option>
+            <option value="3"> Other</option>
+            <option value="3"> Other</option>
+            <option value="3"> Other</option>
+            <option value="3"> Other</option>
+            <option value="3"> Other</option>
+            <option value="3"> Other</option>
+            <option value="3"> Other</option>
+            <option value="3"> Other</option>
+            <option value="3"> Other</option>
           </select>
-          
-         
-
-
-          <h6 class="Date">Birthday</h6>
-          <input type="date" id="birthday" name="birthday" class="birthday" placeholder="Pet Birthday">
-
-          <button class="form__btn" id="btn-1">Next</button>
-        </form>
-        <form class="form">
-          <div class="form--header-container">
-            <h1 class="form--header-title">
-              Adress Info
-            </h1>
-
-           
-          </div>
-
-
           <h6 class="Date">Pet Type</h6>
           <select class="form-select" aria-label="Default select example" placeholder="Gender">
 
@@ -151,25 +193,36 @@
             <option value="2">Male</option>
             <option value="3"> Other</option>
           </select>
+          
           <h6 class="Date">Pet Breed Description</h6>
           <input type="text" placeholder="Description" class="desc">
-          <button class="form__btn" id="btn-2-prev">Previous</button>
-          <button class="form__btn" id="btn-2-next">Next</button>
+
+
+
+         
+
+          <button class="form__btn" id="btn-1">Next</button>
         </form>
-        <form class="form">
+     
+     
+        <form class="form "  id="form1">
           <div class="form--header-container">
             <h1 class="form--header-title">
-              City Info
+              Adress Info
             </h1>
 
-            
+
           </div>
+          <h6 class="Date">Birthday</h6>
+          <input type="date" id="birthday" name="birthday" class="birthday" placeholder="Pet Birthday">
+
           <h6 class="Date">City</h6>
           <select class="form-select" aria-label="Default select example" placeholder="Gender">
 
             <option value="1">Ankara</option>
             <option value="2">Adana</option>
             <option value="3"> İstanbul</option>
+
           </select>
           <h6 class="Date">District</h6>
           <select class="form-select" aria-label="Default select example" placeholder="Gender">
@@ -180,8 +233,41 @@
           </select>
           <h6 class="Date">Adress Description</h6>
           <input type="text" placeholder="Description" class="desc">
-          <button class="form__btn" id="btn-3">Submit</button>
+
+
+
+
+
+
+          <button class="form__btn" id="btn-2-prev">Previous</button>
+          <button class="form__btn" id="btn-2-next">Next</button>
         </form>
+      
+     
+        <form class="form"  id="form1">
+          <div class="form--header-container">
+            <h1 class="form--header-title">
+              Pet Photo
+            </h1>
+            
+
+          </div>
+          <h6 class="Date">Add Photo</h6>
+         <div>
+          <input type='file' id="imageUpload" accept=".png, .jpg, .jpeg" />
+          <label for="imageUpload" class="loa" ><img src="img/add.png" style="width: 70px;  height: 70px; margin-top: 27%;"></label>
+          <input type='file' id="imageUpload" accept=".png, .jpg, .jpeg"  />
+          <label for="imageUpload" class="loa" > <img src="img/add.png"  style="width: 70px;  height: 70px; margin-top: 27%;" ></label>
+          <input type='file' id="imageUpload" accept=".png, .jpg, .jpeg" />
+          <label for="imageUpload" class="loa" ><img src="img/add.png"  style="width: 70px;  height: 70px; margin-top: 27%;"></label>
+        </div>
+
+          
+          <button class="form__btn" id="btn-3">Submit</button>
+        
+        </form>
+      
+
         <div class="form--message">
 
         </div>
@@ -189,6 +275,41 @@
       </main>
     </div>
   </div>
+
+
+
+  <?php
+  include("connect.php");
+  if (isset($_POST["ekle"])){
+
+   
+
+    //$sec="select CID FROM blood_center where B_Name='".$_POST["B_Name"]."'";
+    //$result=$baglan->query($sec);
+    //$cek=$result->fetch_assoc();
+    
+      
+
+      $ekli ="insert into user(name,surname,email,phone,password) values
+      ('".$_POST["name"]."','".$_POST["surname"]."','".$_POST["email"]."','".$_POST["phone"]."','".$_POST["password"]."')";
+
+
+       $sonuc=mysqli_query($baglan,$ekli);
+    
+
+       if($sonuc){
+
+        echo "<center>Registration Successful.</center>";
+           
+       }else{
+           echo "form.php if else hatası sonuc için";
+       }   
+  }
+ 
+  ?>              
+
+
+
 
 
 
@@ -204,11 +325,12 @@
     </div>
 
     <ul class="nav col-md-4 justify-content-end">
-      <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Home</a></li>
-      <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Features</a></li>
-      <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Pricing</a></li>
-      <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">FAQs</a></li>
-      <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">About</a></li>
+    <li class="nav-item"><a href="indexw.php" class="nav-link px-2 text-muted">Home</a></li>
+      <li class="nav-item"><a href="Breedw.php" class="nav-link px-2 text-muted">Breed</a></li>
+      <li class="nav-item"><a href="Newsw.php" class="nav-link px-2 text-muted">News</a></li>
+      <li class="nav-item"><a href="About_Usw.php" class="nav-link px-2 text-muted">About Us</a></li>
+      <li class="nav-item"><a href="logout.php" class="nav-link px-2 text-muted">Log out</a></li>
+
     </ul>
   </footer>
 
