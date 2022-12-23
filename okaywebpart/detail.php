@@ -78,25 +78,7 @@ else{
 
 
 <!-- buraya istediğiniz kadar kod yazabilirsiniz-->
-<?php echo ($published_time) ?>
-<?php echo ($description) ?>
-<?php echo ($pet_name) ?>
-<?php echo ($gender) ?>
-<?php echo ($birthday) ?>
-<?php echo ($advert_city_name) ?>
-<?php echo ($advert_district_name) ?>
-<?php echo ($advert_address_line) ?>
-<?php echo ($pet_type) ?>
-<?php echo ($pet_breed) ?>
-<?php echo ($publisher_id) ?>
-<?php echo '<img src ="image/jpeg'.base64_encode($first_picture).'"/>' ?>
 
-<?php echo '<img src ="image/jpeg'.base64_encode($user_img).'"/>' ?>
-
-<?php echo ($user_email) ?>
-<?php echo ($user_phone) ?>
-<?php echo ($user_name) ?>
-<?php echo ($user_surname) ?>
 
 
 
@@ -346,26 +328,36 @@ else{
         </div>
       </div>
       <div class="animal-info">
-        
-            <div><label>Name:</label><span>[Animal's name]</span></div>
-            <div><label>Species:</label><span><a href="o hayvanın türünün özelliklerinin olduğu sitenin linki.">[Animal's species]</a></span></div>
-            <div><label>Breed:</label><span><a href="o hayvanın cinsinin özelliklerinin olduğu sitenin linki.">[Animal's breed]</a></span></div>
-            <div><label>Age:</label><span>[Animal's age]</span></div>
-            <div><label>Gender:</label><span>[Animal's gender]</span></div>
-            <div><label>Location:</label><span>[Animal's location]</span></div>
+
+
+        <?php echo ($published_time) ?>
+
+
+<?php echo '<img src ="image/jpeg'.base64_encode($first_picture).'"/>' ?>
+
+<?php echo '<img src ="image/jpeg'.base64_encode($user_img).'"/>' ?>
+
+
+<?php echo ($published_time) ?>
+            <div><label>Name:</label><span><?php echo ($pet_name) ?></span></div>
+            <div><label>Species:</label><span><?php echo ($pet_type) ?></span></div>
+            <div><label>Breed:</label><span><a href="<?php echo "Breed_detail.php?pet_breeds_info=".$pet_type;?>"><?php echo ($pet_breed) ?></a></span></div>
+            <div><label>Birdth day :</label><span><?php echo ($birthday) ?></span></div>
+            <div><label>Gender:</label><span><?php echo ($gender) ?></span></div>
+            <div><label>Location:</label><span><?php echo ($advert_city_name) ?> / <?php echo ($advert_district_name) ?> / <?php echo ($advert_address_line) ?></span></div>
           
       </div>
       <div class="owner-info">
 
-        <div><label>Owner:</label><span>[Owner's name]</span></div>
-        <div><label>Email:</label><span>[Owner's email]</span></div>
-        <div><label>Phone Number: </label><span>[Owner's phone number]</span></div>
+        <div><label>Owner:</label><span><?php echo ($user_surname) ?> <?php echo ($user_surname) ?> </span></div>
+        <div><label>Email:</label><span><?php echo ($user_email) ?></span></div>
+        <div><label>Phone Number: </label><span><?php echo ($user_phone) ?></span></div>
         <div><label><button id="favorite-button">Favorite</button></label></div>
 
       </div>
     </div>
     <div class="description">
-      <div><label>Description:</label><span><br>[Owner's description]</span></div>
+      <div><label>Description:</label><span><br><?php echo ($description) ?></span></div>
     </div>
  </div>
 
