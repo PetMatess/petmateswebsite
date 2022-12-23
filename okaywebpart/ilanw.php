@@ -74,12 +74,12 @@ include("userinfo.php");
             <a class="nav-link" href="ilanw.php">Home<span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Breed</a>
+            <a class="nav-link" href="Breedw.php">Breed</a>
           <li class="nav-item">
             <a class="nav-link" href="#">News</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="user_edit.php">About US</a>
+            <a class="nav-link" href="About_Usw.php">About US</a>
           </li>
         </ul>
           <img src="img/WhatsApp-Profil-Resmi-29.webp" class="user" onclick="toggleMenu()"  style="height:90px; width: 90px;"/>
