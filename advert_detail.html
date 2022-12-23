@@ -86,7 +86,7 @@
   
     <style>
  
-  .container {
+  .container-page {
   display: flex;
   flex-direction: row;
   font-size: small;
@@ -201,12 +201,14 @@
 }
 
     </style>
-    
+   
+   <form action="" method="">
+   
     <div class="ilan-basligi">
       <h3>İLANDAKİ HAYVANIN İSMİ</h2>
     </div>
 
-    <div class="container">
+    <div class="container-page">
       <div class="animal-photo">
         <div class="slideshow-container">
           <div class="mySlides fade">
@@ -228,7 +230,8 @@
       <div class="animal-info">
         
             <div><label>Name:</label><span>[Animal's name]</span></div>
-            <div><label>Species:</label><span>[Animal's species]</span></div>
+            <div><label>Species:</label><span><a href="o hayvanın türünün özelliklerinin olduğu sitenin linki.">[Animal's species]</a></span></div>
+            <div><label>Breed:</label><span><a href="o hayvanın cinsinin özelliklerinin olduğu sitenin linki.">[Animal's breed]</a></span></div>
             <div><label>Age:</label><span>[Animal's age]</span></div>
             <div><label>Gender:</label><span>[Animal's gender]</span></div>
             <div><label>Location:</label><span>[Animal's location]</span></div>
@@ -248,7 +251,9 @@
     </div>
  </div>
 
- <script>
+</form>
+
+<script>
   var slideIndex = 0;
       showSlides();
 
