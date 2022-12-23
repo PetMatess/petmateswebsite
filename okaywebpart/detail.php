@@ -315,10 +315,11 @@ else{
             <img src="\img\twitter.png" class=" lazyloaded" style="width:100%">
           </div>
           <div class="mySlides fade">
-            <img src="\img\user.png" class=" lazyloaded" style="width:100%">
+           
+<img src =<?php echo "image/jpeg'.base64_encode($first_picture).'"?>  class=" lazyloaded" style="width:100%">
           </div>
           <div class="mySlides fade">
-            <img src="\img\puppy-2785074__340.jpg" class=" lazyloaded"  style="width:100%">
+           <img src =<?php echo"image/jpeg'.base64_encode($user_img).'"?> class=" lazyloaded"  style="width:100%">
           </div>
         </div>
         <div style="text-align:center">
@@ -330,15 +331,12 @@ else{
       <div class="animal-info">
 
 
-        <?php echo ($published_time) ?>
+        
 
 
-<?php echo '<img src ="image/jpeg'.base64_encode($first_picture).'"/>' ?>
-
-<?php echo '<img src ="image/jpeg'.base64_encode($user_img).'"/>' ?>
 
 
-<?php echo ($published_time) ?>
+            <div><label>Published Time:</label><span><?php echo ($published_time) ?></span></div>
             <div><label>Name:</label><span><?php echo ($pet_name) ?></span></div>
             <div><label>Species:</label><span><?php echo ($pet_type) ?></span></div>
             <div><label>Breed:</label><span><a href="<?php echo "Breed_detail.php?pet_breeds_info=".$pet_type;?>"><?php echo ($pet_breed) ?></a></span></div>
