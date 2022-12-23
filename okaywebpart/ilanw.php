@@ -97,6 +97,11 @@ include("userinfo.php");
                 <span>></span>
             </a>
             
+            <a href="Adverts_add.php" class="sub-menu-link">
+                <img src="img/pencil.png" >
+                <p>Adverts Add</p>
+                <span>></span>
+            </a>
 
             <a href="#" class="sub-menu-link">
               <img src="img/privacy.png" >
@@ -172,7 +177,9 @@ $sec="SELECT * FROM `adverts`;";
 $sonuc=$baglan->query($sec);
 if($sonuc->num_rows>0){
     while($cek=$sonuc->fetch_assoc()){
-      
+      $dogumTarihi = $cek['birthday'];
+$bugun = date("Y-m-d");
+$diff = date_diff(date_create($dogumTarihi), date_create($bugun));
       ?>
 
        
@@ -197,8 +204,8 @@ if($sonuc->num_rows>0){
         <div class='d-flex ' > 
         <div class='d-flex align-items-center ' style='font-size: 10px; padding: 5px;'><img style='width: 20px; height: 20px;'  src='img/88e42073f15a94a24e4ae7e56f70503c.png' alt=''><?php echo $cek['gender'] ?></div>
         
-        <div class='d-flex align-items-center ' style='font-size: 10px; padding: 5px;'><img style='width: 20px; height: 20px;'  src='img/88e42073f15a94a24e4ae7e56f70503c.png' alt=''><?php echo $cek['gender'] ?></div>
-        <div class='d-flex align-items-center ' style='font-size: 10px; padding: 5px;'><img style='width: 20px; height: 20px;'  src='img/5e07484fa0adae51e26d5d8fe3c09253.png' alt=''><?php echo $cek['birthday'] ?></div></div> 
+        <div class='d-flex align-items-center ' style='font-size: 10px; padding: 5px;'><img style='width: 20px; height: 20px;'  src='img/2591741a30ef24af7d953808babe06ab.png' alt=''><?php echo $cek['pet_breed'] ?></div>
+        <div class='d-flex align-items-center ' style='font-size: 10px; padding: 5px;'><img style='width: 20px; height: 20px;'  src='img/5e07484fa0adae51e26d5d8fe3c09253.png' alt=''><?php echo $diff->format('%y y-%m m')  ?></div></div> 
         </div>
         </div>
         </div>
@@ -229,6 +236,9 @@ $sec="SELECT * FROM `adverts` WHERE pet_type='dog';";
 $sonuc=$baglan->query($sec);
 if($sonuc->num_rows>0){
     while($cek=$sonuc->fetch_assoc()){
+      $dogumTarihi = $cek['birthday'];
+$bugun = date("Y-m-d");
+$diff = date_diff(date_create($dogumTarihi), date_create($bugun));
 
       ?>
 
@@ -254,8 +264,8 @@ if($sonuc->num_rows>0){
         <div class='d-flex ' > 
         <div class='d-flex align-items-center ' style='font-size: 10px; padding: 5px;'><img style='width: 20px; height: 20px;'  src='img/88e42073f15a94a24e4ae7e56f70503c.png' alt=''><?php echo $cek['gender'] ?></div>
         
-        <div class='d-flex align-items-center ' style='font-size: 10px; padding: 5px;'><img style='width: 20px; height: 20px;'  src='img/88e42073f15a94a24e4ae7e56f70503c.png' alt=''><?php echo $cek['gender'] ?></div>
-        <div class='d-flex align-items-center ' style='font-size: 10px; padding: 5px;'><img style='width: 20px; height: 20px;'  src='img/5e07484fa0adae51e26d5d8fe3c09253.png' alt=''><?php echo $cek['birthday'] ?></div></div> 
+        <div class='d-flex align-items-center ' style='font-size: 10px; padding: 5px;'><img style='width: 20px; height: 20px;'  src='img/2591741a30ef24af7d953808babe06ab.png' alt=''><?php echo $cek['pet_breed'] ?></div>
+        <div class='d-flex align-items-center ' style='font-size: 10px; padding: 5px;'><img style='width: 20px; height: 20px;'  src='img/5e07484fa0adae51e26d5d8fe3c09253.png' alt=''><?php echo $diff->format('%y y-%m m')  ?></div></div> 
         </div>
         </div>
         </div>
@@ -310,8 +320,8 @@ if($sonuc->num_rows>0){
         <div class='d-flex ' > 
         <div class='d-flex align-items-center ' style='font-size: 10px; padding: 5px;'><img style='width: 20px; height: 20px;'  src='img/88e42073f15a94a24e4ae7e56f70503c.png' alt=''><?php echo $cek['gender'] ?></div>
         
-        <div class='d-flex align-items-center ' style='font-size: 10px; padding: 5px;'><img style='width: 20px; height: 20px;'  src='img/88e42073f15a94a24e4ae7e56f70503c.png' alt=''><?php echo $cek['gender'] ?></div>
-        <div class='d-flex align-items-center ' style='font-size: 10px; padding: 5px;'><img style='width: 20px; height: 20px;'  src='img/5e07484fa0adae51e26d5d8fe3c09253.png' alt=''><?php echo $cek['birthday'] ?></div></div> 
+        <div class='d-flex align-items-center ' style='font-size: 10px; padding: 5px;'><img style='width: 20px; height: 20px;'  src='img/2591741a30ef24af7d953808babe06ab.png' alt=''><?php echo $cek['pet_breed'] ?></div>
+        <div class='d-flex align-items-center ' style='font-size: 10px; padding: 5px;'><img style='width: 20px; height: 20px;'  src='img/5e07484fa0adae51e26d5d8fe3c09253.png' alt=''><?php echo $diff->format('%y y-%m m')  ?></div></div> 
         </div>
         </div>
         </div>
@@ -341,6 +351,9 @@ $sec="SELECT * FROM `adverts` WHERE pet_type='bird';";
 $sonuc=$baglan->query($sec);
 if($sonuc->num_rows>0){
     while($cek=$sonuc->fetch_assoc()){
+      $dogumTarihi = $cek['birthday'];
+$bugun = date("Y-m-d");
+$diff = date_diff(date_create($dogumTarihi), date_create($bugun));
 
       ?>
 
@@ -365,10 +378,10 @@ if($sonuc->num_rows>0){
          
       <div class='d-flex ' > 
       <div class='d-flex align-items-center ' style='font-size: 10px; padding: 5px;'><img style='width: 20px; height: 20px;'  src='img/88e42073f15a94a24e4ae7e56f70503c.png' alt=''><?php echo $cek['gender'] ?></div>
-      
-      <div class='d-flex align-items-center ' style='font-size: 10px; padding: 5px;'><img style='width: 20px; height: 20px;'  src='img/88e42073f15a94a24e4ae7e56f70503c.png' alt=''><?php echo $cek['gender'] ?></div>
-      <div class='d-flex align-items-center ' style='font-size: 10px; padding: 5px;'><img style='width: 20px; height: 20px;'  src='img/5e07484fa0adae51e26d5d8fe3c09253.png' alt=''><?php echo $cek['birthday'] ?></div></div> 
-      </div>
+        
+        <div class='d-flex align-items-center ' style='font-size: 10px; padding: 5px;'><img style='width: 20px; height: 20px;'  src='img/2591741a30ef24af7d953808babe06ab.png' alt=''><?php echo $cek['pet_breed'] ?></div>
+        <div class='d-flex align-items-center ' style='font-size: 10px; padding: 5px;'><img style='width: 20px; height: 20px;'  src='img/5e07484fa0adae51e26d5d8fe3c09253.png' alt=''><?php echo $diff->format('%y y-%m m')  ?></div></div> 
+        </div>
       </div>
       </div>
       
@@ -420,10 +433,10 @@ if($sonuc->num_rows>0){
          
       <div class='d-flex ' > 
       <div class='d-flex align-items-center ' style='font-size: 10px; padding: 5px;'><img style='width: 20px; height: 20px;'  src='img/88e42073f15a94a24e4ae7e56f70503c.png' alt=''><?php echo $cek['gender'] ?></div>
-      
-      <div class='d-flex align-items-center ' style='font-size: 10px; padding: 5px;'><img style='width: 20px; height: 20px;'  src='img/88e42073f15a94a24e4ae7e56f70503c.png' alt=''><?php echo $cek['gender'] ?></div>
-      <div class='d-flex align-items-center ' style='font-size: 10px; padding: 5px;'><img style='width: 20px; height: 20px;'  src='img/5e07484fa0adae51e26d5d8fe3c09253.png' alt=''><?php echo $cek['birthday'] ?></div></div> 
-      </div>
+        
+        <div class='d-flex align-items-center ' style='font-size: 10px; padding: 5px;'><img style='width: 20px; height: 20px;'  src='img/2591741a30ef24af7d953808babe06ab.png' alt=''><?php echo $cek['pet_breed'] ?></div>
+        <div class='d-flex align-items-center ' style='font-size: 10px; padding: 5px;'><img style='width: 20px; height: 20px;'  src='img/5e07484fa0adae51e26d5d8fe3c09253.png' alt=''><?php echo $diff->format('%y y-%m m')  ?></div></div> 
+         </div>
       </div>
       </div>
       

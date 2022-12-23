@@ -1,3 +1,7 @@
+<?php
+include("connect.php");
+include("userinfo.php");
+?>
 <!doctype html>
 <html lang="en">
 
@@ -17,7 +21,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@300&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/Adverts_add.css">
+  <link rel="stylesheet" href="Adverts_add.css">
+  <link rel="stylesheet" href="navbarfooter.css">
 
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Kalam:wght@300&display=swap');
@@ -101,10 +106,9 @@
     </div>
     </div>
   </header>
-
-
+             
   <div class="main-content "
-    style="padding-top: 190px; background-image: url(/img/pattern\ \(2\).jpg); background-repeat: no-repeat;">
+    style="padding-top: 190px; background-image: url(img/pattern\ \(2\).jpg); background-repeat: no-repeat;">
     <div class="container backfont">
       <main>
         <div class="stepper">
@@ -114,80 +118,33 @@
           <div class="step--4">Success</div>
         </div>
 
-        <form class="form form-active" id="form1">
+
+        <form method="POST" action="" class="form form-active" id="form1">
           <div class="form--header-container">
             <h1 class="form--header-title">
               Hello
             </h1>
-
-
+           
           </div>
           <h6 class="Date">Pet Name</h6>
-          <input type="text" placeholder="Pet Name" />
+          <input type="text" name="pet_name" placeholder="Pet Name" />
 
           <h6 class="Date">Gender</h6>
-          <select class="form-select" aria-label="Default select example" placeholder="Gender">
+          <select class="form-select" name="gender" aria-label="Default select example" placeholder="Gender">
 
-            <option value="1">Female</option>
-            <option value="2">Male</option>
-            <option value="3"> Other</option>
-            <option value="3"> Other</option>
-            <option value="3"> Other</option>
-            <option value="3"> Other</option>
-            <option value="3"> Other</option>
-            <option value="3"> Other</option>
-            <option value="3"> Other</option>
-            <option value="3"> Other</option>
-
-
-            <option value="3"> Other</option>
-
-            <option value="3"> Other</option>
-            <option value="3"> Other</option>
-            <option value="3"> Other</option>
-            <option value="3"> Other</option>
-            <option value="3"> Other</option>
-            <option value="3"> Other</option>
-            <option value="3"> Other</option>
-
-            <option value="3"> Other</option>
-            <option value="3"> Other</option>
-            v
-            <option value="3"> Other</option>
-            <option value="3"> Other</option>
-            <option value="3"> Other</option>
-            <option value="3"> Other</option>
-            <option value="3"> Other</option>
-            <option value="3"> Other</option>
-            <option value="3"> Other</option>
-            <option value="3"> Other</option>
-            <option value="3"> Other</option>
-            <var><option value="3"> Other</option>
-            <option value="3"> Other</option></var>
-            <option value="3"> Other</option>
-
-            <option value="3"> Other</option>
-            <option value="3"> Other</option>
-            <option value="3"> Other</option>
-            <option value="3"> Other</option>
-            <option value="3"> Other</option>
-            <option value="3"> Other</option>
-            <option value="3"> Other</option>
-            <option value="3"> Other</option>
-            <option value="3"> Other</option>
-            <option value="3"> Other</option>
-            <option value="3"> Other</option>
-            <option value="3"> Other</option>
+            <option value="Female">Female</option>
+            <option value="Male">Male</option>
+            
           </select>
           <h6 class="Date">Pet Type</h6>
-          <select class="form-select" aria-label="Default select example" placeholder="Gender">
+          <select class="form-select" name="pet_type" aria-label="Default select example" placeholder="Gender">
 
             <option value="1">Female</option>
             <option value="2">Male</option>
             <option value="3"> Other</option>
           </select>
           <h6 class="Date">Pet Breed</h6>
-          <select class="form-select" aria-label="Default select example" placeholder="Gender">
+          <select class="form-select" name="pet_breed" aria-label="Default select example" placeholder="Gender">
 
             <option value="1">Female</option>
             <option value="2">Male</option>
@@ -195,17 +152,25 @@
           </select>
           
           <h6 class="Date">Pet Breed Description</h6>
-          <input type="text" placeholder="Description" class="desc">
+          <input type="text"  name="description" placeholder="Description" class="desc">
+          <button type="submit" name="form1" class="form__btn" id="btn-1">Next</button>
 
-
-
-         
-
-          <button class="form__btn" id="btn-1">Next</button>
         </form>
+        <?php
+        
+  if (isset($_POST["form1"])){
+    $pet_name=$_POST["pet_name"];
+    $pet_gender=$_POST["gender"];
+    $pet_type=$_POST["pet_type"];
+    $pet_breed=$_POST["pet_breed"];
+    $pet_description=$_POST["description"];
+   
+  }
+
+  ?>
      
      
-        <form class="form "  id="form1">
+        <form method="POST" action="" class="form "  id="form1">
           <div class="form--header-container">
             <h1 class="form--header-title">
               Adress Info
@@ -217,7 +182,7 @@
           <input type="date" id="birthday" name="birthday" class="birthday" placeholder="Pet Birthday">
 
           <h6 class="Date">City</h6>
-          <select class="form-select" aria-label="Default select example" placeholder="Gender">
+          <select class="form-select"  name="advert_city_name" aria-label="Default select example" placeholder="Gender">
 
             <option value="1">Ankara</option>
             <option value="2">Adana</option>
@@ -225,14 +190,14 @@
 
           </select>
           <h6 class="Date">District</h6>
-          <select class="form-select" aria-label="Default select example" placeholder="Gender">
+          <select class="form-select" name="advert_district_name" aria-label="Default select example" placeholder="Gender">
 
             <option value="1">Polatlı</option>
             <option value="2">Tepebaşı</option>
             <option value="3"> Odunpazarı</option>
           </select>
-          <h6 class="Date">Adress Description</h6>
-          <input type="text" placeholder="Description" class="desc">
+          <h6 class="Date">Full Addresses</h6>
+          <input type="text" name="advert_address_line"  placeholder="Description" class="desc">
 
 
 
@@ -240,11 +205,24 @@
 
 
           <button class="form__btn" id="btn-2-prev">Previous</button>
-          <button class="form__btn" id="btn-2-next">Next</button>
+          <button type="submit" name="form2" class="form__btn" id="btn-2-next">Next</button>
         </form>
+        <?php
+        
+        if (isset($_POST["form2"])){
+          $pet_birthday=$_POST["birthday"];
+          $pet_advert_city_name=$_POST["advert_city_name"];
+          $pet_advert_district_name=$_POST["advert_district_name"];
+          $pet_breed=$_POST["pet_breed"];
+          $pet_description=$_POST["description"];
+         
+        }
+      
+        ?>
+        
       
      
-        <form class="form"  id="form1">
+        <form method="POST" action="" class="form"  id="form1">
           <div class="form--header-container">
             <h1 class="form--header-title">
               Pet Photo
@@ -262,51 +240,53 @@
           <label for="imageUpload" class="loa" ><img src="img/add.png"  style="width: 70px;  height: 70px; margin-top: 27%;"></label>
         </div>
 
-          
-          <button class="form__btn" id="btn-3">Submit</button>
-        
+         
+         <button type="submit"  class="submit " name="ekle" id="btn-3">Submit</button>
         </form>
       
 
         <div class="form--message">
-
+        <h1 class="form--message-text"> dav </h1>
         </div>
 
       </main>
-    </div>
-  </div>
+     
+     
+              <?php
 
 
+date_default_timezone_set('Europe/Istanbul');
+$time_now = date('d.m.Y H:i:s');
 
-  <?php
   include("connect.php");
   if (isset($_POST["ekle"])){
-
-   
-
+    echo $time_now;
     //$sec="select CID FROM blood_center where B_Name='".$_POST["B_Name"]."'";
     //$result=$baglan->query($sec);
     //$cek=$result->fetch_assoc();
-    
-      
-
-      $ekli ="insert into user(name,surname,email,phone,password) values
-      ('".$_POST["name"]."','".$_POST["surname"]."','".$_POST["email"]."','".$_POST["phone"]."','".$_POST["password"]."')";
-
-
+      $ekli ="insert into adverts(published_time,description,pet_name, gender,birthday, advert_city_name, advert_district_name, advert_address_line, pet_breed,	publisher_id , pet_type) values
+      ('".$time_now."','".$_POST["description"]."','".$_POST["pet_name"]."','".$_POST["gender"]."','".$_POST["birthday"]."','".$_POST["advert_city_name"]."','".$_POST["advert_district_name"]."','".$_POST["advert_address_line"]."','".$_POST["pet_breed"]."','".$user_id."','".$_POST["pet_type"]."')";
        $sonuc=mysqli_query($baglan,$ekli);
-    
-
        if($sonuc){
-
-        echo "<center>Registration Successful.</center>";
-           
+        echo "<center>Registration Successful.</center>";           
        }else{
            echo "form.php if else hatası sonuc için";
        }   
   }
  
-  ?>              
+  ?>
+      <?php
+  if (isset($_POST["ekle"])){
+    
+  }
+
+  ?>
+    </div>
+  </div>
+
+
+
+               
 
 
 
@@ -358,7 +338,52 @@
       });
     });
   </script>
-  <script src="/Adverts_add.js"></script>
+  <script src="Advertsadd.js"></script>
+  <script type="text/javascript">
+    $(function(){
+      var navbar = $('.header-inner');
+      $(window).scroll(function(){
+        if($(window).scrollTop() <=40){
+          navbar.removeClass('navbar-scroll');
+        }else{
+          navbar.addClass('navbar-scroll');
+        }
+      });
+    });
+    
+  </script>
+  <script type="text/javascript">
+   function like(x) {
+    x.classList.toggle("fa-gratipay");
+};
+  </script>
+ 
+  <script>
+    function openPage(pageName,elmnt,color) {
+      var i, tabcontent, tablinks;
+      tabcontent = document.getElementsByClassName("tabcontent");
+      for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+      }
+      tablinks = document.getElementsByClassName("tablink");
+      for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].style.backgroundColor = "";
+      }
+      document.getElementById(pageName).style.display = "block";
+      elmnt.style.backgroundColor = color;
+    }
+    
+    // Get the element with id="defaultOpen" and click on it
+    document.getElementById("defaultOpen").click();
+    </script>
+    <script>
+         
+         let subMenu = document.getElementById("subMenu");
+     
+         function toggleMenu() {
+             subMenu.classList.toggle("open-menu");
+         }
+     </script>
 
 </body>
 
