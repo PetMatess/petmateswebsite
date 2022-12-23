@@ -119,7 +119,8 @@ include("userinfo.php");
         </div>
 
 
-        <form method="POST" action="" class="form form-active" id="form1">
+        <form method="POST" action="">
+        <div class="form form-active" id="form1">
           <div class="form--header-container">
             <h1 class="form--header-title">
               Hello
@@ -153,24 +154,14 @@ include("userinfo.php");
           
           <h6 class="Date">Pet Breed Description</h6>
           <input type="text"  name="description" placeholder="Description" class="desc">
-          <button type="submit" name="form1" class="form__btn" id="btn-1">Next</button>
-
-        </form>
-        <?php
+          <button  class="form__btn" id="btn-1">Next</button>
+          </div>
         
-  if (isset($_POST["form1"])){
-    $pet_name=$_POST["pet_name"];
-    $pet_gender=$_POST["gender"];
-    $pet_type=$_POST["pet_type"];
-    $pet_breed=$_POST["pet_breed"];
-    $pet_description=$_POST["description"];
-   
-  }
 
-  ?>
+      
      
-     
-        <form method="POST" action="" class="form "  id="form1">
+     <div class="form " id="form1">
+       
           <div class="form--header-container">
             <h1 class="form--header-title">
               Adress Info
@@ -206,23 +197,11 @@ include("userinfo.php");
 
           <button class="form__btn" id="btn-2-prev">Previous</button>
           <button type="submit" name="form2" class="form__btn" id="btn-2-next">Next</button>
-        </form>
-        <?php
-        
-        if (isset($_POST["form2"])){
-          $pet_birthday=$_POST["birthday"];
-          $pet_advert_city_name=$_POST["advert_city_name"];
-          $pet_advert_district_name=$_POST["advert_district_name"];
-          $pet_breed=$_POST["pet_breed"];
-          $pet_description=$_POST["description"];
-         
-        }
+          </div>
+       
       
-        ?>
+        <div class="form " id="form1">
         
-      
-     
-        <form method="POST" action="" class="form"  id="form1">
           <div class="form--header-container">
             <h1 class="form--header-title">
               Pet Photo
@@ -241,25 +220,21 @@ include("userinfo.php");
         </div>
 
          
-         <button type="submit"  class="submit " name="ekle" id="btn-3">Submit</button>
+         <button id="btn-3"></button>
+         <button type="submit"  class="submit " name="eklde" >Submit</button>
+         </div>
         </form>
       
 
         <div class="form--message">
-        <h1 class="form--message-text"> dav </h1>
-        </div>
-
-      </main>
-     
-     
-              <?php
+        <h1 class="form--message-text">            <?php
 
 
 date_default_timezone_set('Europe/Istanbul');
-$time_now = date('d.m.Y H:i:s');
-
+$time_now = date('Y.m.d H:i:s');
+echo $time_now;
   include("connect.php");
-  if (isset($_POST["ekle"])){
+  if (isset($_POST["eklde"])){
     echo $time_now;
     //$sec="select CID FROM blood_center where B_Name='".$_POST["B_Name"]."'";
     //$result=$baglan->query($sec);
@@ -274,13 +249,13 @@ $time_now = date('d.m.Y H:i:s');
        }   
   }
  
-  ?>
-      <?php
-  if (isset($_POST["ekle"])){
-    
-  }
+  ?> </h1>
+        </div>
 
-  ?>
+      </main>
+     
+     
+            
     </div>
   </div>
 
