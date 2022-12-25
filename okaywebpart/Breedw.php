@@ -73,11 +73,11 @@ include("userinfo.php");
             <a class="nav-link" href="About_Us.php">About US</a>
           </li>
         </ul>
-        <img src="img/WhatsApp-Profil-Resmi-29.webp" class="user" onclick="toggleMenu()"  style="height:90px; width: 90px;"/>
+        <img src=<?php echo "uploads/".$user_img;?> class="user" onclick="toggleMenu()"  style="height:90px; width: 90px;"/>
     <div class="sub-menu-wrap" id="subMenu">
         <div class="sub-menu">
             <div class="user-info">
-               <img src="img/WhatsApp-Profil-Resmi-29.webp" >
+               <img src=<?php echo "uploads/".$user_img;?> >
                 <h3><?php echo "$name" ?> </h3>
             </div>
             <hr />
