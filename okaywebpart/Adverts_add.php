@@ -119,7 +119,7 @@ include("userinfo.php");
         </div>
 
 
-        <form method="POST" action="">
+        <form method="POST" action="" enctype="multipart/form-data">
         <div class="form form-active" id="form1">
           <div class="form--header-container">
             <h1 class="form--header-title">
@@ -211,12 +211,9 @@ include("userinfo.php");
           </div>
           <h6 class="Date">Add Photo</h6>
          <div>
-          <input type='file' id="imageUpload" accept=".png, .jpg, .jpeg" />
-          <label for="imageUpload" class="loa" ><img src="img/add.png" style="width: 70px;  height: 70px; margin-top: 27%;"></label>
-          <input type='file' id="imageUpload" accept=".png, .jpg, .jpeg"  />
-          <label for="imageUpload" class="loa" > <img src="img/add.png"  style="width: 70px;  height: 70px; margin-top: 27%;" ></label>
-          <input type='file' id="imageUpload" accept=".png, .jpg, .jpeg" />
-          <label for="imageUpload" class="loa" ><img src="img/add.png"  style="width: 70px;  height: 70px; margin-top: 27%;"></label>
+          <input type='file' name="photos[]" id="imageUpload" accept=".png, .jpg, .jpeg" multiple/>
+          <label for="imageUpload" class="loa" ><img src="img/add(1).png" style="width: 70px;  height: 70px; margin-top: 27%;"></label>
+          
         </div>
 
          
@@ -233,27 +230,69 @@ include("userinfo.php");
 date_default_timezone_set('Europe/Istanbul');
 $time_now = date('Y.m.d H:i:s');
 echo $time_now;
+
+
+
   include("connect.php");
   if (isset($_POST["eklde"])){
+    $photos = $_FILES['photos']['name'];
     echo $time_now;
     //$sec="select CID FROM blood_center where B_Name='".$_POST["B_Name"]."'";
     //$result=$baglan->query($sec);
     //$cek=$result->fetch_assoc();
-      $ekli ="insert into adverts(published_time,description,pet_name, gender,birthday, advert_city_name, advert_district_name, advert_address_line, pet_breed,	publisher_id , pet_type) values
-      ('".$time_now."','".$_POST["description"]."','".$_POST["pet_name"]."','".$_POST["gender"]."','".$_POST["birthday"]."','".$_POST["advert_city_name"]."','".$_POST["advert_district_name"]."','".$_POST["advert_address_line"]."','".$_POST["pet_breed"]."','".$user_id."','".$_POST["pet_type"]."')";
+      $ekli ="insert into adverts(published_time,description,pet_name,first_picture, gender,birthday, advert_city_name, advert_district_name, advert_address_line, pet_breed,	publisher_id , pet_type) values
+      ('".$time_now."','".$_POST["description"]."','".$_POST["pet_name"]."','".$photos[0]."','".$_POST["gender"]."','".$_POST["birthday"]."','".$_POST["advert_city_name"]."','".$_POST["advert_district_name"]."','".$_POST["advert_address_line"]."','".$_POST["pet_breed"]."','".$user_id."','".$_POST["pet_type"]."')";
        $sonuc=mysqli_query($baglan,$ekli);
        if($sonuc){
-        echo "<center>Registration Successful.</center>";           
-       }else{
-           echo "form.php if else hatası sonuc için";
-       }   
-  }
+        $last_id = mysqli_insert_id($baglan);
+
+    
+	      $countfiles = count($_FILES['photos']['name']);
+		    error_log($countfiles);
+		    // Looping all files
+		    for($i=0;$i<$countfiles;$i++){
+		      $filename = $_FILES['photos']['name'][$i];
+		      // Upload file
+		      move_uploaded_file($_FILES['photos']['tmp_name'][$i],'uploads/'.$filename);
+		      $query = "INSERT INTO advert_images(advert_id,image) VALUES('$last_id','$filename')";
+		      $results = mysqli_query($baglan, $query);
+		         if ($results){
+             echo "<center>Registration Successful.</center>";           
+             }else{
+              echo "çoklu resim";
+             }  
+           }  }else{
+            echo "form.php if else hatası sonuc için";} 
+          } 
+  
  
   ?> </h1>
         </div>
 
       </main>
      
+
+
+
+
+     
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
      
             
     </div>

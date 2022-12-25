@@ -308,22 +308,42 @@ else{
    <form action="" method="">
    
     <div class="ilan-basligi">
-      <h3>İLANDAKİ HAYVANIN İSMİ</h2>
+      <h3><?php echo ($pet_name) ?></h2>
     </div>
 
     <div class="container-page">
       <div class="animal-photo">
         <div class="slideshow-container">
-          <div class="mySlides fade">
-            <img src="\img\twitter.png" class=" lazyloaded" style="width:100%">
+
+        <div class="mySlides fade">
+            <img src=<?php echo "uploads/".$first_picture;?>  class=" lazyloaded" style="width:100%">
           </div>
+        <?php
+include("connect.php");
+$sec="SELECT * FROM `advert_images` WHERE  advert_id ='".$sef."';";
+$sonuc=$baglan->query($sec);
+if($sonuc->num_rows>0){
+    while($cek=$sonuc->fetch_assoc()){
+      ?>
+
+
           <div class="mySlides fade">
-           
-<img src =<?php echo "image/jpeg'.base64_encode($first_picture).'"?>  class=" lazyloaded" style="width:100%">
+            <img src=<?php echo "uploads/".$cek['image'];?> class=" lazyloaded" style="width:100%">
           </div>
-          <div class="mySlides fade">
-           <img src =<?php echo"image/jpeg'.base64_encode($user_img).'"?> class=" lazyloaded"  style="width:100%">
-          </div>
+        
+
+          <?php
+  }
+  
+  
+}
+else{
+  echo"veri tabanı boş";
+}
+?>
+
+
+
         </div>
         <div style="text-align:center">
           <span class="dot"></span> 

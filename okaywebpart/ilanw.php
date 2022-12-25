@@ -187,7 +187,7 @@ $diff = date_diff(date_create($dogumTarihi), date_create($bugun));
         <div class='col-md-3'>
         <div class='' style='border-radius: 50px 50px 0px 0px; background-color: #F9F9F9;' onclick='selectedId(this)' >
         <a href="<?php echo "detail.php?advert_id=".$cek['advert_id'];?>" >
-        <img class='card-img-top  cardimg' src='img/64f81c3e66cef2bad398eea6eb9231a6.JPG' alt='Card image cap'>
+        <img class='card-img-top  cardimg' src=<?php echo "uploads/".$cek['first_picture'];?> alt='Card image cap'>
         </a><div class='card-body'>
         <div class='d-flex justify-content-between align-items-center'>
         <div>
@@ -247,7 +247,7 @@ $diff = date_diff(date_create($dogumTarihi), date_create($bugun));
         <div class='col-md-3'>
         <div class='' style='border-radius: 50px 50px 0px 0px; background-color: #F9F9F9;' onclick='selectedId(this)' >
         <a href="<?php echo "detail.php?advert_id=".$cek['advert_id'];?>" >
-        <img class='card-img-top  cardimg' src='img/64f81c3e66cef2bad398eea6eb9231a6.JPG' alt='Card image cap'>
+        <img class='card-img-top  cardimg' src=<?php echo "uploads/".$cek['first_picture'];?> alt='Card image cap'>
         </a><div class='card-body'>
         <div class='d-flex justify-content-between align-items-center'>
         <div>
@@ -303,7 +303,7 @@ if($sonuc->num_rows>0){
         <div class='col-md-3'>
         <div class='' style='border-radius: 50px 50px 0px 0px; background-color: #F9F9F9;' onclick='selectedId(this)' >
         <a href="<?php echo "detail.php?advert_id=".$cek['advert_id'];?>" >
-        <img class='card-img-top  cardimg' src='img/64f81c3e66cef2bad398eea6eb9231a6.JPG' alt='Card image cap'>
+        <img class='card-img-top  cardimg' src=<?php echo "uploads/".$cek['first_picture'];?> alt='Card image cap'>
         </a><div class='card-body'>
         <div class='d-flex justify-content-between align-items-center'>
         <div>
@@ -362,7 +362,7 @@ $diff = date_diff(date_create($dogumTarihi), date_create($bugun));
       <div class='col-md-3'>
       <div class='' style='border-radius: 50px 50px 0px 0px; background-color: #F9F9F9;' onclick='selectedId(this)' >
       <a href="<?php echo "detail.php?advert_id=".$cek['advert_id'];?>" >
-      <img class='card-img-top  cardimg' src='img/64f81c3e66cef2bad398eea6eb9231a6.JPG' alt='Card image cap'>
+      <img class='card-img-top  cardimg' src=<?php echo "uploads/".$cek['first_picture'];?> alt='Card image cap'>
       </a><div class='card-body'>
       <div class='d-flex justify-content-between align-items-center'>
       <div>
@@ -417,7 +417,7 @@ if($sonuc->num_rows>0){
       <div class='col-md-3'>
       <div class='' style='border-radius: 50px 50px 0px 0px; background-color: #F9F9F9;' onclick='selectedId(this)' >
       <a href="<?php echo "detail.php?advert_id=".$cek['advert_id'];?>" >
-      <img class='card-img-top  cardimg' src='img/64f81c3e66cef2bad398eea6eb9231a6.JPG' alt='Card image cap'>
+      <img class='card-img-top  cardimg' src=<?php echo "uploads/".$cek['first_picture'];?> alt='Card image cap'>
       </a><div class='card-body'>
       <div class='d-flex justify-content-between align-items-center'>
       <div>
@@ -455,13 +455,6 @@ else{
     
 
 
-  <?php
-function like(x) { 
-  if()
- }
-
-
-?>
   <script>
     function openPage(pageName,elmnt,color) {
       var i, tabcontent, tablinks;
