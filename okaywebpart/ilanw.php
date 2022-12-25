@@ -455,10 +455,13 @@ else{
     
 
 
+  <?php
+function like(x) { 
+  if()
+ }
 
 
-
-
+?>
   <script>
     function openPage(pageName,elmnt,color) {
       var i, tabcontent, tablinks;
@@ -550,8 +553,10 @@ else{
   <script type="text/javascript">
    function like(x) {
     x.classList.toggle("fa-gratipay");
+
 };
   </script>
+
   <script src="Card.js"></script>
   <script src="detail.js"></script>
   <script>
