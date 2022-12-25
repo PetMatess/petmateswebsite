@@ -215,16 +215,16 @@ include("connect.php");
   }
 ?>             </div>
             <div id="changeprofile" class="tabcontent" enctype="multipart/form-data"> 
-              <form method="POST" action="">
+              <form method="POST" action="" enctype="multipart/form-data">
                 <div class="row mt-4 mx-5">
 
                   <div class="avatar-upload  " >
                     <div class="avatar-edit">
-                        <input type="file" id="imageUpload"  name = "image" accept=".png, .jpg, .jpeg" />
-                        <label for="imageUpload" class="loa" ><img src="/img/pencil.png" width="20px" height="20px" ></label>
+                        <input type="file" id="imageUpload"  name = "photos[]" accept=".png, .jpg, .jpeg" multiple />
+                        <label for="imageUpload" class="loa" ><img src="img/pencil.png" width="20px" height="20px" ></label>
                     </div>
                     <div class="avatar-preview">
-                        <div id="imagePreview" style="background-image: url(/img/logo1.png);">
+                        <div id="imagePreview" style="background-image: url(img/logo1.png);">
                         </div>
                     </div>
                 </div>
@@ -241,27 +241,32 @@ include("connect.php");
 
               </form>
 
-
+             
       <?php
 
 include("connect.php");
   if (isset($_POST["savephoto"])  ){
-    echo "savepws butona basıldı";
       if($_POST["oldpws"] == $password){
+         $photos = $_FILES['photos']['name'];
+        
+         // Looping all files
+         $countfiles = count($_FILES['photos']['name']);
+         error_log($countfiles);
+         // Looping all files
+         for($i=0;$i<$countfiles;$i++){
+           $filename = $_FILES['photos']['name'][$i];
+           // Upload file
+           move_uploaded_file($_FILES['photos']['tmp_name'][$i],'uploads/'.$filename);
         echo "if girdi";
-        $resim_adi = mysql_real_escape_string($_FILES["image"]["name"]);
-        $resim_veri = mysql_real_escape_string(file_get_contents($_FILES["image"]["tmp_name"]));
-        $resim_turu = mysql_real_escape_string($_FILES["image"]["type"]);
-        if(substr($resim_turu,0,5) == "image")
-        {
-         mysql_query("insert into user values('$resim_veri') where user_id = '".$user_id."')");
-         echo "<script type='text/javascript'>alert('successful');</script>";
-         
-        }
-        else
-        {
-          echo "<script type='text/javascript'>alert('only photo');</script>";
-        }
+        $guncel ="update user
+      set user_img = '".$photos[0]."'
+      where user_id = '".$user_id."';";
+       $sonucu=mysqli_query($baglan,$guncel);  }  
+       if($sonucu){
+        echo "<script type='text/javascript'>alert('successful');</script>";
+       }else{
+        echo "<script type='text/javascript'>alert('error');</script>";
+       }   
 }else{
   echo "<script type='text/javascript'>alert('password is wrong');</script>";
 }
