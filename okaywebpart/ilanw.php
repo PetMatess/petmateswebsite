@@ -372,7 +372,7 @@ $diff = date_diff(date_create($dogumTarihi), date_create($bugun));
       <p id='animalId'><?php echo $cek['advert_id'] ?></p>
       </div>
       <div>
-      <i onclick=' like(this)' class='fa fa-heart-o'></i>
+      <i data-data= "data" data-url="" onclick=' like(this)' class='fa fa-heart-o'></i>
       </div>
       </div>
          
@@ -415,23 +415,30 @@ if($sonuc->num_rows>0){
        
 
       <div class='col-md-3'>
-      <div class='' style='border-radius: 50px 50px 0px 0px; background-color: #F9F9F9;' onclick='selectedId(this)' >
-      <a href="<?php echo "detail.php?advert_id=".$cek['advert_id'];?>" >
-      <img class='card-img-top  cardimg' src=<?php echo "uploads/".$cek['first_picture'];?> alt='Card image cap'>
-      </a><div class='card-body'>
-      <div class='d-flex justify-content-between align-items-center'>
-      <div>
-      <h5 class='cardtitle'><?php echo $cek['pet_name'] ?></h5>
+  
+      <div  class='' style='border-radius: 50px 50px 0px 0px; background-color: #F9F9F9;' onclick='selectedId(this)' >
+        <a href="<?php echo "detail.php?advert_id=".$cek['advert_id'];?>" >
+        <img class='card-img-top  cardimg' src=<?php echo "uploads/".$cek['first_picture'];?> alt='Card image cap'></a>
+          <div class='card-body'>
+              <div class='d-flex justify-content-between align-items-center'>
+                  <div>
+                    <h5 class='cardtitle'><?php echo $cek['pet_name'] ?></h5>
 
-      <p class='cardcity'><?php echo $cek['advert_city_name'] ?></p>
-      <p id='animalId'><?php echo $cek['advert_id'] ?></p>
-      </div>
-      <div>
-      <i onclick=' like(this)' class='fa fa-heart-o'></i>
-      </div>
-      </div>
+                    <p class='cardcity'><?php echo $cek['advert_city_name'] ?></p>
+                    <p id='animalId'><?php echo $cek['advert_id'] ?></p>
+                  </div>
+                  <div>
+
+                  <button>
+                    <i  onclick='like(this)' class='fa fa-heart-o'></i>
+                  </button>
+                      
+                   
+
+                   </div>
+                </div>
          
-      <div class='d-flex ' > 
+                  <div class='d-flex ' > 
       <div class='d-flex align-items-center ' style='font-size: 10px; padding: 5px;'><img style='width: 20px; height: 20px;'  src='img/88e42073f15a94a24e4ae7e56f70503c.png' alt=''><?php echo $cek['gender'] ?></div>
         
         <div class='d-flex align-items-center ' style='font-size: 10px; padding: 5px;'><img style='width: 20px; height: 20px;'  src='img/2591741a30ef24af7d953808babe06ab.png' alt=''><?php echo $cek['pet_breed'] ?></div>
@@ -449,7 +456,7 @@ if($sonuc->num_rows>0){
 else{
   echo"veri tabanı boş";
 }
-?>
+ ?>
     </div>
   </div>
     
@@ -544,11 +551,16 @@ else{
     
   </script>
   <script type="text/javascript">
-   function like(x) {
+    
+  function like(x) {
+    
+
     x.classList.toggle("fa-gratipay");
+    
 
 };
   </script>
+
 
   <script src="Card.js"></script>
   <script src="detail.js"></script>
@@ -576,6 +588,7 @@ else{
      
          function toggleMenu() {
              subMenu.classList.toggle("open-menu");
+
          }
      </script>
   </body>
