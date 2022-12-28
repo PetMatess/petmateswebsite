@@ -429,7 +429,14 @@ if($sonuc->num_rows>0){
                   </div>
                   <div>
 
-                  <button>
+                  <button style=" 
+  margin: 0 auto;
+  width: 50px;
+  height: 50px;
+  border-radius: 0px;
+  color: black;
+  font-size: 15px;
+">
                     <i  onclick='like(this)' class='fa fa-heart-o'></i>
                   </button>
                       
