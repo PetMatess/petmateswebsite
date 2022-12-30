@@ -73,7 +73,7 @@
   </header>
 
 <!--background-image: url(/img/pattern_edited1.jpg) ; background-size:2000px 1100px;-->
-  <div class="main-content " style="padding-top: 190px; background-color: #EFEFEF;">
+  <div class="main-content " style="padding-top: 190px; ">
     <div class="container backfont" >
       <div class="login" >
         <section class="loginpage" >

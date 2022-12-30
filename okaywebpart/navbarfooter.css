@@ -1,5 +1,7 @@
 body {
   font-family: "Montserrat" sans-serif;
+  background-image: url(img/cbfc106d5c5bcfee949464502816dae4_edited.jpg);
+  background-size:contain;
 }
 
 @media only screen and (min-width: 1200px) {
