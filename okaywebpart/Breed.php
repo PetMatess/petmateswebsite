@@ -103,13 +103,13 @@
                 </ol>
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <img class="d-block w-100" src="img/pet-health-insurance.jpg" alt="First slide">
+                        <img class="d-block w-100" src="<?php echo $r['pet-health-insurance'];?>" alt="First slide">
                     </div>
                     <div class="carousel-item">
-                        <img class="d-block w-100" src="img/maxresdefault.jpg" alt="Second slide">
+                        <img class="d-block w-100" src="<?php echo $r['maxresdefault'];?>" alt="Second slide">
                     </div>
                     <div class="carousel-item">
-                        <img class="d-block w-100" src="img/cat_care_app_ui_4x.webp" alt="Third slide">
+                        <img class="d-block w-100" src="<?php echo $r['cat_care_app_ui_4x.webp'];?>" alt="Third slide">
                     </div>
                 </div>
                 <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -148,7 +148,7 @@
                                 the earliest jobs eagerly performed by the animal destined to be called “man’s best
                                 friend.”
                             </p>
-                            <br><br><br><br>
+                            <br><br><br>
                             <hr class="my-4" />
 
                         </div>
@@ -174,7 +174,7 @@
                                 house cats, or if it is not necessary to distinguish them from other felines and small
                                 cats, they are called cats.
                                 People value the companionship of cats and their ability to hunt domestic pests.
-                                <br><br><br><br><br><br>
+                                <br><br><br><br>
                             </p>
                             <hr class="my-4" />
 
@@ -202,7 +202,7 @@
                                 of the disappearance of dinosaurs is an interesting and mysterious one.
                                 However, what they left behind is even
                                 more interesting.
-                                <br><br><br><br><br><br>
+                                <br><br><br><br>
                             </p>
                             <hr class="my-4" />
 
