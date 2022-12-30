@@ -108,7 +108,7 @@ include("userinfo.php");
   </header>
              
   <div class="main-content "
-    style="padding-top: 190px; background-image: url(img/pattern\ \(2\).jpg); background-repeat: no-repeat;">
+    style="padding-top: 190px;">
     <div class="container backfont">
       <main>
         <div class="stepper">
