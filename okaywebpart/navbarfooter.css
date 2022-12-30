@@ -206,14 +206,18 @@ body {
 .loginpage {
   padding-top: 70px;
   padding-bottom: 120px;
-  padding-left: 120px;
+  padding-left: 90px;
   justify-content: center;
   align-items: center;
   font-family: "Nunito", sans-serif;
 }
 
 input,
-
+button {
+  border: none;
+  outline: none;
+  background: none;
+}
 
 .cont {
   overflow: hidden;
@@ -353,7 +357,7 @@ button {
   top: 0;
   width: 900px;
   height: 100%;
-  background-image: url(/img/26_2908.jpg);
+  background-image: url(img/26_2908.jpg);
   background-size: cover;
   transition: -webkit-transform 1.2s ease-in-out;
   transition: transform 1.2s ease-in-out, -webkit-transform 1.2s ease-in-out;
@@ -499,6 +503,7 @@ button {
 .sign-up {
   margin-top: 10px;
 }
+
 
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap");
 
