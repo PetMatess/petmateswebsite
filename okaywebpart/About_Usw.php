@@ -1,9 +1,15 @@
+
+<?php
+include("connect.php");
+include("userinfo.php");
+
+?>
 <!doctype html>
 <html lang="en">
 
 <head>
   <!-- her sayfa için değişecek -->
-  <title>kemik</title>
+  <title>petmates.com</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="author" content="Ramazan Gencer" />
@@ -57,9 +63,7 @@
           </li>
           <li class="nav-item">
             <a class="nav-link" href="Breedw.php">Breed</a>
-          <li class="nav-item">
-            <a class="nav-link" href="Newsw.php">News</a>
-          </li>
+         
           <li class="nav-item">
             <a class="nav-link" href="About_Usw.php">About US</a>
           </li>
@@ -72,20 +76,21 @@
                 <h3><?php echo "$name" ?> </h3>
             </div>
             <hr />
-
-            <a href="user_edit.php" class="sub-menu-link">
-                <img src="img/pencil.png" >
-                <p>Edit Profile</p>
+            <a href="MyFavorites.php" class="sub-menu-link">
+                <img src="img/acunt.png" >
+                <p>My Profile</p>
                 <span>></span>
             </a>
-            
-
-            <a href="#" class="sub-menu-link">
+            <a href="Adverts_add.php" class="sub-menu-link">
+              <img src="img/add.png" >
+                <p>Advert add</p>
+                <span>></span>
+            </a>
+            <a href="privacy_policy.php" class="sub-menu-link">
               <img src="img/privacy.png" >
                 <p>Privacy</p>
                 <span>></span>
             </a>
-
             <a href="logout.php" class="sub-menu-link">
               <img src="img/logout.png" >
                 <p>Logout</p>
@@ -292,6 +297,14 @@
         });
       });
     </script>
+    <script>
+         
+         let subMenu = document.getElementById("subMenu");
+     
+         function toggleMenu() {
+             subMenu.classList.toggle("open-menu");
+         }
+     </script>
 
 </body>
 

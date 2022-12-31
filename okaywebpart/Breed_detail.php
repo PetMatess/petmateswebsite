@@ -78,9 +78,7 @@ echo ("ürün ulaşılmadı");
           </li>
           <li class="nav-item">
             <a class="nav-link" href="Breed.php">Breed</a>
-          <li class="nav-item">
-            <a class="nav-link" href="#">News</a>
-          </li>
+          
           <li class="nav-item">
             <a class="nav-link" href="About_Us.php">About US</a>
           </li>
@@ -167,10 +165,10 @@ if($sonuc->num_rows>0){
                                                         class="attachment-rectangle_thumbnail size-rectangle_thumbnail" style="border-radius: 3em 3em 3em 3em;">
                                                     <br><br>    
                                                     <p style="font-family: Kadwa;">
-                                                    <?php echo $cek['info'] ?>
+                                                    <?php echo $info ?>
                                                     </p>
                                                 </div>
-        
+                                                
                                             </div>
                                         </div>
                                     </div>

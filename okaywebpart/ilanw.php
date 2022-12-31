@@ -3,6 +3,7 @@
 <?php
 include("connect.php");
 include("userinfo.php");
+
 ?>
 
 <!doctype html>
@@ -82,33 +83,30 @@ include("userinfo.php");
             <a class="nav-link" href="About_Usw.php">About US</a>
           </li>
         </ul>
-          <img src=<?php echo "uploads/".$user_img;?> class="user" onclick="toggleMenu()"  style="height:90px; width: 90px;"/>
+        <img src=<?php echo "uploads/".$user_img;?>  class="user" onclick="toggleMenu()"  style="height:90px; width: 90px;"/>
     <div class="sub-menu-wrap" id="subMenu">
         <div class="sub-menu">
             <div class="user-info">
-               <img src=<?php echo "uploads/".$user_img;?> >
+               <img src=<?php echo "uploads/".$user_img;?>  >
                 <h3><?php echo "$name" ?> </h3>
             </div>
             <hr />
 
-            <a href="user_edit.php" class="sub-menu-link">
-                <img src="img/pencil.png" >
-                <p>Edit Profile</p>
+            <a href="MyFavorites.php" class="sub-menu-link">
+                <img src="img/acunt.png" >
+                <p>My Profile</p>
                 <span>></span>
             </a>
-            
             <a href="Adverts_add.php" class="sub-menu-link">
-                <img src="img/pencil.png" >
-                <p>Adverts Add</p>
+              <img src="img/add.png" >
+                <p>Advert add</p>
                 <span>></span>
             </a>
-
-            <a href="#" class="sub-menu-link">
+            <a href="privacy_policy.php" class="sub-menu-link">
               <img src="img/privacy.png" >
                 <p>Privacy</p>
                 <span>></span>
             </a>
-
             <a href="logout.php" class="sub-menu-link">
               <img src="img/logout.png" >
                 <p>Logout</p>
@@ -133,7 +131,9 @@ include("userinfo.php");
 
   <div class="navbar  "  >
     <div id="typeBar" class="form-inline m-auto">
-     
+
+   
+  
       <div style=" padding: 5px 20px !important;">
           <div class="btn  btn-outline-secondary nav-link type-bar index-test tablink " onclick="openPage('mix', this, 'pink')"id="defaultOpen">
             <img class="index-img" src="img/9f43d521e6825f48958825c38be21ff2.png" alt="">All
@@ -300,31 +300,31 @@ if($sonuc->num_rows>0){
 
        
 
-        <div class='col-md-3'>
-        <div class='' style='border-radius: 50px 50px 0px 0px; background-color: #F9F9F9;' onclick='selectedId(this)' >
-        <a href="<?php echo "detail.php?advert_id=".$cek['advert_id'];?>" >
-        <img class='card-img-top  cardimg' src=<?php echo "uploads/".$cek['first_picture'];?> alt='Card image cap'>
-        </a><div class='card-body'>
-        <div class='d-flex justify-content-between align-items-center'>
-        <div>
-        <h5 class='cardtitle'><?php echo $cek['pet_name'] ?></h5>
+            <div class='col-md-3'>
+            <div class='' style='border-radius: 50px 50px 0px 0px; background-color: #F9F9F9;' onclick='selectedId(this)' >
+            <a href="<?php echo "detail.php?advert_id=".$cek['advert_id'];?>" >
+            <img class='card-img-top  cardimg' src=<?php echo "uploads/".$cek['first_picture'];?> alt='Card image cap'>
+            </a><div class='card-body'>
+            <div class='d-flex justify-content-between align-items-center'>
+            <div>
+            <h5 class='cardtitle'><?php echo $cek['pet_name'] ?></h5>
 
-        <p class='cardcity'><?php echo $cek['advert_city_name'] ?></p>
-        <p id='animalId'><?php echo $cek['advert_id'] ?></p>
-        </div>
-        <div>
-        <i onclick=' like(this)' class='fa fa-heart-o'></i>
-        </div>
-        </div>
-           
-        <div class='d-flex ' > 
-        <div class='d-flex align-items-center ' style='font-size: 10px; padding: 5px;'><img style='width: 20px; height: 20px;'  src='img/88e42073f15a94a24e4ae7e56f70503c.png' alt=''><?php echo $cek['gender'] ?></div>
-        
-        <div class='d-flex align-items-center ' style='font-size: 10px; padding: 5px;'><img style='width: 20px; height: 20px;'  src='img/2591741a30ef24af7d953808babe06ab.png' alt=''><?php echo $cek['pet_breed'] ?></div>
-        <div class='d-flex align-items-center ' style='font-size: 10px; padding: 5px;'><img style='width: 20px; height: 20px;'  src='img/5e07484fa0adae51e26d5d8fe3c09253.png' alt=''><?php echo $diff->format('%y y-%m m')  ?></div></div> 
-        </div>
-        </div>
-        </div>
+            <p class='cardcity'><?php echo $cek['advert_city_name'] ?></p>
+            <p id='animalId'><?php echo $cek['advert_id'] ?></p>
+            </div>
+            <div>
+            <i onclick=' like(this)' class='fa fa-heart-o'></i>
+            </div>
+            </div>
+              
+            <div class='d-flex ' > 
+            <div class='d-flex align-items-center ' style='font-size: 10px; padding: 5px;'><img style='width: 20px; height: 20px;'  src='img/88e42073f15a94a24e4ae7e56f70503c.png' alt=''><?php echo $cek['gender'] ?></div>
+            
+            <div class='d-flex align-items-center ' style='font-size: 10px; padding: 5px;'><img style='width: 20px; height: 20px;'  src='img/2591741a30ef24af7d953808babe06ab.png' alt=''><?php echo $cek['pet_breed'] ?></div>
+            <div class='d-flex align-items-center ' style='font-size: 10px; padding: 5px;'><img style='width: 20px; height: 20px;'  src='img/5e07484fa0adae51e26d5d8fe3c09253.png' alt=''><?php echo $diff->format('%y y-%m m')  ?></div></div> 
+            </div>
+            </div>
+            </div>
         
 
         <?php
@@ -428,8 +428,8 @@ if($sonuc->num_rows>0){
                     <p id='animalId'><?php echo $cek['advert_id'] ?></p>
                   </div>
                   <div>
-
-                  <button style=" 
+                  
+  <button  id= "likebutton" data-mesaj="<?php echo $cek['advert_id'] ?>" style=" 
   margin: 0 auto;
   width: 50px;
   height: 50px;
@@ -437,10 +437,11 @@ if($sonuc->num_rows>0){
   color: black;
   font-size: 15px;
 ">
-                    <i  onclick='like(this)' class='fa fa-heart-o'></i>
+  
+
+     <i onclick=' like(this)' class='fa fa-heart-o'></i>
                   </button>
-                      
-                   
+                       
 
                    </div>
                 </div>
@@ -452,8 +453,8 @@ if($sonuc->num_rows>0){
         <div class='d-flex align-items-center ' style='font-size: 10px; padding: 5px;'><img style='width: 20px; height: 20px;'  src='img/5e07484fa0adae51e26d5d8fe3c09253.png' alt=''><?php echo $diff->format('%y y-%m m')  ?></div></div> 
          </div>
       </div>
-      </div>
-      
+     
+       </div>
 
       <?php
   }
@@ -463,13 +464,12 @@ if($sonuc->num_rows>0){
 else{
   echo"veri tabanı boş";
 }
- ?>
+ ?> 
     </div>
   </div>
-    
-
-
+ 
   <script>
+
     function openPage(pageName,elmnt,color) {
       var i, tabcontent, tablinks;
       tabcontent = document.getElementsByClassName("tabcontent");
@@ -557,18 +557,55 @@ else{
     });
     
   </script>
+
   <script type="text/javascript">
     
   function like(x) {
-    
-
     x.classList.toggle("fa-gratipay");
-    
+ 
 
 };
+</script>
+<script type="text/javascript">
+document.getElementById("likebutton").addEventListener("click", function() {
+  // PHP fonksiyonunu çağırın
+  var buton = document.getElementById("likebutton");
+  var advertId= buton.dataset.mesaj;
+
+  <?php likeit(  "`
+  advertId;
+`"); ?>
+});
+
   </script>
+   <?php 
+ function likeit($id) {
+  
 
+include("connect.php");
+  
+    echo"eklendi";
+      $ekli ="insert into user_fav_adverts(user_id, advert_id) values
+      ('".$user_id."','".$id."')";
+       $sonuc=mysqli_query($baglan,$ekli);
+       if($sonuc){  
+        echo("ok");
+       }else{
+        echo("no");
+       }
+      
+      }
+      
+?>
 
+ <script>
+         
+         let subMenu = document.getElementById("subMenu");
+     
+         function toggleMenu() {
+             subMenu.classList.toggle("open-menu");
+         }
+     </script>
   <script src="Card.js"></script>
   <script src="detail.js"></script>
   <script>
@@ -589,14 +626,6 @@ else{
     // Get the element with id="defaultOpen" and click on it
     document.getElementById("defaultOpen").click();
     </script>
-    <script>
-         
-         let subMenu = document.getElementById("subMenu");
      
-         function toggleMenu() {
-             subMenu.classList.toggle("open-menu");
-
-         }
-     </script>
   </body>
 </html>

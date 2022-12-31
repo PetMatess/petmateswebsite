@@ -7,7 +7,7 @@ include("userinfo.php");
 
 <head>
   <!-- her sayfa için değişecek -->
-  <title>kemik</title>
+  <title>Petmates.com</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="author" content="Adem Doğan" />
@@ -65,35 +65,35 @@ include("userinfo.php");
           </li>
           <li class="nav-item">
             <a class="nav-link" href="Breedw.php">Breed</a>
-          <li class="nav-item">
-            <a class="nav-link" href="Newsw.php">News</a>
-          </li>
+          
           <li class="nav-item">
             <a class="nav-link" href="About_Usw.php">About US</a>
           </li>
         </ul>
-          <img src="img/WhatsApp-Profil-Resmi-29.webp" class="user" onclick="toggleMenu()"  style="height:90px; width: 90px;"/>
+          <img src=<?php echo "uploads/".$user_img;?>  class="user" onclick="toggleMenu()"  style="height:90px; width: 90px;"/>
     <div class="sub-menu-wrap" id="subMenu">
         <div class="sub-menu">
             <div class="user-info">
-               <img src="img/WhatsApp-Profil-Resmi-29.webp" >
+               <img src=<?php echo "uploads/".$user_img;?>  >
                 <h3><?php echo "$name" ?> </h3>
             </div>
             <hr />
 
-            <a href="user_edit.php" class="sub-menu-link">
-                <img src="img/pencil.png" >
-                <p>Edit Profile</p>
+            <a href="MyFavorites.php" class="sub-menu-link">
+                <img src="img/acunt.png" >
+                <p>My Profile</p>
                 <span>></span>
             </a>
-            
-
-            <a href="#" class="sub-menu-link">
+            <a href="Adverts_add.php" class="sub-menu-link">
+              <img src="img/add.png" >
+                <p>Advert add</p>
+                <span>></span>
+            </a>
+            <a href="privacy_policy.php" class="sub-menu-link">
               <img src="img/privacy.png" >
                 <p>Privacy</p>
                 <span>></span>
             </a>
-
             <a href="logout.php" class="sub-menu-link">
               <img src="img/logout.png" >
                 <p>Logout</p>
@@ -137,20 +137,13 @@ include("userinfo.php");
             <option value="Male">Male</option>
             
           </select>
+
           <h6 class="Date">Pet Type</h6>
-          <select class="form-select" name="pet_type" aria-label="Default select example" placeholder="Gender">
-
-            <option value="1">Female</option>
-            <option value="2">Male</option>
-            <option value="3"> Other</option>
-          </select>
+          <input type="text"  name="pet_type" placeholder="Pet Type" />
+       
           <h6 class="Date">Pet Breed</h6>
-          <select class="form-select" name="pet_breed" aria-label="Default select example" placeholder="Gender">
-
-            <option value="1">Female</option>
-            <option value="2">Male</option>
-            <option value="3"> Other</option>
-          </select>
+          <input type="text"  name="pet_breed" placeholder="Pet Breed" />
+          
           
           <h6 class="Date">Pet Breed Description</h6>
           <input type="text"  name="description" placeholder="Description" class="desc">
@@ -270,41 +263,9 @@ echo $time_now;
         </div>
 
       </main>
-     
-
-
-
-
-     
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-     
             
     </div>
   </div>
-
-
-
-               
-
-
-
-
 
 
   <footer class="d-flex flex-wrap justify-content-between align-items-center py-3  footer">
@@ -366,11 +327,7 @@ echo $time_now;
     });
     
   </script>
-  <script type="text/javascript">
-   function like(x) {
-    x.classList.toggle("fa-gratipay");
-};
-  </script>
+  
  
   <script>
     function openPage(pageName,elmnt,color) {
