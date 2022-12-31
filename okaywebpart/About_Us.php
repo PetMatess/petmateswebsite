@@ -3,7 +3,7 @@
 
 <head>
   <!-- her sayfa için değişecek -->
-  <title>kemik</title>
+  <title>petmates.com</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="author" content="Ramazan Gencer" />
@@ -58,9 +58,6 @@
           <li class="nav-item">
             <a class="nav-link" href="Breed.php">Breed</a>
           
-          <li class="nav-item">
-            <a class="nav-link" href="News.php">News</a>
-          </li>
           <li class="nav-item">
             <a class="nav-link" href="About_us.php">About Us</a>
           </li>

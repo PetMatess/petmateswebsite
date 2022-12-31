@@ -61,9 +61,7 @@
           </li>
           <li class="nav-item">
             <a class="nav-link" href="Breed.php">Breed</a>
-          <li class="nav-item">
-            <a class="nav-link" href="#">News</a>
-          </li>
+         
           <li class="nav-item">
             <a class="nav-link" href="About_Us.php">About US</a>
           </li>

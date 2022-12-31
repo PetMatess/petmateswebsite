@@ -204,8 +204,9 @@ main {
   border-right: 1px solid rgb(212, 209, 209);
 }
 #form1{
-  margin-top:290px;
+  margin-top:-290px;
   margin-bottom: 200px;
+  margin-left: -200;
 }
 .form {
   background: #fff;

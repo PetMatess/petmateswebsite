@@ -140,9 +140,7 @@ else{
           </li>
           <li class="nav-item">
             <a class="nav-link" href="Breedw.php">Breed</a>
-          <li class="nav-item">
-            <a class="nav-link" href="Newsw.php">News</a>
-          </li>
+          
           <li class="nav-item">
             <a class="nav-link" href="About_Usw.php">About US</a>
           </li>
@@ -156,19 +154,21 @@ else{
             </div>
             <hr />
 
-            <a href="user_edit.php" class="sub-menu-link">
-                <img src="img/pencil.png" >
-                <p>Edit Profile</p>
+            <a href="MyFavorites.php" class="sub-menu-link">
+                <img src="img/acunt.png" >
+                <p>My Profile</p>
                 <span>></span>
             </a>
-            
-
-            <a href="#" class="sub-menu-link">
+            <a href="Adverts_add.php" class="sub-menu-link">
+              <img src="img/add.png" >
+                <p>Advert add</p>
+                <span>></span>
+            </a>
+            <a href="privacy_policy.php" class="sub-menu-link">
               <img src="img/privacy.png" >
                 <p>Privacy</p>
                 <span>></span>
             </a>
-
             <a href="logout.php" class="sub-menu-link">
               <img src="img/logout.png" >
                 <p>Logout</p>

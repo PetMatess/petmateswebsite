@@ -5,7 +5,7 @@ body {
 }
 
 @media only screen and (min-width: 1200px) {
-  .nav-item>.nav-link {
+  .nav-item > .nav-link {
     padding: 5px 20px !important;
     display: block !important;
   }
@@ -15,16 +15,13 @@ body {
   .header-inner {
     background-color: white !important;
   }
-
-  .nav-item>.nav-link {
+  .nav-item > .nav-link {
     color: black !important;
   }
-
   .logo {
     color: #000 !important;
     font-weight: 600 !important;
   }
-
   .content-banner .first-title {
     font-size: 30px !important;
   }
@@ -43,19 +40,16 @@ body {
 .logo {
   color: #ffffff;
 }
-
 .logofont {
   font-family: "Kalam", cursive;
   font-style: normal;
   font-weight: 400;
   font-size: 64px;
 }
-
 .logoimg {
   width: 150px;
   margin: -3px 5px 0px 0px;
 }
-
 .logobottom {
   font-family: "JejuMyeongjo", cursive;
   font-style: normal;
@@ -65,7 +59,6 @@ body {
   left: 250px;
   top: 100px;
 }
-
 .nav-item .nav-link {
   display: block;
   line-height: 36px;
@@ -111,7 +104,6 @@ body {
 .navbar-scroll .nav-item .nav-link {
   color: black;
 }
-
 .navbar-scroll .nav-item .nav-link:hover {
   color: #b386ef;
 }
@@ -122,12 +114,10 @@ body {
   font-weight: 400;
   font-size: 28px;
 }
-
 .navbar-scroll .logoimg {
   width: 60px;
   margin: -3px 5px 0px 0px;
 }
-
 .navbar-scroll .logobottom {
   font-family: "JejuMyeongjo", cursive;
   font-style: normal;
@@ -135,14 +125,13 @@ body {
   font-size: 12px;
   position: absolute;
   left: 110px;
-  top: 60px;
+  top: 48px;
 }
 
 .navbar-scroll .header-btn {
   color: #ffffff;
   background-color: gray;
 }
-
 .navbar-scroll .header-btn:hover {
   color: #ffffff;
   background-color: #b386ef;
@@ -227,7 +216,7 @@ button {
   overflow: hidden;
   position: relative;
   width: 900px;
-  height: 550px;
+  
   background: #fff;
 }
 
@@ -503,7 +492,6 @@ button {
   -webkit-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
 }
-
 .sign-up {
   margin-top: 10px;
 }
@@ -526,33 +514,27 @@ button {
   overflow: hidden;
   transition: max-height 0.5s;
 }
-
 .sub-menu-wrap.open-menu {
   max-height: 450px;
 }
-
 .sub-menu {
   background: #ede9f9;
   padding: 20px;
   margin: 10px;
   border-radius: 10%;
 }
-
 .user-info {
   display: flex;
   align-items: center;
 }
-
 .user-info h3 {
   font-weight: 500;
 }
-
 .user-info img {
   width: 60px;
   border-radius: 50%;
   margin-right: 15px;
 }
-
 .sub-menu hr {
   border: 0;
   height: 1px;
@@ -560,7 +542,6 @@ button {
   background: #ccc;
   margin: 15px 0 10px;
 }
-
 .sub-menu-link {
   display: flex;
   align-items: center;
@@ -568,13 +549,11 @@ button {
   color: #525252;
   margin: 12px 0;
 }
-
 .sub-menu-link p {
   width: 100%;
   font-family: "Roboto", sans-serif;
   margin-top: 18px;
 }
-
 .sub-menu-link img {
   width: 40px;
   background: #e5e5e5;
@@ -582,21 +561,17 @@ button {
   padding: 8px;
   margin-right: 15px;
 }
-
 .sub-menu-link span {
   font-size: 22px;
   transition: transform 0.5s;
 }
-
 .sub-menu-link:hover span {
   transform: translateX(5px);
 }
-
 .sub-menu-link:hover p {
   font-weight: 600;
   color: #ba68c8;
 }
-
 /*Sub menu end*/
 
 /*About Us Page Start*/
@@ -617,7 +592,6 @@ button {
   transition: all 0.2s linear;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-
 .card1 {
   height: 560px;
   width: 320px;
@@ -629,14 +603,12 @@ button {
   background-color: #222;
   font-family: "Roboto Condensed", sans-serif;
 }
-
 .card1 .bg-image img {
   width: 100%;
   height: 200px;
   object-fit: cover;
   clip-path: polygon(0 0, 100% 0%, 100% 70%, 45% 100%, 0 70%);
 }
-
 .card1 .pic img {
   height: 250px;
   width: 250px;
@@ -645,25 +617,21 @@ button {
   margin-top: -150px;
   position: relative;
 }
-
 .card1 .info h3 {
   color: #f0f0f0;
   font-size: 20px;
   padding: 10px 0;
 }
-
 .card1 .info span {
   font-size: 15px;
   color: #aac4ff;
   font-family: "Roboto Condensed", sans-serif;
 }
-
 .card1 .info p {
   font-size: 13px;
   padding: 10px 20px;
   color: #999;
 }
-
 .card1 .info .iconss a {
   font-size: 50px;
   text-decoration: none;
@@ -671,7 +639,6 @@ button {
   margin-top: 20px;
   padding: 0 5px;
 }
-
 .iconss {
   font-size: 30px;
 }
@@ -683,127 +650,127 @@ button {
 /* search button */
 
 .main-search-input {
-  background: #f8f3ff;
-  padding: 0 200px 0 0;
-  border-radius: 20px;
-  margin-top: 30px;
-  box-shadow: 0px 0px 0px 6px rgba(255, 255, 255, 0.3);
+    background: #f8f3ff;
+    padding: 0 200px 0 0;
+    border-radius: 20px;
+    margin-top: 30px;
+    box-shadow: 0px 0px 0px 6px rgba(255,255,255,0.3);
 }
 
 .fl-wrap {
-  float: right;
-  width: 100%;
-  position: relative;
+    float: right;
+    width: 100%;
+    position: relative;
 }
 
 .main-search-input:before {
-  content: '';
-  position: absolute;
-  bottom: -40px;
-  width: 50px;
-  height: 1px;
-  background: rgba(255, 255, 255, 0.41);
-  left: 50%;
-  margin-left: -25px;
+    content: '';
+    position: absolute;
+    bottom: -40px;
+    width: 50px;
+    height: 1px;
+    background: rgba(255,255,255,0.41);
+    left: 50%;
+    margin-left: -25px;
 }
 
 .main-search-input-item {
-  float: left;
-  width: 70%;
-  box-sizing: border-box;
-  border-right: 1px solid #f8f3ff;
-  height: 50px;
-  position: relative;
+    float: left;
+    width: 70%;
+    box-sizing: border-box;
+    border-right: 1px solid  #f8f3ff;
+    height: 50px;
+    position: relative;
 }
 
 .main-search-input-item input:first-child {
-  border-radius: 100%;
+    border-radius: 100%;
 }
 
 .main-search-input-item input {
-  float: left;
-  border: none;
-  width: 100%;
-  height: 50px;
-  padding-left: 20px;
+    float: left;
+    border: none;
+    width: 100%;
+    height: 50px;
+    padding-left: 20px;
+}
+
+.main-search-button{
+
+      background: #4DB7FE;
 }
 
 .main-search-button {
-
-  background: #4DB7FE;
-}
-
-.main-search-button {
-  position: absolute;
-  right: 0px;
-  height: 50px;
-  width: 120px;
-  color: #fff;
-  top: 0;
-  border: none;
-  border-top-right-radius: 0px;
-  border-bottom-right-radius: 0px;
-  cursor: pointer;
+    position: absolute;
+    right: 0px;
+    height: 50px;
+    width: 120px;
+    color: #fff;
+    top: 0;
+    border: none;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+    cursor: pointer;
 }
 
 .main-search-input-wrap {
-  max-width: 500px;
-  margin: 20px auto;
-  position: relative;
+    max-width: 500px;
+    margin: 20px auto;
+    position: relative;
 }
 
 :focus {
-  outline: 0;
+    outline: 0;
 }
 
 
-@media only screen and (max-width: 768px) {
-  .main-search-input {
-    background: rgba(255, 255, 255, 0.2);
+@media only screen and (max-width: 768px){
+.main-search-input {
+    background: rgba(255,255,255,0.2);
     padding: 14px 20px 10px;
     border-radius: 10px;
-    box-shadow: 0px 0px 0px 10px rgba(255, 255, 255, 0.0);
-  }
+    box-shadow: 0px 0px 0px 10px rgba(255,255,255,0.0);
+}
 
-  .main-search-input-item {
+.main-search-input-item {
     width: 100%;
     border: 1px solid rgb(176, 29, 29);
     height: 50px;
     border: none;
     margin-bottom: 10px;
-  }
+}
 
-  .main-search-input-item input {
+.main-search-input-item input {
     border-radius: 6px !important;
     background: #fff;
-  }
+}
 
-  .main-search-button {
+.main-search-button {
     position: relative;
     float: left;
     width: 100%;
     border-radius: 6px;
-  }
+}   
 
-  /* search button end*/
+/* search button end*/
 
-  .bree {
+.bree{
     color: #b386ef;
     text-align: center;
     padding-top: 0.1px;
     font-weight: bolder;
-    font-size: x-large;
-  }
-
-  .card-text {
-    font-family: 'Maven Pro';
-  }
-
-  .card-title {
-    font-family: Tienne;
-  }
-
+    font-size: x-large;	
 }
+	
+.card-text {
+    font-family: 'Maven Pro';
+}
+
+.card-title {
+    font-family: Tienne;
+}
+}
+
 
 
 
