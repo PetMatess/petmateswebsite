@@ -381,7 +381,17 @@ black;">
     //$cek=$result->fetch_assoc();
       echo "butona basıldı";
 
-  
+    
+
+      $guncel ="DELETE FROM adverts WHERE advert_id = '".$cek['advert_id']."'
+      where publisher_id = '"$user_id"';";
+
+       $sonucu=mysqli_query($baglan,$guncel);   
+       if($sonucu){
+           echo"silindi";
+       }else{
+           echo "güncelleme hatası";
+       }   
   }
  
 
