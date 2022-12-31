@@ -1,4 +1,35 @@
 
+<?php
+include("connect.php");
+include("userinfo.php");
+?>
+
+
+
+<?php
+include("connect.php");
+$sec="SELECT * FROM `adverts` WHERE publisher_id = $user_id;";
+$sonuc=$baglan->query($sec);
+if($sonuc->num_rows>0){
+    while($cek=$sonuc->fetch_assoc()){
+      $dogumTarihi = $cek['birthday'];
+$bugun = date("Y-m-d");
+$diff = date_diff(date_create($dogumTarihi), date_create($bugun));
+      
+
+}
+    echo "geldi";
+    
+}
+else{
+    echo"empt";
+}
+
+
+
+?>
+
+
 
 
 
@@ -271,6 +302,113 @@
               </div>
 
 
+
+
+
+
+
+              <?php
+include("connect.php");
+$sec="SELECT * FROM `adverts` WHERE publisher_id = $user_id;";
+$sonuc=$baglan->query($sec);
+if($sonuc->num_rows>0){
+    while($cek=$sonuc->fetch_assoc()){
+      $dogumTarihi = $cek['birthday'];
+$bugun = date("Y-m-d");
+$diff = date_diff(date_create($dogumTarihi), date_create($bugun));
+      
+?>
+
+<div class="postcard__preview-txt2" style="color: 
+black;">
+
+                <div class='ilan-style' style=' background-color: #F9F9F9;' onclick='selectedId(this)'>
+                  <a href="<?php echo " detail.php?advert_id=".$cek['advert_id'];?>">
+                    <div class="adverts-img" style="background-image: url(<?php echo "uploads/".$cek['first_picture'];?>);
+              background-repeat: no-repeat; width: 250px ; height: 220px; background-size: contain;
+              ">
+              
+            </div>
+                  </a>
+                  <form action="" method="post">
+                  <button name = "guncelle" class="delete-adverts"><img src="img/x.png" style="width: 20px; height:20px "></button>
+                  </form>
+                  <div class='card-body'>
+                    <div class='d-flex justify-content-between align-items-center'>
+                      <div>
+                        <h5 class='cardtitle'>
+                          <?php echo $cek['pet_name'] ?>
+                        </h5>
+
+                        <p class='cardcity'>
+                          <?php echo $cek['advert_city_name'] ?>
+                        </p>
+                        <p id='animalId'>
+                          <?php echo $cek['advert_id'] ?>
+                        </p>
+                      </div>
+                      <div>
+                        <i onclick=' like(this)' class='fa fa-heart-o'></i>
+                      </div>
+                    </div>
+
+                    <div class='d-flex '>
+                      <div class='d-flex align-items-center ' style='font-size: 10px; padding: 5px 5px;'><img
+                          style='width: 20px; height: 20px;' src='img/88e42073f15a94a24e4ae7e56f70503c.png' alt=''>
+                        <?php echo $cek['gender'] ?>
+                      </div>
+
+                      <div class='d-flex align-items-center ' style='font-size: 10px; padding: 5px 5px;'><img
+                          style='width: 20px; height: 20px;' src='img/2591741a30ef24af7d953808babe06ab.png' alt=''>
+                        <?php echo $cek['pet_breed'] ?>
+                      </div>
+                      <div class='d-flex align-items-center ' style='font-size: 10px; padding: 5px 5px;'><img
+                          style='width: 20px; height: 20px;' src='img/5e07484fa0adae51e26d5d8fe3c09253.png' alt=''>
+                        <?php echo $diff->format('%y y-%m m')  ?>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+
+              </div>
+
+
+<?php             
+     if (isset($_POST["guncelle"])){
+    //$sec="select CID FROM blood_center where B_Name='".$_POST["B_Name"]."'";
+    //$result=$baglan->query($sec);
+    //$cek=$result->fetch_assoc();
+      echo "butona basıldı";
+
+  
+  }
+ 
+
+
+}
+    }
+else{
+    echo"empt";
+}
+
+
+
+?>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
               <div class="postcard__preview-txt2">
 
                 <div class='ilan-style' style=' background-color: #F9F9F9;' onclick='selectedId(this)'>
@@ -318,6 +456,20 @@
 
 
               </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
             </div>
 
           </div>
