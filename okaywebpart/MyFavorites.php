@@ -168,14 +168,15 @@ else{
             <div class="postcard__bar"></div>
             <div class="postcard__preview-txt">
 
+
               <div class="Info-user">
-                <h4>Name :</h4>
-                <h4>Surname:</h4>
-                <h4>Email:</h4>
-                <h4>Mobile Number:</h4>
-                <h4 class="adress">Adress:</h4>
+                <h4>Name : <?php echo $name ?> </h4>
+                <h4>Surname :  <?php echo $lastname ?></h4>
+                <h4>Email : <?php echo $email ?></h4>
+                <h4>Mobile Number : <?php echo $phone ?></h4>
+                
               </div>
-              <div class="change-button"><a href="/user_edit.html">
+              <div class="change-button"><a href="user_edit.php">
                   <button class="button-c">Change Your Information</button></a>
               </div>
 
@@ -191,7 +192,7 @@ else{
           </a>
           <div class="postcard__text t-dark">
             <h1 class="postcard__title blue"><a href="#">MyAdverts</a></h1>
-            <div class="change-button" style="margin-left: 150px; display: inline-block;"><a href="/user_edit.html">
+            <div class="change-button" style="margin-left: 150px; display: inline-block;"><a href="Adverts_add.php">
                 <button class="button-c">New Adverts</button></a>
             </div>
             <div class="postcard__subtitle small">
@@ -199,107 +200,7 @@ else{
             </div>
             <div class="cards-adverts" style="display: inline-block;">
            
-              <div class="postcard__preview-txt2">
-
-   
-
-                <div class='ilan-style' style=' background-color: #F9F9F9;' onclick='selectedId(this)'>
-
-
-                  <a href="<?php echo " detail.php?advert_id=".$cek['advert_id'];?>">
-                    <div class="adverts-img" style="background-image: url(img/close-up-of-cat-wearing-sunglasses-while-sitting-royalty-free-image-1571755145.jpg);
-                        background-repeat: no-repeat; width: 250px ; height: 220px; background-size: contain;
-                        "><button class="delete-adverts"><img src="img/x.png" style="width: 20px; height:20px "></button></div>
-                          </a>
-
-
-
-                  <div class='card-body'>
-                    <div class='d-flex justify-content-between align-items-center'>
-                      <div>
-                        <h5 class='cardtitle'>
-                          <?php echo $cek['pet_name'] ?>
-                        </h5>
-
-                        <p class='cardcity'>
-                          <?php echo $cek['advert_city_name'] ?>
-                        </p>
-                        <p id='animalId'>
-                          <?php echo $cek['advert_id'] ?>
-                        </p>
-                      </div>
-                      <div>
-                        <i onclick=' like(this)' class='fa fa-heart-o'></i>
-                      </div>
-                    </div>
-
-                    <div class='d-flex '>
-                      <div class='d-flex align-items-center ' style='font-size: 10px; padding: 100px 5px 5px;'><img
-                          style='width: 20px; height: 20px;' src='img/88e42073f15a94a24e4ae7e56f70503c.png' alt=''>
-                        <?php echo $cek['gender'] ?>
-                      </div>
-
-                      <div class='d-flex align-items-center ' style='font-size: 10px; padding: 100px 5px 5px;'><img
-                          style='width: 20px; height: 20px;' src='img/2591741a30ef24af7d953808babe06ab.png' alt=''>
-                        <?php echo $cek['pet_breed'] ?>
-                      </div>
-                      <div class='d-flex align-items-center ' style='font-size: 10px; padding: 100px 5px 5px;'><img
-                          style='width: 20px; height: 20px;' src='img/5e07484fa0adae51e26d5d8fe3c09253.png' alt=''>
-                        <?php echo $diff->format('%y y-%m m')  ?>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              
-
-              <div class="postcard__preview-txt2">
-
-                <div class='ilan-style' style=' background-color: #F9F9F9;' onclick='selectedId(this)'>
-                  <a href="<?php echo " detail.php?advert_id=".$cek['advert_id'];?>">
-                    <div class="adverts-img" style="background-image: url(img/close-up-of-cat-wearing-sunglasses-while-sitting-royalty-free-image-1571755145.jpg);
-            background-repeat: no-repeat; width: 250px ; height: 220px; background-size: contain;
-            "><button class="delete-adverts"><img src="img/x.png" style="width: 20px; height:20px "></button></div>
-                  </a>
-                  <div class='card-body'>
-                    <div class='d-flex justify-content-between align-items-center'>
-                      <div>
-                        <h5 class='cardtitle'>
-                          <?php echo $cek['pet_name'] ?>
-                        </h5>
-
-                        <p class='cardcity'>
-                          <?php echo $cek['advert_city_name'] ?>
-                        </p>
-                        <p id='animalId'>
-                          <?php echo $cek['advert_id'] ?>
-                        </p>
-                      </div>
-                      <div>
-                        <i onclick=' like(this)' class='fa fa-heart-o'></i>
-                      </div>
-                    </div>
-
-                    <div class='d-flex '>
-                      <div class='d-flex align-items-center ' style='font-size: 10px; padding: 100px 5px 5px;'><img
-                          style='width: 20px; height: 20px;' src='img/88e42073f15a94a24e4ae7e56f70503c.png' alt=''>
-                        <?php echo $cek['gender'] ?>
-                      </div>
-
-                      <div class='d-flex align-items-center ' style='font-size: 10px; padding: 100px 5px 5px;'><img
-                          style='width: 20px; height: 20px;' src='img/2591741a30ef24af7d953808babe06ab.png' alt=''>
-                        <?php echo $cek['pet_breed'] ?>
-                      </div>
-                      <div class='d-flex align-items-center ' style='font-size: 10px; padding: 100px 5px 5px;'><img
-                          style='width: 20px; height: 20px;' src='img/5e07484fa0adae51e26d5d8fe3c09253.png' alt=''>
-                        <?php echo $diff->format('%y y-%m m')  ?>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-
-              </div>
+             
 
 
 
@@ -384,7 +285,7 @@ black;">
     
 
       $guncel ="DELETE FROM adverts WHERE advert_id = '".$cek['advert_id']."'
-      where publisher_id = '"$user_id"';";
+      where publisher_id = '".$user_id."';";
 
        $sonucu=mysqli_query($baglan,$guncel);   
        if($sonucu){
@@ -419,53 +320,7 @@ else{
 
 
 
-              <div class="postcard__preview-txt2">
-
-                <div class='ilan-style' style=' background-color: #F9F9F9;' onclick='selectedId(this)'>
-                  <a href="<?php echo " detail.php?advert_id=".$cek['advert_id'];?>">
-                    <div class="adverts-img" style="background-image: url(img/close-up-of-cat-wearing-sunglasses-while-sitting-royalty-free-image-1571755145.jpg);
-              background-repeat: no-repeat; width: 250px ; height: 220px; background-size: contain;
-              "><button class="delete-adverts"><img src="img/x.png" style="width: 20px; height:20px "></button></div>
-                  </a>
-                  <div class='card-body'>
-                    <div class='d-flex justify-content-between align-items-center'>
-                      <div>
-                        <h5 class='cardtitle'>
-                          <?php echo $cek['pet_name'] ?>
-                        </h5>
-
-                        <p class='cardcity'>
-                          <?php echo $cek['advert_city_name'] ?>
-                        </p>
-                        <p id='animalId'>
-                          <?php echo $cek['advert_id'] ?>
-                        </p>
-                      </div>
-                      <div>
-                        <i onclick=' like(this)' class='fa fa-heart-o'></i>
-                      </div>
-                    </div>
-
-                    <div class='d-flex '>
-                      <div class='d-flex align-items-center ' style='font-size: 10px; padding: 100px 5px 5px;'><img
-                          style='width: 20px; height: 20px;' src='img/88e42073f15a94a24e4ae7e56f70503c.png' alt=''>
-                        <?php echo $cek['gender'] ?>
-                      </div>
-
-                      <div class='d-flex align-items-center ' style='font-size: 10px; padding: 100px 5px 5px;'><img
-                          style='width: 20px; height: 20px;' src='img/2591741a30ef24af7d953808babe06ab.png' alt=''>
-                        <?php echo $cek['pet_breed'] ?>
-                      </div>
-                      <div class='d-flex align-items-center ' style='font-size: 10px; padding: 100px 5px 5px;'><img
-                          style='width: 20px; height: 20px;' src='img/5e07484fa0adae51e26d5d8fe3c09253.png' alt=''>
-                        <?php echo $diff->format('%y y-%m m')  ?>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-
-              </div>
+         
 
 
 
@@ -494,15 +349,45 @@ else{
             <div class="postcard__bar"></div>
             <div class="cards-adverts" style="display: inline-block;">
 
-              <div class="postcard__preview-txt2">
+              
+
+
+
+
+              <?php
+include("connect.php");
+$sec="SELECT DISTINCT * FROM user_fav_adverts, user, adverts WHERE user.user_id=user_fav_adverts.user_id AND user_fav_adverts.advert_id= adverts.advert_id AND user.user_id=$user_id;";
+$sonuc=$baglan->query($sec);
+if($sonuc->num_rows>0){
+    while($cek=$sonuc->fetch_assoc()){
+      $dogumTarihi = $cek['birthday'];
+$bugun = date("Y-m-d");
+$diff = date_diff(date_create($dogumTarihi), date_create($bugun));
+$link= $cek['advert_id']
+
+ ?>     
+
+
+   
+    
+    
+    
+    
+              <div class="postcard__preview-txt2" 
+style="color: 
+black;">
 
                 <div class='ilan-style' style=' background-color: #F9F9F9;' onclick='selectedId(this)'>
-                  <a href="<?php echo " detail.php?advert_id=".$cek['advert_id'];?>">
+                  <a href="<?php echo "detail.php?advert_id=".$link;?>">
                     <div class="adverts-img" style="background-image: url(img/close-up-of-cat-wearing-sunglasses-while-sitting-royalty-free-image-1571755145.jpg);
-                  background-repeat: no-repeat; width: 250px ; height: 220px; background-size: contain;
-                  "><button class="delete-adverts"><img src="img/x.png" style="width: 20px; height:20px "></button>
-                    </div>
-                  </a>
+                background-repeat: no-repeat; width: 250px ; height: 200px; background-size: contain;
+                "> 
+                
+                
+              </div></a> <div style ="top:-80px">
+                <form action="" method="post">
+                  <button name = "sil" class="delete-adverts"><img src="img/x.png" style="width: 20px; height:20px "></button>
+                  </form> </div>
                   <div class='card-body'>
                     <div class='d-flex justify-content-between align-items-center'>
                       <div>
@@ -523,16 +408,16 @@ else{
                     </div>
 
                     <div class='d-flex '>
-                      <div class='d-flex align-items-center ' style='font-size: 10px; padding: 100px 5px 5px;'><img
+                      <div class='d-flex align-items-center ' style='font-size: 10px; padding: 5px 5px;'><img
                           style='width: 20px; height: 20px;' src='img/88e42073f15a94a24e4ae7e56f70503c.png' alt=''>
                         <?php echo $cek['gender'] ?>
                       </div>
 
-                      <div class='d-flex align-items-center ' style='font-size: 10px; padding: 100px 5px 5px;'><img
+                      <div class='d-flex align-items-center ' style='font-size: 10px; padding: 5px 5px;'><img
                           style='width: 20px; height: 20px;' src='img/2591741a30ef24af7d953808babe06ab.png' alt=''>
                         <?php echo $cek['pet_breed'] ?>
                       </div>
-                      <div class='d-flex align-items-center ' style='font-size: 10px; padding: 100px 5px 5px;'><img
+                      <div class='d-flex align-items-center ' style='font-size: 10px; padding:  5px 5px;'><img
                           style='width: 20px; height: 20px;' src='img/5e07484fa0adae51e26d5d8fe3c09253.png' alt=''>
                         <?php echo $diff->format('%y y-%m m')  ?>
                       </div>
@@ -542,104 +427,46 @@ else{
 
 
               </div>
-
-              <div class="postcard__preview-txt2">
-
-                <div class='ilan-style' style=' background-color: #F9F9F9;' onclick='selectedId(this)'>
-                  <a href="<?php echo " detail.php?advert_id=".$cek['advert_id'];?>">
-                    <div class="adverts-img" style="background-image: url(img/close-up-of-cat-wearing-sunglasses-while-sitting-royalty-free-image-1571755145.jpg);
-                background-repeat: no-repeat; width: 250px ; height: 220px; background-size: contain;
-                "><button class="delete-adverts"><img src="img/x.png" style="width: 20px; height:20px "></button></div>
-                  </a>
-                  <div class='card-body'>
-                    <div class='d-flex justify-content-between align-items-center'>
-                      <div>
-                        <h5 class='cardtitle'>
-                          <?php echo $cek['pet_name'] ?>
-                        </h5>
-
-                        <p class='cardcity'>
-                          <?php echo $cek['advert_city_name'] ?>
-                        </p>
-                        <p id='animalId'>
-                          <?php echo $cek['advert_id'] ?>
-                        </p>
-                      </div>
-                      <div>
-                        <i onclick=' like(this)' class='fa fa-heart-o'></i>
-                      </div>
-                    </div>
-
-                    <div class='d-flex '>
-                      <div class='d-flex align-items-center ' style='font-size: 10px; padding: 100px 5px 5px;'><img
-                          style='width: 20px; height: 20px;' src='img/88e42073f15a94a24e4ae7e56f70503c.png' alt=''>
-                        <?php echo $cek['gender'] ?>
-                      </div>
-
-                      <div class='d-flex align-items-center ' style='font-size: 10px; padding: 100px 5px 5px;'><img
-                          style='width: 20px; height: 20px;' src='img/2591741a30ef24af7d953808babe06ab.png' alt=''>
-                        <?php echo $cek['pet_breed'] ?>
-                      </div>
-                      <div class='d-flex align-items-center ' style='font-size: 10px; padding: 100px 5px 5px;'><img
-                          style='width: 20px; height: 20px;' src='img/5e07484fa0adae51e26d5d8fe3c09253.png' alt=''>
-                        <?php echo $diff->format('%y y-%m m')  ?>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+    
+    
+    <?php
+         if (isset($_POST["sil"])){
+          //$sec="select CID FROM blood_center where B_Name='".$_POST["B_Name"]."'";
+          //$result=$baglan->query($sec);
+          //$cek=$result->fetch_assoc();
+            echo "butona basıldı";
+      
+          
+      
+            $guncel ="DELETE FROM user_fav_adverts WHERE advert_id = '".$cek['advert_id']."' AND user_id= '".$user_id."';";
+      
+             $sonucu=mysqli_query($baglan,$guncel);   
+             if($sonucu){
+                 echo"silindi";
+             }else{
+                 echo "güncelleme hatası";
+             }   
+        }
+       
+    }
+}else{
+    echo"empt";
+}
 
 
-              </div>
+
+?>
 
 
-              <div class="postcard__preview-txt2">
-
-                <div class='ilan-style' style=' background-color: #F9F9F9;' onclick='selectedId(this)'>
-                  <a href="<?php echo " detail.php?advert_id=".$cek['advert_id'];?>">
-                    <div class="adverts-img" style="background-image: url(img/close-up-of-cat-wearing-sunglasses-while-sitting-royalty-free-image-1571755145.jpg);
-                  background-repeat: no-repeat; width: 250px ; height: 220px; background-size: contain;
-                  "><button class="delete-adverts"><img src="img/x.png" style="width: 20px; height:20px "></button>
-                    </div>
-                  </a>
-                  <div class='card-body'>
-                    <div class='d-flex justify-content-between align-items-center'>
-                      <div>
-                        <h5 class='cardtitle'>
-                          <?php echo $cek['pet_name'] ?>
-                        </h5>
-
-                        <p class='cardcity'>
-                          <?php echo $cek['advert_city_name'] ?>
-                        </p>
-                        <p id='animalId'>
-                          <?php echo $cek['advert_id'] ?>
-                        </p>
-                      </div>
-                      <div>
-                        <i onclick=' like(this)' class='fa fa-heart-o'></i>
-                      </div>
-                    </div>
-
-                    <div class='d-flex '>
-                      <div class='d-flex align-items-center ' style='font-size: 10px; padding: 100px 5px 5px;'><img
-                          style='width: 20px; height: 20px;' src='img/88e42073f15a94a24e4ae7e56f70503c.png' alt=''>
-                        <?php echo $cek['gender'] ?>
-                      </div>
-
-                      <div class='d-flex align-items-center ' style='font-size: 10px; padding: 100px 5px 5px;'><img
-                          style='width: 20px; height: 20px;' src='img/2591741a30ef24af7d953808babe06ab.png' alt=''>
-                        <?php echo $cek['pet_breed'] ?>
-                      </div>
-                      <div class='d-flex align-items-center ' style='font-size: 10px; padding: 100px 5px 5px;'><img
-                          style='width: 20px; height: 20px;' src='img/5e07484fa0adae51e26d5d8fe3c09253.png' alt=''>
-                        <?php echo $diff->format('%y y-%m m')  ?>
-                      </div>
-                    </div>
-                  </div>
-                </div>
 
 
-              </div>
+
+
+
+
+
+
+
             </div>
             <ul class="postcard__tagbox">
 

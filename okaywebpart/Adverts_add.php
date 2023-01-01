@@ -120,7 +120,7 @@ include("userinfo.php");
 
 
         <form method="POST" action="" enctype="multipart/form-data">
-        <div class="form form-active" id="form1">
+        <div class="form form-active" id="form1" style="margin: -250px 0px 0px -320px;">
           <div class="form--header-container">
             <h1 class="form--header-title">
               Hello
@@ -153,7 +153,7 @@ include("userinfo.php");
 
       
      
-     <div class="form " id="form1">
+     <div class="form " id="form1" style="margin: -250px 0px 0px -320px;" >
        
           <div class="form--header-container">
             <h1 class="form--header-title">
@@ -193,7 +193,7 @@ include("userinfo.php");
           </div>
        
       
-        <div class="form " id="form1">
+        <div class="form " id="form1" style="margin: -250px 0px 0px -320px;">
         
           <div class="form--header-container">
             <h1 class="form--header-title">

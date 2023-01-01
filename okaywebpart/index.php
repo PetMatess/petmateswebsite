@@ -150,7 +150,16 @@ $diff = date_diff(date_create($dogumTarihi), date_create($bugun));
         <div class='col-md-3'>
         <div class='' style='border-radius: 50px 50px 0px 0px; background-color: #F9F9F9;' onclick='selectedId(this)' >
         <a href="login.php" >
-        <img class='card-img-top  cardimg' src='img/64f81c3e66cef2bad398eea6eb9231a6.JPG' alt='Card image cap'>
+        <img class='card-img-top  cardimg'  src=<?php
+        
+        
+        if ($cek['first_picture'] != null) {
+          echo "uploads/".$cek['first_picture'];
+        }else{
+          echo "petmates_icons/petmates_logo.png";
+        }
+        
+        ?> alt='Card image cap'>
         </a><div class='card-body'>
         <div class='d-flex justify-content-between align-items-center'>
         <div>
@@ -210,7 +219,16 @@ $diff = date_diff(date_create($dogumTarihi), date_create($bugun));
       <div class='col-md-3'>
       <div class='' style='border-radius: 50px 50px 0px 0px; background-color: #F9F9F9;' onclick='selectedId(this)' >
       <a href="login.php" >
-      <img class='card-img-top  cardimg' src='img/64f81c3e66cef2bad398eea6eb9231a6.JPG' alt='Card image cap'>
+      <img class='card-img-top  cardimg' src=<?php
+        
+        
+        if ($cek['first_picture'] != null) {
+          echo "uploads/".$cek['first_picture'];
+        }else{
+          echo "petmates_icons/petmates_logo.png";
+        }
+        
+        ?> alt='Card image cap'>
       </a><div class='card-body'>
       <div class='d-flex justify-content-between align-items-center'>
       <div>
@@ -269,7 +287,16 @@ $diff = date_diff(date_create($dogumTarihi), date_create($bugun));
       <div class='col-md-3'>
       <div class='' style='border-radius: 50px 50px 0px 0px; background-color: #F9F9F9;' onclick='selectedId(this)' >
       <a href="login.php" >
-      <img class='card-img-top  cardimg' src='img/64f81c3e66cef2bad398eea6eb9231a6.JPG' alt='Card image cap'>
+      <img class='card-img-top  cardimg' src=<?php
+        
+        
+        if ($cek['first_picture'] != null) {
+          echo "uploads/".$cek['first_picture'];
+        }else{
+          echo "petmates_icons/petmates_logo.png";
+        }
+        
+        ?> alt='Card image cap'>
       </a><div class='card-body'>
       <div class='d-flex justify-content-between align-items-center'>
       <div>
@@ -327,7 +354,16 @@ if($sonuc->num_rows>0){
       <div class='col-md-3'>
       <div class='' style='border-radius: 50px 50px 0px 0px; background-color: #F9F9F9;' onclick='selectedId(this)' >
       <a href="login.php" >
-      <img class='card-img-top  cardimg' src='img/64f81c3e66cef2bad398eea6eb9231a6.JPG' alt='Card image cap'>
+      <img class='card-img-top  cardimg' src=<?php
+        
+        
+        if ($cek['first_picture'] != null) {
+          echo "uploads/".$cek['first_picture'];
+        }else{
+          echo "petmates_icons/petmates_logo.png";
+        }
+        
+        ?> alt='Card image cap'>
       </a><div class='card-body'>
       <div class='d-flex justify-content-between align-items-center'>
       <div>
@@ -385,7 +421,16 @@ if($sonuc->num_rows>0){
       <div class='col-md-3'>
       <div class='' style='border-radius: 50px 50px 0px 0px; background-color: #F9F9F9;' onclick='selectedId(this)' >
       <a href="login.php" >
-      <img class='card-img-top  cardimg' src='img/64f81c3e66cef2bad398eea6eb9231a6.JPG' alt='Card image cap'>
+      <img class='card-img-top  cardimg' src=<?php
+        
+        
+        if ($cek['first_picture'] != null) {
+          echo "uploads/".$cek['first_picture'];
+        }else{
+          echo "petmates_icons/petmates_logo.png";
+        }
+        
+        ?> alt='Card image cap'>
       </a><div class='card-body'>
       <div class='d-flex justify-content-between align-items-center'>
       <div>

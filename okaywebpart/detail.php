@@ -288,7 +288,7 @@ else{
   .active, .dot:hover {
     background-color: #717171;
   }
-  #favorite-button {
+  #favorite {
   background-color:  #b386ef;
   border: 1px solid  #b386ef;
   padding: 8px 16px;
@@ -297,7 +297,7 @@ else{
 
 }
 
-#favorite-button.selected {
+#favorite.selected {
   background-color:  #8528fe;
   color: #8528fe;
   border-color: #8528fe;
@@ -380,7 +380,7 @@ else{
         <div><label>Owner:</label><span><?php echo ($user_surname) ?> <?php echo ($user_surname) ?> </span></div>
         <div><label>Email:</label><span><?php echo ($user_email) ?></span></div>
         <div><label>Phone Number: </label><span><?php echo ($user_phone) ?></span></div>
-        <div><label><button id="favorite-button">Favorite</button></label></div>
+        <div><label><input type="button"id="favorite">Favorite</label></div>
 
       </div>
     </div>
@@ -411,7 +411,7 @@ else{
       dots[slideIndex-1].className += " active";
       setTimeout(showSlides, 2500); // 2,5 saniyede bir fotoğraf değiştir
       }
-      const button = document.getElementById('favorite-button');
+      const button = document.getElementById('favorite');
 button.addEventListener('click', function() {
   button.classList.toggle('selected');
 });
