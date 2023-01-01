@@ -70,11 +70,11 @@ include("userinfo.php");
             <a class="nav-link" href="About_Usw.php">About US</a>
           </li>
         </ul>
-          <img src=<?php echo "uploads/".$user_img;?>  class="user" onclick="toggleMenu()"  style="height:90px; width: 90px;"/>
+          <img src=<?php echo "userPhotos/".$user_img;?>  class="user" onclick="toggleMenu()"  style="height:90px; width: 90px;"/>
     <div class="sub-menu-wrap" id="subMenu">
         <div class="sub-menu">
             <div class="user-info">
-               <img src=<?php echo "uploads/".$user_img;?>  >
+               <img src=<?php echo "userPhotos/".$user_img;?>  >
                 <h3><?php echo "$name" ?> </h3>
             </div>
             <hr />
@@ -131,6 +131,7 @@ include("userinfo.php");
           <input type="text" name="pet_name" placeholder="Pet Name" />
 
           <h6 class="Date">Gender</h6>
+
           <select class="form-select" name="gender" aria-label="Default select example" placeholder="Gender">
 
             <option value="Female">Female</option>
@@ -139,8 +140,22 @@ include("userinfo.php");
           </select>
 
           <h6 class="Date">Pet Type</h6>
-          <input type="text"  name="pet_type" placeholder="Pet Type" />
-       
+
+          <select class="form-select" name="pet_type" aria-label="Default select example" placeholder="Pet Type">
+
+            <option value="dog">Dog</option>
+            <option value="cat">Cat</option>
+            <option value="bird">Bird</option>
+            <option value="fish">Fish</option>
+          </select>
+
+
+
+
+
+
+
+          
           <h6 class="Date">Pet Breed</h6>
           <input type="text"  name="pet_breed" placeholder="Pet Breed" />
           
@@ -166,20 +181,14 @@ include("userinfo.php");
           <input type="date" id="birthday" name="birthday" class="birthday" placeholder="Pet Birthday">
 
           <h6 class="Date">City</h6>
-          <select class="form-select"  name="advert_city_name" aria-label="Default select example" placeholder="Gender">
 
-            <option value="1">Ankara</option>
-            <option value="2">Adana</option>
-            <option value="3"> İstanbul</option>
+          <input type="text"  name="advert_city_name" placeholder="City" />
+       
 
-          </select>
           <h6 class="Date">District</h6>
-          <select class="form-select" name="advert_district_name" aria-label="Default select example" placeholder="Gender">
 
-            <option value="1">Polatlı</option>
-            <option value="2">Tepebaşı</option>
-            <option value="3"> Odunpazarı</option>
-          </select>
+          <input type="text"  name="advert_district_name" placeholder="District" />
+
           <h6 class="Date">Full Addresses</h6>
           <input type="text" name="advert_address_line"  placeholder="Description" class="desc">
 
@@ -205,7 +214,7 @@ include("userinfo.php");
           <h6 class="Date">Add Photo</h6>
          <div>
           <input type='file' name="photos[]" id="imageUpload" accept=".png, .jpg, .jpeg" multiple/>
-          <label for="imageUpload" class="loa" ><img src="img/add(1).png" style="width: 70px;  height: 70px; margin-top: 27%;"></label>
+          <label for="imageUpload" class="loa" ><img src="img/add.png" style="width: 70px;  height: 70px; margin-top: 27%;"></label>
           
         </div>
 

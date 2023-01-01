@@ -166,7 +166,16 @@ if($sonuc->num_rows>0){
                     <div class="breed-type-card mla mra bpm-mx2 contents-filter shadow-sm p-2 mb-5 bg-white rounded" id="breed-type-card">
                         <div class="d-block relative">
                             <div class="media-wrap">
-                                <img src="https://www.akc.org/wp-content/uploads/2017/11/Affenpinscher-running-outdoors.jpg"
+                                <img src=<?php
+        
+        
+        if ($pet_breed_img != null) {
+          echo "breeds/".$pet_breed_img;
+        }else{
+          echo "petmates_icons/petmates_logo.png";
+        }
+        
+        ?>
                                     width="400" height="auto" class="attachment-rectangle_thumbnail size-rectangle_thumbnail"
                                     style="border-radius: 3em 3em 0 0;">
                                 <h3 class="breed-type-card__title mt0 mb0 f-25 py3 px3"
@@ -179,12 +188,12 @@ if($sonuc->num_rows>0){
                                     </p>
         
                                     <button data-name="one" type="button" class="link-with-arrow mbauto" data-toggle="modal"
-                                        data-target="#exampleModalLong1"
+                                        data-target= <?php echo "#a".$pet_breed_id ?>
                                         style="font-family: 'Jeju Gothic'; text-align: left; left: -10px;">
                                         See More
                                     </button>
                                     <!-- Modal -->
-                                    <div class="modal fade" id="exampleModalLong1" tabindex="-1" role="dialog"
+                                    <div class="modal fade" id=<?php echo "a".$pet_breed_id ?> tabindex="-1" role="dialog"
                                         aria-labelledby="exampleModalLongTitle" aria-hidden="true">
                                         <div class="modal-dialog" role="document">
                                             <div class="modal-content">
@@ -193,7 +202,16 @@ if($sonuc->num_rows>0){
                                                         style="color: #682773; font-style: italic; font-weight: bold; text-align: center; margin-top: 20px;"><?php echo $pet_breed_name ?></h5>
                                                 </div>
                                                 <div class="modal-body f-16 text-center">
-                                                    <img src="https://www.akc.org/wp-content/uploads/2017/11/Affenpinscher-running-outdoors.jpg" width="400" height="auto"
+                                                    <img src=<?php
+        
+        
+        if ($pet_breed_img != null) {
+          echo "breeds/".$pet_breed_img;
+        }else{
+          echo "petmates_icons/petmates_logo.png";
+        }
+        
+        ?> width="400" height="auto"
                                                         class="attachment-rectangle_thumbnail size-rectangle_thumbnail" style="border-radius: 3em 3em 3em 3em;">
                                                     <br><br>    
                                                     <p style="font-family: Kadwa;">

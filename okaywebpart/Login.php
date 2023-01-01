@@ -143,13 +143,9 @@
                     <span>Email</span>
                     <input type="text"   name="email" required  placeholder="Your mail ..">
                   </label>
-                  <label for="phone">
-                    <span>Email</span>
-                    <input type="text"   name="phone" required  placeholder="Your Phone Number..">
-                  </label>
                   <label for="password">
                     <span>Password</span>
-                    <input input type="text"   name="password" required  placeholder="Your pasw Number.." id="signuppassword">
+                    <input input type="password"   name="password" required  placeholder="Your pasw Number.." id="signuppassword">
                   </label>
                    <button type="submit" class="submit" id="signup" name="ekle">Sign Up Now</button>
                 </form>
@@ -171,8 +167,8 @@
     
       
 
-      $ekli ="insert into user(name,surname,email,phone,password) values
-      ('".$_POST["name"]."','".$_POST["surname"]."','".$_POST["email"]."','".$_POST["phone"]."','".$_POST["password"]."')";
+      $ekli ="insert into user(name,surname,email,password) values
+      ('".$_POST["name"]."','".$_POST["surname"]."','".$_POST["email"]."','".$_POST["password"]."')";
 
 
        $sonuc=mysqli_query($baglan,$ekli);
