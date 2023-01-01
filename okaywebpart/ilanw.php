@@ -83,8 +83,7 @@ include("userinfo.php");
           </li>
         </ul>
 
-        <img src=
-        <?php
+        <img src=<?php
         
         
         if ($user_img != null) {
@@ -93,7 +92,7 @@ include("userinfo.php");
           echo "img/acunt.png";
         }
         
-        ?> class="user" onclick="thismenu()"  style="height:90px; width: 90px;"/>
+        ?> class="user" onclick="toggleMenu()"  style="height:90px; width: 90px;"/>
     <div class="sub-menu-wrap" id="subMenu">
         <div class="sub-menu">
             <div class="user-info">
@@ -821,7 +820,7 @@ document.getElementById("likebutton").addEventListener("click", function() {
    <script>
          
          let subMenu = document.getElementById("subMenu");
-         function thismenu() {
+         function toggleMenu() {
              subMenu.classList.toggle("open-menu");
          }
   </script>

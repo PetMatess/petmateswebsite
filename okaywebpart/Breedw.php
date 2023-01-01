@@ -71,11 +71,29 @@ include("userinfo.php");
             <a class="nav-link" href="About_Usw.php">About US</a>
           </li>
         </ul>
-        <img src=<?php echo "uploads/".$user_img;?> class="user" onclick="toggleMenu()"  style="height:90px; width: 90px;"/>
+        <img src=<?php
+        
+        
+        if ($user_img != null) {
+          echo "userphotos/".$user_img;
+        }else{
+          echo "img/acunt.png";
+        }
+        
+        ?> class="user" onclick="toggleMenu()"  style="height:90px; width: 90px;"/>
     <div class="sub-menu-wrap" id="subMenu">
         <div class="sub-menu">
             <div class="user-info">
-               <img src=<?php echo "uploads/".$user_img;?> >
+               <img src=<?php
+        
+        
+        if ($user_img != null) {
+          echo "userphotos/".$user_img;
+        }else{
+          echo "img/acunt.png";
+        }
+        
+        ?> >
                 <h3><?php echo "$name" ?> </h3>
             </div>
             <hr />

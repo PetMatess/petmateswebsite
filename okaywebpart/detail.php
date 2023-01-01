@@ -136,7 +136,7 @@ else{
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
   <ul class="navbar-nav m-auto">
           <li class="nav-item active">
-            <a class="nav-link" href="ilanw.php">Home<span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="ilanw.php">Home</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="Breedw.php">Breed</a>
@@ -145,11 +145,29 @@ else{
             <a class="nav-link" href="About_Usw.php">About US</a>
           </li>
         </ul>
-          <img src="img/WhatsApp-Profil-Resmi-29.webp" class="user" onclick="toggleMenu()"  style="height:90px; width: 90px;"/>
+        <img src=<?php
+        
+        
+        if ($user_img != null) {
+          echo "userphotos/".$user_img;
+        }else{
+          echo "img/acunt.png";
+        }
+        
+        ?> class="user" onclick="toggleMenu()"  style="height:90px; width: 90px;"/>
     <div class="sub-menu-wrap" id="subMenu">
         <div class="sub-menu">
             <div class="user-info">
-               <img src="img/WhatsApp-Profil-Resmi-29.webp" >
+               <img src=<?php
+        
+        
+        if ($user_img != null) {
+          echo "userphotos/".$user_img;
+        }else{
+          echo "img/acunt.png";
+        }
+        
+        ?> >
                 <h3><?php echo "$name" ?> </h3>
             </div>
             <hr />
@@ -330,7 +348,7 @@ else{
 
     </style>
    
-   <form action="" method="">
+   
    
     <div class="ilan-basligi">
       <h3><?php echo ($pet_name) ?></h2>
@@ -405,7 +423,13 @@ else{
         <div><label>Owner:</label><span><?php echo ($user_surname) ?> <?php echo ($user_surname) ?> </span></div>
         <div><label>Email:</label><span><?php echo ($user_email) ?></span></div>
         <div><label>Phone Number: </label><span><?php echo ($user_phone) ?></span></div>
-        <div><label><input type="button"id="favorite">Favorite</label></div>
+        <div><form action="" method="post">
+                  <button
+                  style="width:40px 
+                  "
+                  
+                  name = "like" class="delete-adverts"><img src="img/favheart.png" style="width: 40px; height:40px "></button>
+                  </form></div>
 
       </div>
     </div>
@@ -414,7 +438,22 @@ else{
     </div>
  </div>
 
-</form>
+ <?php             
+     if (isset($_POST ["like"])){
+    //$sec="select CID FROM blood_center where B_Name='".$_POST["B_Name"]."'";
+    //$result=$baglan->query($sec);
+    //$cek=$result->fetch_assoc();
+      echo "butona basıldı";
+    
+      $ekli ="insert into user_fav_adverts(user_id, advert_id) values
+      ('".$user_id."','".$sef."')";
+       $sonuc=mysqli_query($baglan,$ekli);
+       if($sonuc){  
+        echo("ok");
+       }else{
+        echo("no");
+       }   
+  }?>
 
 <script>
   var slideIndex = 0;

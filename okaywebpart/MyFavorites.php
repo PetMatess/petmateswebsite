@@ -97,41 +97,52 @@ else{
             <a class="nav-link" href="About_Usw.php">About US</a>
           </li>
         </ul>
-        <img src="img/WhatsApp-Profil-Resmi-29.webp" class="user" onclick="toggleMenu()"
-          style="height:90px; width: 90px;" />
-        <div class="sub-menu-wrap" id="subMenu">
-          <div class="sub-menu">
+        <img src=<?php
+        
+        
+        if ($user_img != null) {
+          echo "userphotos/".$user_img;
+        }else{
+          echo "img/acunt.png";
+        }
+        
+        ?> class="user" onclick="toggleMenu()"  style="height:90px; width: 90px;"/>
+    <div class="sub-menu-wrap" id="subMenu">
+        <div class="sub-menu">
             <div class="user-info">
-              <img src="img/WhatsApp-Profil-Resmi-29.webp">
-              <h3>Adem Doğan</h3>
+               <img src=<?php
+        
+        
+        if ($user_img != null) {
+          echo "userphotos/".$user_img;
+        }else{
+          echo "img/acunt.png";
+        }
+        
+        ?> >
+                <h3><?php echo "$name" ?> </h3>
             </div>
             <hr />
 
-            <a href="#" class="sub-menu-link">
-              <img src="img/pencil.png">
-              <p>Edit Profile</p>
-              <span>></span>
+            <a href="MyFavorites.php" class="sub-menu-link">
+                <img src="img/acunt.png" >
+                <p>My Profile</p>
+                <span>></span>
             </a>
-
-
-            <a href="#" class="sub-menu-link">
-              <img src="img/icons8-home-page-100.png">
-              <p>MyAdverts</p>
-              <span>></span>
+            <a href="Adverts_add.php" class="sub-menu-link">
+              <img src="img/add.png" >
+                <p>Advert add</p>
+                <span>></span>
             </a>
-
-
-            <a href="#" class="sub-menu-link">
-              <img src="img/privacy.png">
-              <p>Privacy</p>
-              <span>></span>
+            <a href="privacy_policy.php" class="sub-menu-link">
+              <img src="img/privacy.png" >
+                <p>Privacy</p>
+                <span>></span>
             </a>
-
-
-            <a href="#" class="sub-menu-link">
-              <img src="img/logout.png">
-              <p>Logout</p>
-              <span>></span>
+            <a href="logout.php" class="sub-menu-link">
+              <img src="img/logout.png" >
+                <p>Logout</p>
+                <span>></span>
             </a>
           </div>
         </div>
@@ -223,7 +234,16 @@ black;">
 
                 <div class='ilan-style' style=' background-color: #F9F9F9;' onclick='selectedId(this)'>
                   <a href="<?php echo " detail.php?advert_id=".$cek['advert_id'];?>">
-                    <div class="adverts-img" style="background-image: url(<?php echo "uploads/".$cek['first_picture'];?>);
+                    <div class="adverts-img" style="background-image: url(<?php
+        
+        
+        if ($cek['first_picture'] != null) {
+          echo "uploads/".$cek['first_picture'];
+        }else{
+          echo "img/Logo2(1).png";
+        }
+        
+        ?>);
               background-repeat: no-repeat; width: 250px ; height: 220px; background-size: contain;
               ">
               
@@ -242,9 +262,7 @@ black;">
                         <p class='cardcity'>
                           <?php echo $cek['advert_city_name'] ?>
                         </p>
-                        <p id='animalId'>
-                          <?php echo $cek['advert_id'] ?>
-                        </p>
+                        
                       </div>
                       <div>
                         <i onclick=' like(this)' class='fa fa-heart-o'></i>
@@ -377,7 +395,16 @@ black;">
 
                 <div class='ilan-style' style=' background-color: #F9F9F9;' onclick='selectedId(this)'>
                   <a href="<?php echo "detail.php?advert_id=".$link;?>">
-                    <div class="adverts-img" style="background-image: url(img/close-up-of-cat-wearing-sunglasses-while-sitting-royalty-free-image-1571755145.jpg);
+                    <div class="adverts-img" style="background-image: url(<?php
+        
+        
+        if ($cek['first_picture'] != null) {
+          echo "uploads/".$cek['first_picture'];
+        }else{
+          echo "img/Logo2(1).png";
+        }
+        
+        ?>);
                 background-repeat: no-repeat; width: 250px ; height: 200px; background-size: contain;
                 "> 
                 
@@ -396,9 +423,7 @@ black;">
                         <p class='cardcity'>
                           <?php echo $cek['advert_city_name'] ?>
                         </p>
-                        <p id='animalId'>
-                          <?php echo $cek['advert_id'] ?>
-                        </p>
+                      
                       </div>
                       <div>
                         <i onclick=' like(this)' class='fa fa-heart-o'></i>

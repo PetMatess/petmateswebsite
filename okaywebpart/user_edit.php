@@ -68,11 +68,29 @@ include("userinfo.php");
             <a class="nav-link" href="About_Usw.php">About US</a>
           </li>
         </ul>
-          <img src=<?php echo "uploads/".$user_img;?> class="user" onclick="toggleMenu()"  style="height:90px; width: 90px;"/>
+        <img src=<?php
+        
+        
+        if ($user_img != null) {
+          echo "userphotos/".$user_img;
+        }else{
+          echo "img/acunt.png";
+        }
+        
+        ?> class="user" onclick="toggleMenu()"  style="height:90px; width: 90px;"/>
     <div class="sub-menu-wrap" id="subMenu">
         <div class="sub-menu">
             <div class="user-info">
-               <img src=<?php echo "uploads/".$user_img;?> >
+               <img src=<?php
+        
+        
+        if ($user_img != null) {
+          echo "userphotos/".$user_img;
+        }else{
+          echo "img/acunt.png";
+        }
+        
+        ?> >
                 <h3><?php echo "$name" ?> </h3>
             </div>
             <hr />
@@ -110,7 +128,7 @@ include("userinfo.php");
 
 
 
-  <?php echo "$email" ?><?php echo "$lastname" ?><?php echo "$name" ?>
+  
 
     <div class="container backfont">
       <div class="container rounded bg-light ">
@@ -118,7 +136,16 @@ include("userinfo.php");
           <div class="col-md-5 border-right">
             <div class="d-flex flex-column align-items-center text-center p-3 py-5"><img class="rounded-circle mt-5"
                 width="150px"
-                src=<?php echo "uploads/".$user_img;?>><span
+                src=<?php
+        
+        
+        if ($user_img != null) {
+          echo "userphotos/".$user_img;
+        }else{
+          echo "img/acunt.png";
+        }
+        
+        ?> ><span
                 class="font-weight-bold"><?php echo "$name" ?> <?php echo "$lastname" ?></span><span
                 class="text-black-50"><?php echo "$email" ?></span><span>
               </span></div>
