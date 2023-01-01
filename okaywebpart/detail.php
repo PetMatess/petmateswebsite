@@ -359,7 +359,16 @@ else{
         <div class="slideshow-container">
 
         <div class="mySlides fade">
-            <img src=<?php echo "uploads/".$first_picture;?>  class=" lazyloaded" style="width:100%">
+            <img src=<?php
+        
+        
+        if ($first_picture != null) {
+          echo "uploads/".$first_picture;
+        }else{
+          echo "img/Logo2(1).png";
+        }
+        
+        ?> class=" lazyloaded" style="width:100%">
           </div>
         <?php
 include("connect.php");
@@ -381,7 +390,15 @@ if($sonuc->num_rows>0){
   
 }
 else{
-  echo"veri tabanı boş";
+  ?>
+
+
+  <div class="mySlides fade">
+  <img src=<?php echo "img/Logo2(1).png";?> class=" lazyloaded" style="width:100%">
+  </div>
+
+
+  <?php
 }
 ?>
 
@@ -420,7 +437,7 @@ else{
       </div>
       <div class="owner-info">
 
-        <div><label>Owner:</label><span><?php echo ($user_surname) ?> <?php echo ($user_surname) ?> </span></div>
+        <div><label>Owner:</label><span><?php echo ($user_name) ?> <?php echo ($user_surname) ?> </span></div>
         <div><label>Email:</label><span><?php echo ($user_email) ?></span></div>
         <div><label>Phone Number: </label><span><?php echo ($user_phone) ?></span></div>
         <div><form action="" method="post">

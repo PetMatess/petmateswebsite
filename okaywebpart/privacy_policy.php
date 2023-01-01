@@ -1,3 +1,8 @@
+
+<?php
+include("connect.php");
+include("userinfo.php");
+?>
 <!doctype html>
 <html lang="en">
 
@@ -49,21 +54,19 @@
             <span class="navbar-toggler-icon"><i class="fas fa-bars" style="margin:5px 0px 0px 0px;"></i></span>
           </button>
     
-           <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav m-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="ilanw.php">Home<span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="Breedw.php">Breed</a>
-            <li class="nav-item">
-              <a class="nav-link" href="Newsw.php">News</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="About_Usw.php">About US</a>
-            </li>
-          </ul>
-          <img src=<?php
+          <li class="nav-item active">
+            <a class="nav-link" href="ilanw.php">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Breedw.php">Breed</a>
+         
+          <li class="nav-item">
+            <a class="nav-link" href="About_Usw.php">About US</a>
+          </li>
+        </ul>
+        <img src=<?php
         
         
         if ($user_img != null) {
@@ -110,11 +113,13 @@
                 <p>Logout</p>
                 <span>></span>
             </a>
-            </div>
-            </nav>
         </div>
-        </div>
-    </header>
+    </div>
+      </div>
+      </nav>
+    </div>
+    </div>
+  </header>
 
 
     <div class="main-content " style="padding-top: 230px;  ">
@@ -364,6 +369,13 @@
       });
     });
         </script>
+         <script>
+         
+         let subMenu = document.getElementById("subMenu");
+         function toggleMenu() {
+             subMenu.classList.toggle("open-menu");
+         }
+  </script>
 
 </body>
 
