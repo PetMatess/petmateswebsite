@@ -86,9 +86,7 @@
           <div class="info">
             <h3>Adem Doğan</h3>
             <span><i class="fas fa-code"></i> Frontend Deweloper</span>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae dicta suscipit possimus fugiat
-              eos? At illum numquam quia odio ipsa enim eveniet animi explicabo omnis ullam! Illum mollitia
-              expedita perferendis.</p>
+            <p>I am a 3rd year Computer Engineering student.Html,Css, Javascript, .Net, React, Java and Python are the programming languages ​​I'm interested in.</p>
           </div>
           <div class="iconss">
             <a href="#" class="fab fa-facebook-f"></a>
