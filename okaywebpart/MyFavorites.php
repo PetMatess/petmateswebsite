@@ -92,9 +92,7 @@ else{
           </li>
           <li class="nav-item">
             <a class="nav-link" href="Breedw.php">Breed</a>
-          <li class="nav-item">
-            <a class="nav-link" href="Newsw.php">News</a>
-          </li>
+         
           <li class="nav-item">
             <a class="nav-link" href="About_Usw.php">About US</a>
           </li>
@@ -285,7 +283,7 @@ black;">
     
 
       $guncel ="DELETE FROM adverts WHERE advert_id = '".$cek['advert_id']."'
-      where publisher_id = '".$user_id."';";
+      and publisher_id = '".$user_id."';";
 
        $sonucu=mysqli_query($baglan,$guncel);   
        if($sonucu){

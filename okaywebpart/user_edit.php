@@ -256,7 +256,7 @@ include("connect.php");
          for($i=0;$i<$countfiles;$i++){
            $filename = $_FILES['photos']['name'][$i];
            // Upload file
-           move_uploaded_file($_FILES['photos']['tmp_name'][$i],'uploads/'.$filename);
+           move_uploaded_file($_FILES['photos']['tmp_name'][$i],'userPhotos/'.$filename);
         echo "if girdi";
         $guncel ="update user
       set user_img = '".$photos[0]."'

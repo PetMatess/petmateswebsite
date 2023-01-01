@@ -57,7 +57,7 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav m-auto">
           <li class="nav-item active">
-            <a class="nav-link" href="ilanw.php">Home</a>
+            <a class="nav-link" href="ilan.php">Home</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="Breed.php">Breed</a>
@@ -101,13 +101,13 @@
                 </ol>
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <img class="d-block w-100" src="<?php echo $r['pet-health-insurance'];?>" alt="First slide">
+                        <img class="d-block w-100" src="img/s1.jpg" alt="First slide">
                     </div>
                     <div class="carousel-item">
-                        <img class="d-block w-100" src="<?php echo $r['maxresdefault'];?>" alt="Second slide">
+                        <img class="d-block w-100" src="img/s2.jpg" alt="Second slide">
                     </div>
                     <div class="carousel-item">
-                        <img class="d-block w-100" src="<?php echo $r['cat_care_app_ui_4x.webp'];?>" alt="Third slide">
+                        <img class="d-block w-100" src="img/s3.webp" alt="Third slide">
                     </div>
                 </div>
                 <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">

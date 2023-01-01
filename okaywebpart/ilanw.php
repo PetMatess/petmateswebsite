@@ -51,6 +51,7 @@ include("userinfo.php");
   <body>
 
   <header class="header">
+    
     <div class="header-inner">
       <div class="container-fluid px-lg-5">
         <nav class="navbar navbar-expand-lg my-navbar">
@@ -72,22 +73,20 @@ include("userinfo.php");
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav m-auto">
           <li class="nav-item active">
-            <a class="nav-link" href="ilanw.php">Home<span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="ilanw.php">Home</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="Breedw.php">Breed</a>
-          <li class="nav-item">
-            <a class="nav-link" href="#">News</a>
-          </li>
+          
           <li class="nav-item">
             <a class="nav-link" href="About_Usw.php">About US</a>
           </li>
         </ul>
-        <img src=<?php echo "uploads/".$user_img;?>  class="user" onclick="toggleMenu()"  style="height:90px; width: 90px;"/>
+        <img src=<?php echo "userphotos/".$user_img;?> class="user" onclick="thismenu()"  style="height:90px; width: 90px;"/>
     <div class="sub-menu-wrap" id="subMenu">
         <div class="sub-menu">
             <div class="user-info">
-               <img src=<?php echo "uploads/".$user_img;?>  >
+               <img src=<?php echo "userphotos/".$user_img;?> >
                 <h3><?php echo "$name" ?> </h3>
             </div>
             <hr />
@@ -643,16 +642,9 @@ include("connect.php");
       
 ?>
 
- <script>
-         
-         let subMenu = document.getElementById("subMenu");
-     
-         function toggleMenu() {
-             subMenu.classList.toggle("open-menu");
-         }
-     </script>
+
   <script src="Card.js"></script>
-  <script src="detail.js"></script>
+ 
   <script>
     function openPage(pageName,elmnt,color) {
       var i, tabcontent, tablinks;
@@ -671,6 +663,13 @@ include("connect.php");
     // Get the element with id="defaultOpen" and click on it
     document.getElementById("defaultOpen").click();
     </script>
+   <script>
+         
+         let subMenu = document.getElementById("subMenu");
+         function thismenu() {
+             subMenu.classList.toggle("open-menu");
+         }
+  </script>
      
   </body>
 </html>

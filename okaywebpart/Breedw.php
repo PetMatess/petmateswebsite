@@ -68,7 +68,7 @@ include("userinfo.php");
             <a class="nav-link" href="Breedw.php">Breed</a>
          
           <li class="nav-item">
-            <a class="nav-link" href="About_Us.php">About US</a>
+            <a class="nav-link" href="About_Usw.php">About US</a>
           </li>
         </ul>
         <img src=<?php echo "uploads/".$user_img;?> class="user" onclick="toggleMenu()"  style="height:90px; width: 90px;"/>
@@ -134,13 +134,13 @@ include("userinfo.php");
                 </ol>
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <img class="d-block w-100" src="img/pet-health-insurance.jpg" alt="First slide">
+                        <img class="d-block w-100" src="img/s1.jpg" alt="First slide">
                     </div>
                     <div class="carousel-item">
-                        <img class="d-block w-100" src="img/maxresdefault.jpg" alt="Second slide">
+                        <img class="d-block w-100" src="img/s2.jpg" alt="Second slide">
                     </div>
                     <div class="carousel-item">
-                        <img class="d-block w-100" src="img/cat_care_app_ui_4x.webp" alt="Third slide">
+                        <img class="d-block w-100" src="img/s3.webp" alt="Third slide">
                     </div>
                 </div>
                 <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">

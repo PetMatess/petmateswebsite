@@ -74,7 +74,7 @@ echo ("ürün ulaşılmadı");
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav m-auto">
           <li class="nav-item active">
-            <a class="nav-link" href="ilanw.php">Home</a>
+            <a class="nav-link" href="index.php">Home</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="Breed.php">Breed</a>
@@ -84,7 +84,7 @@ echo ("ürün ulaşılmadı");
           </li>
         </ul>
         <form class="form-inline my-2 my-lg-0">
-     <a class="nav-link header-btn my-2 my-sm-0" href="login.php"  >log in</a>
+     <a class="nav-link header-btn my-2 my-sm-0" href="login.php">log in</a>
     </form>
       </div>
       </nav>
@@ -170,7 +170,16 @@ if($sonuc->num_rows>0){
                                                         style="color: #682773; font-style: italic; font-weight: bold; text-align: center; margin-top: 20px;"><?php echo $pet_breed_name ?></h5>
                                                 </div>
                                                 <div class="modal-body f-16 text-center">
-                                                    <img src="https://www.akc.org/wp-content/uploads/2017/11/Affenpinscher-running-outdoors.jpg" width="400" height="auto"
+                                                    <img  src=<?php
+        
+        
+        if ($pet_breed_img != null) {
+          echo "breeds/".$pet_breed_img;
+        }else{
+          echo "petmates_icons/petmates_logo.png";
+        }
+        
+        ?> width="400" height="auto"
                                                         class="attachment-rectangle_thumbnail size-rectangle_thumbnail" style="border-radius: 3em 3em 3em 3em;">
                                                     <br><br>    
                                                     <p style="font-family: Kadwa;">
