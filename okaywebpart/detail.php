@@ -188,24 +188,49 @@ else{
   <div class="container backfont">
   
     <style>
- 
   .container-page {
+    border-radius: 10px;
+    box-shadow: 0 4px 21px -12px rgba(0, 0, 0, 0.66);
   display: flex;
   flex-direction: row;
   font-size: small;
-  width:980px;
-   background:#fff;
-    border:1px solid #e9e9e9;
+  width:1200px;
+   background-color: #efefee;
+   background-repeat: no-repeat;
+  background-size: cover;
+   
+     padding:10px 10px 0
+}
+.description{
+  margin-bottom: 20px;
+  margin-top: 2px;
+  border-radius: 10px;
+    box-shadow: 0 4px 21px -12px rgba(0, 0, 0, 0.66);
+  display: flex;
+  flex-direction: row;
+  font-size: small;
+  width:1200px;
+  height: 200px;
+ background-color: #efefee;
+   background-repeat: no-repeat;
+  background-size: cover;
+   
      padding:10px 10px 0
 }
 
+.description h4{
+ margin-left: 500px;
+}
 .animal-photo {
-  width: 80%;
+  width: 70%;
+ 
+  margin-right:6%;
 }
 
 .animal-info {
   width: 30%;
-  margin-right: 5px;
+  margin-left: 1%;
+  margin-right:1%;
 }
 .animal-info table tr{
   margin: 5px;
