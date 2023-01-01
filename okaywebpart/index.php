@@ -166,18 +166,32 @@ $diff = date_diff(date_create($dogumTarihi), date_create($bugun));
         <h5 class='cardtitle'><?php echo $cek['pet_name'] ?></h5>
 
         <p class='cardcity'><?php echo $cek['advert_city_name'] ?></p>
-        <p id='animalId'><?php echo $cek['advert_id'] ?></p>
+       
         </div>
         <div>
-        <i onclick=' like(this)' class='fa fa-heart-o'></i>
-        </div>
-        </div>
-           
-        <div class='d-flex ' > 
-        <div class='d-flex align-items-center ' style='font-size: 10px; padding: 5px;'><img style='width: 20px; height: 20px;'  src='img/88e42073f15a94a24e4ae7e56f70503c.png' alt=''><?php echo $cek['gender'] ?></div>
+        <button onclick="like(this)"
+                  style="width:40px 
+                  "
+                  
+                  name = <?php echo $cek['pet_name'] ?> class="delete-adverts"><img src="img/favheart.png" style="width: 40px; height:40px "></button>
+                       
+
+                   </div>
+                </div>
+         
+                  <div class='d-flex ' > 
+      <div class='d-flex align-items-center ' style='font-size: 10px; padding: 5px;'><img style='width: 20px; height: 20px;'  src='img/genders.png' alt=''><?php echo $cek['gender'] ?></div>
         
         <div class='d-flex align-items-center ' style='font-size: 10px; padding: 5px;'><img style='width: 20px; height: 20px;'  src='img/2591741a30ef24af7d953808babe06ab.png' alt=''><?php echo $cek['pet_breed'] ?></div>
-        <div class='d-flex align-items-center ' style='font-size: 10px; padding: 5px;'><img style='width: 20px; height: 20px;'  src='img/5e07484fa0adae51e26d5d8fe3c09253.png' alt=''><?php echo $diff->format('%y y-%m m')  ?></div></div> 
+        <div class='d-flex align-items-center ' style='font-size: 10px; padding: 5px;'><img style='width: 20px; height: 20px;'  src='img/5e07484fa0adae51e26d5d8fe3c09253.png' alt=''><?php 
+        $month = $diff->format('%m'); // Ayı alır
+        $year = $diff->format('%Y');
+        if ($year == 0) {
+          echo ("$month month");
+      }else{
+        echo ("$year year");
+      }
+        ?></div></div> 
         </div>
         </div>
         </div>
@@ -235,23 +249,35 @@ $diff = date_diff(date_create($dogumTarihi), date_create($bugun));
       <h5 class='cardtitle'><?php echo $cek['pet_name'] ?></h5>
 
       <p class='cardcity'><?php echo $cek['advert_city_name'] ?></p>
-      <p id='animalId'><?php echo $cek['advert_id'] ?></p>
       </div>
-      <div>
-      <i onclick=' like(this)' class='fa fa-heart-o'></i>
-      </div>
-      </div>
+        <div>
+        <button onclick="like(this)"
+                  style="width:40px 
+                  "
+                  
+                  name = <?php echo $cek['pet_name'] ?> class="delete-adverts"><img src="img/favheart.png" style="width: 40px; height:40px "></button>
+                       
+
+                   </div>
+                </div>
          
-      <div class='d-flex ' > 
-      <div class='d-flex align-items-center ' style='font-size: 10px; padding: 5px;'><img style='width: 20px; height: 20px;'  src='img/88e42073f15a94a24e4ae7e56f70503c.png' alt=''><?php echo $cek['gender'] ?></div>
+                  <div class='d-flex ' > 
+      <div class='d-flex align-items-center ' style='font-size: 10px; padding: 5px;'><img style='width: 20px; height: 20px;'  src='img/genders.png' alt=''><?php echo $cek['gender'] ?></div>
         
         <div class='d-flex align-items-center ' style='font-size: 10px; padding: 5px;'><img style='width: 20px; height: 20px;'  src='img/2591741a30ef24af7d953808babe06ab.png' alt=''><?php echo $cek['pet_breed'] ?></div>
-        <div class='d-flex align-items-center ' style='font-size: 10px; padding: 5px;'><img style='width: 20px; height: 20px;'  src='img/5e07484fa0adae51e26d5d8fe3c09253.png' alt=''><?php echo $diff->format('%y y-%m m')  ?></div></div> 
-         </div>
-      </div>
-      </div>
-      
-
+        <div class='d-flex align-items-center ' style='font-size: 10px; padding: 5px;'><img style='width: 20px; height: 20px;'  src='img/5e07484fa0adae51e26d5d8fe3c09253.png' alt=''><?php 
+        $month = $diff->format('%m'); // Ayı alır
+        $year = $diff->format('%Y');
+        if ($year == 0) {
+          echo ("$month month");
+      }else{
+        echo ("$year year");
+      }
+        ?></div></div> 
+        </div>
+        </div>
+        </div>
+        
       <?php
   }
   
@@ -303,23 +329,35 @@ $diff = date_diff(date_create($dogumTarihi), date_create($bugun));
       <h5 class='cardtitle'><?php echo $cek['pet_name'] ?></h5>
 
       <p class='cardcity'><?php echo $cek['advert_city_name'] ?></p>
-      <p id='animalId'><?php echo $cek['advert_id'] ?></p>
       </div>
-      <div>
-      <i onclick=' like(this)' class='fa fa-heart-o'></i>
-      </div>
-      </div>
+        <div>
+        <button onclick="like(this)"
+                  style="width:40px 
+                  "
+                  
+                  name = <?php echo $cek['pet_name'] ?> class="delete-adverts"><img src="img/favheart.png" style="width: 40px; height:40px "></button>
+                       
+
+                   </div>
+                </div>
          
-      <div class='d-flex ' > 
-      <div class='d-flex align-items-center ' style='font-size: 10px; padding: 5px;'><img style='width: 20px; height: 20px;'  src='img/88e42073f15a94a24e4ae7e56f70503c.png' alt=''><?php echo $cek['gender'] ?></div>
+                  <div class='d-flex ' > 
+      <div class='d-flex align-items-center ' style='font-size: 10px; padding: 5px;'><img style='width: 20px; height: 20px;'  src='img/genders.png' alt=''><?php echo $cek['gender'] ?></div>
         
         <div class='d-flex align-items-center ' style='font-size: 10px; padding: 5px;'><img style='width: 20px; height: 20px;'  src='img/2591741a30ef24af7d953808babe06ab.png' alt=''><?php echo $cek['pet_breed'] ?></div>
-        <div class='d-flex align-items-center ' style='font-size: 10px; padding: 5px;'><img style='width: 20px; height: 20px;'  src='img/5e07484fa0adae51e26d5d8fe3c09253.png' alt=''><?php echo $diff->format('%y y-%m m')  ?></div></div> 
+        <div class='d-flex align-items-center ' style='font-size: 10px; padding: 5px;'><img style='width: 20px; height: 20px;'  src='img/5e07484fa0adae51e26d5d8fe3c09253.png' alt=''><?php 
+        $month = $diff->format('%m'); // Ayı alır
+        $year = $diff->format('%Y');
+        if ($year == 0) {
+          echo ("$month month");
+      }else{
+        echo ("$year year");
+      }
+        ?></div></div> 
         </div>
-      </div>
-      </div>
-      
-
+        </div>
+        </div>
+        
       <?php
   }
   
@@ -370,23 +408,34 @@ if($sonuc->num_rows>0){
       <h5 class='cardtitle'><?php echo $cek['pet_name'] ?></h5>
 
       <p class='cardcity'><?php echo $cek['advert_city_name'] ?></p>
-      <p id='animalId'><?php echo $cek['advert_id'] ?></p>
       </div>
-      <div>
-      <i onclick=' like(this)' class='fa fa-heart-o'></i>
-      </div>
-      </div>
+        <div>
+        <button onclick="like(this)"
+                  style="width:40px 
+                  "
+                  
+                  name = <?php echo $cek['pet_name'] ?> class="delete-adverts"><img src="img/favheart.png" style="width: 40px; height:40px "></button>
+
+                   </div>
+                </div>
          
-      <div class='d-flex ' > 
-      <div class='d-flex align-items-center ' style='font-size: 10px; padding: 5px;'><img style='width: 20px; height: 20px;'  src='img/88e42073f15a94a24e4ae7e56f70503c.png' alt=''><?php echo $cek['gender'] ?></div>
+                  <div class='d-flex ' > 
+      <div class='d-flex align-items-center ' style='font-size: 10px; padding: 5px;'><img style='width: 20px; height: 20px;'  src='img/genders.png' alt=''><?php echo $cek['gender'] ?></div>
         
         <div class='d-flex align-items-center ' style='font-size: 10px; padding: 5px;'><img style='width: 20px; height: 20px;'  src='img/2591741a30ef24af7d953808babe06ab.png' alt=''><?php echo $cek['pet_breed'] ?></div>
-        <div class='d-flex align-items-center ' style='font-size: 10px; padding: 5px;'><img style='width: 20px; height: 20px;'  src='img/5e07484fa0adae51e26d5d8fe3c09253.png' alt=''><?php echo $diff->format('%y y-%m m')  ?></div></div> 
+        <div class='d-flex align-items-center ' style='font-size: 10px; padding: 5px;'><img style='width: 20px; height: 20px;'  src='img/5e07484fa0adae51e26d5d8fe3c09253.png' alt=''><?php 
+        $month = $diff->format('%m'); // Ayı alır
+        $year = $diff->format('%Y');
+        if ($year == 0) {
+          echo ("$month month");
+      }else{
+        echo ("$year year");
+      }
+        ?></div></div> 
         </div>
-      </div>
-      </div>
-      
-
+        </div>
+        </div>
+        
       <?php
   }
   
@@ -437,21 +486,37 @@ if($sonuc->num_rows>0){
       <h5 class='cardtitle'><?php echo $cek['pet_name'] ?></h5>
 
       <p class='cardcity'><?php echo $cek['advert_city_name'] ?></p>
-      <p id='animalId'><?php echo $cek['advert_id'] ?></p>
       </div>
-      <div>
-      <i onclick=' like(this)' class='fa fa-heart-o'></i>
-      </div>
-      </div>
+        <div>
+        
+                  <button onclick="like(this)"
+                  style="width:40px 
+                  "
+                  
+                  name = <?php echo $cek['pet_name'] ?> class="delete-adverts"><img src="img/favheart.png" style="width: 40px; height:40px "></button>
+                 
+                       
+
+                   </div>
+                </div>
          
-      <div class='d-flex ' > 
-      <div class='d-flex align-items-center ' style='font-size: 10px; padding: 5px;'><img style='width: 20px; height: 20px;'  src='img/88e42073f15a94a24e4ae7e56f70503c.png' alt=''><?php echo $cek['gender'] ?></div>
+                  <div class='d-flex ' > 
+      <div class='d-flex align-items-center ' style='font-size: 10px; padding: 5px;'><img style='width: 20px; height: 20px;'  src='img/genders.png' alt=''><?php echo $cek['gender'] ?></div>
         
         <div class='d-flex align-items-center ' style='font-size: 10px; padding: 5px;'><img style='width: 20px; height: 20px;'  src='img/2591741a30ef24af7d953808babe06ab.png' alt=''><?php echo $cek['pet_breed'] ?></div>
-        <div class='d-flex align-items-center ' style='font-size: 10px; padding: 5px;'><img style='width: 20px; height: 20px;'  src='img/5e07484fa0adae51e26d5d8fe3c09253.png' alt=''><?php echo $diff->format('%y y-%m m')  ?></div></div> 
-         </div>
-      </div>
-      </div>
+        <div class='d-flex align-items-center ' style='font-size: 10px; padding: 5px;'><img style='width: 20px; height: 20px;'  src='img/5e07484fa0adae51e26d5d8fe3c09253.png' alt=''><?php 
+        $month = $diff->format('%m'); // Ayı alır
+        $year = $diff->format('%Y');
+        if ($year == 0) {
+          echo ("$month month");
+      }else{
+        echo ("$year year");
+      }
+        ?></div></div> 
+        </div>
+        </div>
+        </div>
+        
       
 
       <?php

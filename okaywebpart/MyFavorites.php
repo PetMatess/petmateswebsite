@@ -230,7 +230,7 @@ black;">
             </div>
                   </a>
                   <form action="" method="post">
-                  <button name = "guncelle" class="delete-adverts"><img src="img/x.png" style="width: 20px; height:20px "></button>
+                  <button name = <?php echo $cek['pet_name'] ?> class="delete-adverts"><img src="img/x.png" style="width: 20px; height:20px "></button>
                   </form>
                   <div class='card-body'>
                     <div class='d-flex justify-content-between align-items-center'>
@@ -274,7 +274,7 @@ black;">
 
 
 <?php             
-     if (isset($_POST["guncelle"])){
+     if (isset($_POST[$cek['pet_name']])){
     //$sec="select CID FROM blood_center where B_Name='".$_POST["B_Name"]."'";
     //$result=$baglan->query($sec);
     //$cek=$result->fetch_assoc();
@@ -384,7 +384,7 @@ black;">
                 
               </div></a> <div style ="top:-80px">
                 <form action="" method="post">
-                  <button name = "sil" class="delete-adverts"><img src="img/x.png" style="width: 20px; height:20px "></button>
+                  <button name = <?php echo $cek['pet_name'] ?> class="delete-adverts"><img src="img/x.png" style="width: 20px; height:20px "></button>
                   </form> </div>
                   <div class='card-body'>
                     <div class='d-flex justify-content-between align-items-center'>
@@ -428,7 +428,7 @@ black;">
     
     
     <?php
-         if (isset($_POST["sil"])){
+         if (isset($_POST[$cek['pet_name']])){
           //$sec="select CID FROM blood_center where B_Name='".$_POST["B_Name"]."'";
           //$result=$baglan->query($sec);
           //$cek=$result->fetch_assoc();

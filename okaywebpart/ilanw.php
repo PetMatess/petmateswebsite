@@ -10,7 +10,7 @@ include("userinfo.php");
 <html lang="en">
   <head>
     <!-- her sayfa için değişecek -->
-    <title>kemik</title>
+    <title>petmates.com</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="author" content="Ramazan Gencer" />
@@ -82,11 +82,31 @@ include("userinfo.php");
             <a class="nav-link" href="About_Usw.php">About US</a>
           </li>
         </ul>
-        <img src=<?php echo "userphotos/".$user_img;?> class="user" onclick="thismenu()"  style="height:90px; width: 90px;"/>
+
+        <img src=
+        <?php
+        
+        
+        if ($user_img != null) {
+          echo "userphotos/".$user_img;
+        }else{
+          echo "img/acunt.png";
+        }
+        
+        ?> class="user" onclick="thismenu()"  style="height:90px; width: 90px;"/>
     <div class="sub-menu-wrap" id="subMenu">
         <div class="sub-menu">
             <div class="user-info">
-               <img src=<?php echo "userphotos/".$user_img;?> >
+               <img src=<?php
+        
+        
+        if ($user_img != null) {
+          echo "userphotos/".$user_img;
+        }else{
+          echo "img/acunt.png";
+        }
+        
+        ?> >
                 <h3><?php echo "$name" ?> </h3>
             </div>
             <hr />
@@ -202,24 +222,51 @@ $diff = date_diff(date_create($dogumTarihi), date_create($bugun));
         <h5 class='cardtitle'><?php echo $cek['pet_name'] ?></h5>
 
         <p class='cardcity'><?php echo $cek['advert_city_name'] ?></p>
-        <p id='animalId'><?php echo $cek['advert_id'] ?></p>
+       
         </div>
         <div>
-        <i onclick=' like(this)' class='fa fa-heart-o'></i>
-        </div>
-        </div>
-           
-        <div class='d-flex ' > 
-        <div class='d-flex align-items-center ' style='font-size: 10px; padding: 5px;'><img style='width: 20px; height: 20px;'  src='img/88e42073f15a94a24e4ae7e56f70503c.png' alt=''><?php echo $cek['gender'] ?></div>
+        <form action="" method="post">
+                  <button
+                  style="width:40px 
+                  "
+                  
+                  name = <?php echo $cek['pet_name'] ?> class="delete-adverts"><img src="img/favheart.png" style="width: 40px; height:40px "></button>
+                  </form>
+                       
+
+                   </div>
+                </div>
+         
+                  <div class='d-flex ' > 
+      <div class='d-flex align-items-center ' style='font-size: 10px; padding: 5px;'><img style='width: 20px; height: 20px;'  src='img/genders.png' alt=''><?php echo $cek['gender'] ?></div>
         
         <div class='d-flex align-items-center ' style='font-size: 10px; padding: 5px;'><img style='width: 20px; height: 20px;'  src='img/2591741a30ef24af7d953808babe06ab.png' alt=''><?php echo $cek['pet_breed'] ?></div>
-        <div class='d-flex align-items-center ' style='font-size: 10px; padding: 5px;'><img style='width: 20px; height: 20px;'  src='img/5e07484fa0adae51e26d5d8fe3c09253.png' alt=''><?php echo $diff->format('%y y-%m m')  ?></div></div> 
-        </div>
-        </div>
-        </div>
-        
+        <div class='d-flex align-items-center ' style='font-size: 10px; padding: 5px;'><img style='width: 20px; height: 20px;'  src='img/5e07484fa0adae51e26d5d8fe3c09253.png' alt=''><?php 
+        $month = $diff->format('%m'); // Ayı alır
+        $year = $diff->format('%Y');
+        if ($year == 0) {
+          echo ("$month month");
+      }else{
+        echo ("$year year");
+      }
+        ?></div></div> 
+         </div>
+      </div>
+     
+       </div>
 
-        <?php
+       <?php             
+     if (isset($_POST[$cek['pet_name']])){
+    //$sec="select CID FROM blood_center where B_Name='".$_POST["B_Name"]."'";
+    //$result=$baglan->query($sec);
+    //$cek=$result->fetch_assoc();
+      
+    
+      $ekli ="insert into user_fav_adverts(user_id, advert_id) values
+      ('".$user_id."','".$cek['advert_id']."')";
+       $sonuc=mysqli_query($baglan,$ekli);
+       
+  }
     }
     
     
@@ -271,24 +318,55 @@ $diff = date_diff(date_create($dogumTarihi), date_create($bugun));
         <h5 class='cardtitle'><?php echo $cek['pet_name'] ?></h5>
 
         <p class='cardcity'><?php echo $cek['advert_city_name'] ?></p>
-        <p id='animalId'><?php echo $cek['advert_id'] ?></p>
+        
         </div>
         <div>
-        <i onclick=' like(this)' class='fa fa-heart-o'></i>
-        </div>
-        </div>
-           
-        <div class='d-flex ' > 
-        <div class='d-flex align-items-center ' style='font-size: 10px; padding: 5px;'><img style='width: 20px; height: 20px;'  src='img/88e42073f15a94a24e4ae7e56f70503c.png' alt=''><?php echo $cek['gender'] ?></div>
+        <form action="" method="post">
+                  <button
+                  style="width:40px 
+                  "
+                  
+                  name = <?php echo $cek['pet_name'] ?> class="delete-adverts"><img src="img/favheart.png" style="width: 40px; height:40px "></button>
+                  </form>
+                       
+
+                   </div>
+                </div>
+         
+                  <div class='d-flex ' > 
+      <div class='d-flex align-items-center ' style='font-size: 10px; padding: 5px;'><img style='width: 20px; height: 20px;'  src='img/genders.png' alt=''><?php echo $cek['gender'] ?></div>
         
         <div class='d-flex align-items-center ' style='font-size: 10px; padding: 5px;'><img style='width: 20px; height: 20px;'  src='img/2591741a30ef24af7d953808babe06ab.png' alt=''><?php echo $cek['pet_breed'] ?></div>
-        <div class='d-flex align-items-center ' style='font-size: 10px; padding: 5px;'><img style='width: 20px; height: 20px;'  src='img/5e07484fa0adae51e26d5d8fe3c09253.png' alt=''><?php echo $diff->format('%y y-%m m')  ?></div></div> 
-        </div>
-        </div>
-        </div>
-        
+        <div class='d-flex align-items-center ' style='font-size: 10px; padding: 5px;'><img style='width: 20px; height: 20px;'  src='img/5e07484fa0adae51e26d5d8fe3c09253.png' alt=''><?php 
+        $month = $diff->format('%m'); // Ayı alır
+        $year = $diff->format('%Y');
+        if ($year == 0) {
+          echo ("$month month");
+      }else{
+        echo ("$year year");
+      }
+        ?></div></div> 
+         </div>
+      </div>
+     
+       </div>
 
-        <?php
+       <?php             
+     if (isset($_POST[$cek['pet_name']])){
+    //$sec="select CID FROM blood_center where B_Name='".$_POST["B_Name"]."'";
+    //$result=$baglan->query($sec);
+    //$cek=$result->fetch_assoc();
+      echo "butona basıldı";
+    
+      $ekli ="insert into user_fav_adverts(user_id, advert_id) values
+      ('".$user_id."','".$cek['advert_id']."')";
+       $sonuc=mysqli_query($baglan,$ekli);
+       if($sonuc){  
+        echo("ok");
+       }else{
+        echo("no");
+       }   
+  }
     }
     
     
@@ -336,24 +414,55 @@ if($sonuc->num_rows>0){
             <h5 class='cardtitle'><?php echo $cek['pet_name'] ?></h5>
 
             <p class='cardcity'><?php echo $cek['advert_city_name'] ?></p>
-            <p id='animalId'><?php echo $cek['advert_id'] ?></p>
+            
             </div>
             <div>
-            <i onclick=' like(this)' class='fa fa-heart-o'></i>
-            </div>
-            </div>
-              
-            <div class='d-flex ' > 
-            <div class='d-flex align-items-center ' style='font-size: 10px; padding: 5px;'><img style='width: 20px; height: 20px;'  src='img/88e42073f15a94a24e4ae7e56f70503c.png' alt=''><?php echo $cek['gender'] ?></div>
-            
-            <div class='d-flex align-items-center ' style='font-size: 10px; padding: 5px;'><img style='width: 20px; height: 20px;'  src='img/2591741a30ef24af7d953808babe06ab.png' alt=''><?php echo $cek['pet_breed'] ?></div>
-            <div class='d-flex align-items-center ' style='font-size: 10px; padding: 5px;'><img style='width: 20px; height: 20px;'  src='img/5e07484fa0adae51e26d5d8fe3c09253.png' alt=''><?php echo $diff->format('%y y-%m m')  ?></div></div> 
-            </div>
-            </div>
-            </div>
-        
+            <form action="" method="post">
+                  <button
+                  style="width:40px 
+                  "
+                  
+                  name = <?php echo $cek['pet_name'] ?> class="delete-adverts"><img src="img/favheart.png" style="width: 40px; height:40px "></button>
+                  </form>
+                       
 
-        <?php
+                   </div>
+                </div>
+         
+                  <div class='d-flex ' > 
+      <div class='d-flex align-items-center ' style='font-size: 10px; padding: 5px;'><img style='width: 20px; height: 20px;'  src='img/genders.png' alt=''><?php echo $cek['gender'] ?></div>
+        
+        <div class='d-flex align-items-center ' style='font-size: 10px; padding: 5px;'><img style='width: 20px; height: 20px;'  src='img/2591741a30ef24af7d953808babe06ab.png' alt=''><?php echo $cek['pet_breed'] ?></div>
+        <div class='d-flex align-items-center ' style='font-size: 10px; padding: 5px;'><img style='width: 20px; height: 20px;'  src='img/5e07484fa0adae51e26d5d8fe3c09253.png' alt=''><?php 
+        $month = $diff->format('%m'); // Ayı alır
+        $year = $diff->format('%Y');
+        if ($year == 0) {
+          echo ("$month month");
+      }else{
+        echo ("$year year");
+      }
+        ?></div></div> 
+         </div>
+      </div>
+     
+       </div>
+
+       <?php             
+     if (isset($_POST[$cek['pet_name']])){
+    //$sec="select CID FROM blood_center where B_Name='".$_POST["B_Name"]."'";
+    //$result=$baglan->query($sec);
+    //$cek=$result->fetch_assoc();
+      echo "butona basıldı";
+    
+      $ekli ="insert into user_fav_adverts(user_id, advert_id) values
+      ('".$user_id."','".$cek['advert_id']."')";
+       $sonuc=mysqli_query($baglan,$ekli);
+       if($sonuc){  
+        echo("ok");
+       }else{
+        echo("no");
+       }   
+  }
     }
     
     
@@ -394,7 +503,7 @@ $diff = date_diff(date_create($dogumTarihi), date_create($bugun));
         if ($cek['first_picture'] != null) {
           echo "uploads/".$cek['first_picture'];
         }else{
-          echo "petmates_icons/petmates_logo.png";
+          echo "img/Logo2(1).png";
         }
         
         ?> alt='Card image cap'>
@@ -404,24 +513,55 @@ $diff = date_diff(date_create($dogumTarihi), date_create($bugun));
       <h5 class='cardtitle'><?php echo $cek['pet_name'] ?></h5>
 
       <p class='cardcity'><?php echo $cek['advert_city_name'] ?></p>
-      <p id='animalId'><?php echo $cek['advert_id'] ?></p>
+    
       </div>
       <div>
-      <i data-data= "data" data-url="" onclick=' like(this)' class='fa fa-heart-o'></i>
-      </div>
-      </div>
+      <form action="" method="post">
+                  <button
+                  style="width:40px 
+                  "
+                  
+                  name = <?php echo $cek['pet_name'] ?> class="delete-adverts"><img src="img/favheart.png" style="width: 40px; height:40px "></button>
+                  </form>
+                       
+
+                   </div>
+                </div>
          
-      <div class='d-flex ' > 
-      <div class='d-flex align-items-center ' style='font-size: 10px; padding: 5px;'><img style='width: 20px; height: 20px;'  src='img/88e42073f15a94a24e4ae7e56f70503c.png' alt=''><?php echo $cek['gender'] ?></div>
+                  <div class='d-flex ' > 
+      <div class='d-flex align-items-center ' style='font-size: 10px; padding: 5px;'><img style='width: 20px; height: 20px;'  src='img/genders.png' alt=''><?php echo $cek['gender'] ?></div>
         
         <div class='d-flex align-items-center ' style='font-size: 10px; padding: 5px;'><img style='width: 20px; height: 20px;'  src='img/2591741a30ef24af7d953808babe06ab.png' alt=''><?php echo $cek['pet_breed'] ?></div>
-        <div class='d-flex align-items-center ' style='font-size: 10px; padding: 5px;'><img style='width: 20px; height: 20px;'  src='img/5e07484fa0adae51e26d5d8fe3c09253.png' alt=''><?php echo $diff->format('%y y-%m m')  ?></div></div> 
-        </div>
+        <div class='d-flex align-items-center ' style='font-size: 10px; padding: 5px;'><img style='width: 20px; height: 20px;'  src='img/5e07484fa0adae51e26d5d8fe3c09253.png' alt=''><?php 
+        $month = $diff->format('%m'); // Ayı alır
+        $year = $diff->format('%Y');
+        if ($year == 0) {
+          echo ("$month month");
+      }else{
+        echo ("$year year");
+      }
+        ?></div></div> 
+         </div>
       </div>
-      </div>
-      
+     
+       </div>
 
-      <?php
+       <?php             
+     if (isset($_POST[$cek['pet_name']])){
+    //$sec="select CID FROM blood_center where B_Name='".$_POST["B_Name"]."'";
+    //$result=$baglan->query($sec);
+    //$cek=$result->fetch_assoc();
+      echo "butona basıldı";
+    
+      $ekli ="insert into user_fav_adverts(user_id, advert_id) values
+      ('".$user_id."','".$cek['advert_id']."')";
+       $sonuc=mysqli_query($baglan,$ekli);
+       if($sonuc){  
+        echo("ok");
+       }else{
+        echo("no");
+       }   
+  }
   }
   
   
@@ -459,7 +599,7 @@ if($sonuc->num_rows>0){
         if ($cek['first_picture'] != null) {
           echo "uploads/".$cek['first_picture'];
         }else{
-          echo "petmates_icons/petmates_logo.png";
+           echo "img/Logo2(1).png";
         }
         
         ?> alt='Card image cap'></a>
@@ -469,38 +609,56 @@ if($sonuc->num_rows>0){
                     <h5 class='cardtitle'><?php echo $cek['pet_name'] ?></h5>
 
                     <p class='cardcity'><?php echo $cek['advert_city_name'] ?></p>
-                    <p id='animalId'><?php echo $cek['advert_id'] ?></p>
+                   
                   </div>
                   <div>
                   
-  <button  id= "likebutton" data-mesaj="<?php echo $cek['advert_id'] ?>" style=" 
-  margin: 0 auto;
-  width: 50px;
-  height: 50px;
-  border-radius: 0px;
-  color: black;
-  font-size: 15px;
-">
-  
-
-     <i onclick=' like(this)' class='fa fa-heart-o'></i>
-                  </button>
+                  <form action="" method="post">
+                  <button
+                  style="width:40px 
+                  "
+                  
+                  name = <?php echo $cek['pet_name'] ?> class="delete-adverts"><img src="img/favheart.png" style="width: 40px; height:40px "></button>
+                  </form>
                        
 
                    </div>
                 </div>
          
                   <div class='d-flex ' > 
-      <div class='d-flex align-items-center ' style='font-size: 10px; padding: 5px;'><img style='width: 20px; height: 20px;'  src='img/88e42073f15a94a24e4ae7e56f70503c.png' alt=''><?php echo $cek['gender'] ?></div>
+      <div class='d-flex align-items-center ' style='font-size: 10px; padding: 5px;'><img style='width: 20px; height: 20px;'  src='img/genders.png' alt=''><?php echo $cek['gender'] ?></div>
         
         <div class='d-flex align-items-center ' style='font-size: 10px; padding: 5px;'><img style='width: 20px; height: 20px;'  src='img/2591741a30ef24af7d953808babe06ab.png' alt=''><?php echo $cek['pet_breed'] ?></div>
-        <div class='d-flex align-items-center ' style='font-size: 10px; padding: 5px;'><img style='width: 20px; height: 20px;'  src='img/5e07484fa0adae51e26d5d8fe3c09253.png' alt=''><?php echo $diff->format('%y y-%m m')  ?></div></div> 
+        <div class='d-flex align-items-center ' style='font-size: 10px; padding: 5px;'><img style='width: 20px; height: 20px;'  src='img/5e07484fa0adae51e26d5d8fe3c09253.png' alt=''><?php 
+        $month = $diff->format('%m'); // Ayı alır
+        $year = $diff->format('%Y');
+        if ($year == 0) {
+          echo ("$month month");
+      }else{
+        echo ("$year year");
+      }
+        ?>s</div></div> 
          </div>
       </div>
      
        </div>
 
-      <?php
+       <?php             
+     if (isset($_POST[$cek['pet_name']])){
+    //$sec="select CID FROM blood_center where B_Name='".$_POST["B_Name"]."'";
+    //$result=$baglan->query($sec);
+    //$cek=$result->fetch_assoc();
+      
+    
+      $ekli ="insert into user_fav_adverts(user_id, advert_id) values
+      ('".$user_id."','".$cek['advert_id']."')";
+       $sonuc=mysqli_query($baglan,$ekli);
+       if($sonuc){  
+        echo("ok");
+       }else{
+        echo("no");
+       }   
+  }
   }
   
   
@@ -615,18 +773,15 @@ document.getElementById("likebutton").addEventListener("click", function() {
   // PHP fonksiyonunu çağırın
   var buton = document.getElementById("likebutton");
   var advertId= buton.dataset.mesaj;
-
-  <?php likeit(  "`
-  advertId;
-`"); ?>
+  <?php likeit($advertId); ?>
 });
 
   </script>
    <?php 
- function likeit($id) {
+ function likeit($advertId) {
   
 
-include("connect.php");
+    include("connect.php");
   
     echo"eklendi";
       $ekli ="insert into user_fav_adverts(user_id, advert_id) values
