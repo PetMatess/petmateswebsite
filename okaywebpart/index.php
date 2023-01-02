@@ -154,7 +154,7 @@ $diff = date_diff(date_create($dogumTarihi), date_create($bugun));
        
 <div class='col-md-3 mb-5 ilan-card'>
       <div class='' style='border-radius: 50px 50px 0px 0px; height:400px;  background-color: #F9F9F9; ' onclick='selectedId(this)' >
-      <a href="login.php" >
+      <a href="<?php echo "detailw.php?advert_id=".$cek['advert_id'];?>" >
       <img class='card-img-top  cardimg' src=<?php
         
         
@@ -237,7 +237,7 @@ $diff = date_diff(date_create($dogumTarihi), date_create($bugun));
 
       <div class='col-md-3 mb-5 ilan-card'>
       <div class='' style='border-radius: 50px 50px 0px 0px; height:400px;  background-color: #F9F9F9; ' onclick='selectedId(this)' >
-      <a href="login.php" >
+      <a href="<?php echo "detailw.php?advert_id=".$cek['advert_id'];?>" >
       <img class='card-img-top  cardimg' src=<?php
         
         
@@ -318,7 +318,7 @@ $diff = date_diff(date_create($dogumTarihi), date_create($bugun));
 
 <div class='col-md-3 mb-5 ilan-card'>
       <div class='' style='border-radius: 50px 50px 0px 0px; height:400px;  background-color: #F9F9F9; ' onclick='selectedId(this)' >
-      <a href="login.php" >
+      <a href="<?php echo "detailw.php?advert_id=".$cek['advert_id'];?>" >
       <img class='card-img-top  cardimg' src=<?php
         
         
@@ -398,7 +398,7 @@ if($sonuc->num_rows>0){
 
 <div class='col-md-3 mb-5 ilan-card'>
       <div class='' style='border-radius: 50px 50px 0px 0px; height:400px;  background-color: #F9F9F9; ' onclick='selectedId(this)' >
-      <a href="login.php" >
+      <a href="<?php echo "detailw.php?advert_id=".$cek['advert_id'];?>" >
       <img class='card-img-top  cardimg' src=<?php
         
         
@@ -476,7 +476,7 @@ if($sonuc->num_rows>0){
        
 <div class='col-md-3 mb-5 ilan-card'>
       <div class='' style='border-radius: 50px 50px 0px 0px; height:400px;  background-color: #F9F9F9; ' onclick='selectedId(this)' >
-      <a href="login.php" >
+      <a href="<?php echo "detailw.php?advert_id=".$cek['advert_id'];?>" >
       <img class='card-img-top  cardimg' src=<?php
         
         
