@@ -66,7 +66,13 @@
       </li>
       <li class="nav-item">
         <a class="nav-link" href="Breed.php">Breed</a>
-      
+        </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Pet_Health.php">Pet Health</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Pet_News.php">Pet News</a>
+          </li>
       
       <li class="nav-item">
         <a class="nav-link" href="About_Us.php">About Us</a>
@@ -146,11 +152,10 @@ $diff = date_diff(date_create($dogumTarihi), date_create($bugun));
       ?>
 
        
-
-        <div class='col-md-3'>
-        <div class='' style='border-radius: 50px 50px 0px 0px; background-color: #F9F9F9;' onclick='selectedId(this)' >
-        <a href="login.php" >
-        <img class='card-img-top  cardimg'  src=<?php
+<div class='col-md-3 mb-5 ilan-card'>
+      <div class='' style='border-radius: 50px 50px 0px 0px; height:400px;  background-color: #F9F9F9; ' onclick='selectedId(this)' >
+      <a href="login.php" >
+      <img class='card-img-top  cardimg' src=<?php
         
         
         if ($cek['first_picture'] != null) {
@@ -160,14 +165,14 @@ $diff = date_diff(date_create($dogumTarihi), date_create($bugun));
         }
         
         ?> alt='Card image cap'>
-        </a><div class='card-body'>
-        <div class='d-flex justify-content-between align-items-center'>
-        <div>
-        <h5 class='cardtitle'><?php echo $cek['pet_name'] ?></h5>
-
-        <p class='cardcity'><?php echo $cek['advert_city_name'] ?></p>
+      </a><div class='card-body card-text'>
+      <div class='d-flex justify-content-between align-items-center' >
+      <div class='col mb-5' >
        
-        </div>
+      <h5 class='cardtitle'><?php echo $cek['pet_name'] ?></h5>
+    
+      <p class='cardcity'><?php echo $cek['advert_city_name'] ?></p>
+      </div>
         <div>
         <button onclick="like(this)"
                   style="width:40px 
@@ -230,8 +235,8 @@ $diff = date_diff(date_create($dogumTarihi), date_create($bugun));
 
        
 
-      <div class='col-md-3'>
-      <div class='' style='border-radius: 50px 50px 0px 0px; background-color: #F9F9F9;' onclick='selectedId(this)' >
+      <div class='col-md-3 mb-5 ilan-card'>
+      <div class='' style='border-radius: 50px 50px 0px 0px; height:400px;  background-color: #F9F9F9; ' onclick='selectedId(this)' >
       <a href="login.php" >
       <img class='card-img-top  cardimg' src=<?php
         
@@ -243,11 +248,12 @@ $diff = date_diff(date_create($dogumTarihi), date_create($bugun));
         }
         
         ?> alt='Card image cap'>
-      </a><div class='card-body'>
-      <div class='d-flex justify-content-between align-items-center'>
-      <div>
+      </a><div class='card-body card-text'>
+      <div class='d-flex justify-content-between align-items-center' >
+      <div class='col mb-5' >
+       
       <h5 class='cardtitle'><?php echo $cek['pet_name'] ?></h5>
-
+    
       <p class='cardcity'><?php echo $cek['advert_city_name'] ?></p>
       </div>
         <div>
@@ -310,8 +316,8 @@ $diff = date_diff(date_create($dogumTarihi), date_create($bugun));
 
        
 
-      <div class='col-md-3'>
-      <div class='' style='border-radius: 50px 50px 0px 0px; background-color: #F9F9F9;' onclick='selectedId(this)' >
+<div class='col-md-3 mb-5 ilan-card'>
+      <div class='' style='border-radius: 50px 50px 0px 0px; height:400px;  background-color: #F9F9F9; ' onclick='selectedId(this)' >
       <a href="login.php" >
       <img class='card-img-top  cardimg' src=<?php
         
@@ -323,11 +329,12 @@ $diff = date_diff(date_create($dogumTarihi), date_create($bugun));
         }
         
         ?> alt='Card image cap'>
-      </a><div class='card-body'>
-      <div class='d-flex justify-content-between align-items-center'>
-      <div>
+      </a><div class='card-body card-text'>
+      <div class='d-flex justify-content-between align-items-center' >
+      <div class='col mb-5' >
+       
       <h5 class='cardtitle'><?php echo $cek['pet_name'] ?></h5>
-
+    
       <p class='cardcity'><?php echo $cek['advert_city_name'] ?></p>
       </div>
         <div>
@@ -389,8 +396,8 @@ if($sonuc->num_rows>0){
 
        
 
-      <div class='col-md-3'>
-      <div class='' style='border-radius: 50px 50px 0px 0px; background-color: #F9F9F9;' onclick='selectedId(this)' >
+<div class='col-md-3 mb-5 ilan-card'>
+      <div class='' style='border-radius: 50px 50px 0px 0px; height:400px;  background-color: #F9F9F9; ' onclick='selectedId(this)' >
       <a href="login.php" >
       <img class='card-img-top  cardimg' src=<?php
         
@@ -402,11 +409,12 @@ if($sonuc->num_rows>0){
         }
         
         ?> alt='Card image cap'>
-      </a><div class='card-body'>
-      <div class='d-flex justify-content-between align-items-center'>
-      <div>
+      </a><div class='card-body card-text'>
+      <div class='d-flex justify-content-between align-items-center' >
+      <div class='col mb-5' >
+       
       <h5 class='cardtitle'><?php echo $cek['pet_name'] ?></h5>
-
+    
       <p class='cardcity'><?php echo $cek['advert_city_name'] ?></p>
       </div>
         <div>
@@ -466,9 +474,8 @@ if($sonuc->num_rows>0){
       ?>
 
        
-
-      <div class='col-md-3'>
-      <div class='' style='border-radius: 50px 50px 0px 0px; background-color: #F9F9F9;' onclick='selectedId(this)' >
+<div class='col-md-3 mb-5 ilan-card'>
+      <div class='' style='border-radius: 50px 50px 0px 0px; height:400px;  background-color: #F9F9F9; ' onclick='selectedId(this)' >
       <a href="login.php" >
       <img class='card-img-top  cardimg' src=<?php
         
@@ -480,15 +487,15 @@ if($sonuc->num_rows>0){
         }
         
         ?> alt='Card image cap'>
-      </a><div class='card-body'>
-      <div class='d-flex justify-content-between align-items-center'>
-      <div>
+      </a><div class='card-body card-text'>
+      <div class='d-flex justify-content-between align-items-center' >
+      <div class='col mb-5' >
+       
       <h5 class='cardtitle'><?php echo $cek['pet_name'] ?></h5>
-
+    
       <p class='cardcity'><?php echo $cek['advert_city_name'] ?></p>
       </div>
         <div>
-        
                   <button onclick="like(this)"
                   style="width:40px 
                   "

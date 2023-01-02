@@ -1,3 +1,8 @@
+<?php
+include("connect.php");
+include("userinfo.php");
+
+?>
 <!doctype html>
 <html lang="en">
 
@@ -79,24 +84,68 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav m-auto">
           <li class="nav-item active">
-            <a class="nav-link" href="index.php">Home<span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="ilanw.php">Home<span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="Breed.php">Breed</a>
+            <a class="nav-link" href="Breedw.php">Breed</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="Pet_Health.php">Pet Health</a>
+            <a class="nav-link" href="Pet_Healthw.php">Pet Health</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="Pet_News.php">Pet News</a>
+            <a class="nav-link" href="Pet_Newsw.php">Pet News</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="About_us.php">About Us</a>
+            <a class="nav-link" href="About_usw.php">About Us</a>
           </li>
         </ul>
-        <form class="form-inline my-2 my-lg-0">
-        <a class="nav-link header-btn my-2 my-sm-0" href="login.php"  >log in</a>
-        </form>
+        <img src=<?php
+        
+        
+        if ($user_img != null) {
+          echo "userphotos/".$user_img;
+        }else{
+          echo "img/acunt.png";
+        }
+        
+        ?> class="user" onclick="toggleMenu()"  style="height:90px; width: 90px;"/>
+    <div class="sub-menu-wrap" id="subMenu">
+        <div class="sub-menu">
+            <div class="user-info">
+               <img src=<?php
+        
+        
+        if ($user_img != null) {
+          echo "userphotos/".$user_img;
+        }else{
+          echo "img/acunt.png";
+        }
+        
+        ?> >
+                <h3><?php echo "$name" ?> </h3>
+            </div>
+            <hr />
+
+            <a href="MyFavorites.php" class="sub-menu-link">
+                <img src="img/acunt.png" >
+                <p>My Profile</p>
+                <span>></span>
+            </a>
+            <a href="Adverts_add.php" class="sub-menu-link">
+              <img src="img/add.png" >
+                <p>Advert add</p>
+                <span>></span>
+            </a>
+            <a href="privacy_policy.php" class="sub-menu-link">
+              <img src="img/privacy.png" >
+                <p>Privacy</p>
+                <span>></span>
+            </a>
+            <a href="logout.php" class="sub-menu-link">
+              <img src="img/logout.png" >
+                <p>Logout</p>
+                <span>></span>
+            </a>
       </div>
       </nav>
     </div>
@@ -955,7 +1004,14 @@
     });
   });
 </script>
+<script>
 
+    let subMenu = document.getElementById("subMenu");
+
+    function toggleMenu() {
+      subMenu.classList.toggle("open-menu");
+    }
+  </script>
 </body>
 
 </html>

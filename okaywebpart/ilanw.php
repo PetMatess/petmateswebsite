@@ -77,7 +77,13 @@ include("userinfo.php");
           </li>
           <li class="nav-item">
             <a class="nav-link" href="Breedw.php">Breed</a>
-          
+            </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Pet_Healthw.php">Pet Health</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Pet_Newsw.php">Pet News</a>
+          </li>
           <li class="nav-item">
             <a class="nav-link" href="About_Usw.php">About US</a>
           </li>
@@ -262,9 +268,12 @@ $diff = date_diff(date_create($dogumTarihi), date_create($bugun));
     
       $ekli ="insert into user_fav_adverts(user_id, advert_id) values
       ('".$user_id."','".$cek['advert_id']."')";
-       $sonuc=mysqli_query($baglan,$ekli);
+       $liked=mysqli_query($baglan,$ekli);
+       if($liked){
+        header("Refresh:0");
+       }
        
-  }
+  } 
     }
     
     
@@ -358,9 +367,9 @@ $diff = date_diff(date_create($dogumTarihi), date_create($bugun));
     
       $ekli ="insert into user_fav_adverts(user_id, advert_id) values
       ('".$user_id."','".$cek['advert_id']."')";
-       $sonuc=mysqli_query($baglan,$ekli);
-       if($sonuc){  
-        echo("ok");
+       $liked=mysqli_query($baglan,$ekli);
+       if($liked){  
+        header("Refresh:0");
        }else{
         echo("no");
        }   
@@ -454,9 +463,9 @@ if($sonuc->num_rows>0){
     
       $ekli ="insert into user_fav_adverts(user_id, advert_id) values
       ('".$user_id."','".$cek['advert_id']."')";
-       $sonuc=mysqli_query($baglan,$ekli);
-       if($sonuc){  
-        echo("ok");
+       $liked=mysqli_query($baglan,$ekli);
+       if($liked){  
+        header("Refresh:0");
        }else{
         echo("no");
        }   
@@ -552,9 +561,9 @@ $diff = date_diff(date_create($dogumTarihi), date_create($bugun));
     
       $ekli ="insert into user_fav_adverts(user_id, advert_id) values
       ('".$user_id."','".$cek['advert_id']."')";
-       $sonuc=mysqli_query($baglan,$ekli);
-       if($sonuc){  
-        echo("ok");
+       $liked=mysqli_query($baglan,$ekli);
+       if($liked){  
+        header("Refresh:0");
        }else{
         echo("no");
        }   
@@ -647,9 +656,9 @@ if($sonuc->num_rows>0){
     
       $ekli ="insert into user_fav_adverts(user_id, advert_id) values
       ('".$user_id."','".$cek['advert_id']."')";
-       $sonuc=mysqli_query($baglan,$ekli);
-       if($sonuc){  
-        echo("ok");
+       $liked=mysqli_query($baglan,$ekli);
+       if($liked){  
+        header("Refresh:0");
        }else{
         echo("no");
        }   
@@ -745,7 +754,7 @@ else{
       ('".$user_id."','".$id."')";
        $sonuc=mysqli_query($baglan,$ekli);
        if($sonuc){  
-        echo("ok");
+        header("Refresh:0");
        }else{
         echo("no");
        }
@@ -792,7 +801,7 @@ document.getElementById("likebutton").addEventListener("click", function() {
   </script>
   
 
-
+  <script src="detail.js"></script>
   <script src="Card.js"></script>
  
   <script>

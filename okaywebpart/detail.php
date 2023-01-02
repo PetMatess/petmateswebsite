@@ -140,7 +140,13 @@ else{
           </li>
           <li class="nav-item">
             <a class="nav-link" href="Breedw.php">Breed</a>
-          
+            </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Pet_Healthw.php">Pet Health</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Pet_Newsw.php">Pet News</a>
+          </li>
           <li class="nav-item">
             <a class="nav-link" href="About_Usw.php">About US</a>
           </li>
@@ -154,6 +160,7 @@ else{
           echo "img/acunt.png";
         }
         
+        
         ?> class="user" onclick="toggleMenu()"  style="height:90px; width: 90px;"/>
     <div class="sub-menu-wrap" id="subMenu">
         <div class="sub-menu">
@@ -166,6 +173,7 @@ else{
         }else{
           echo "img/acunt.png";
         }
+        
         
         ?> >
                 <h3><?php echo "$name" ?> </h3>
@@ -466,7 +474,7 @@ else{
       ('".$user_id."','".$sef."')";
        $sonuc=mysqli_query($baglan,$ekli);
        if($sonuc){  
-        echo("ok");
+        header("Refresh:0");
        }else{
         echo("no");
        }   

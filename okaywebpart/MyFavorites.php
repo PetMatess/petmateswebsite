@@ -92,7 +92,13 @@ else{
           </li>
           <li class="nav-item">
             <a class="nav-link" href="Breedw.php">Breed</a>
-         
+            </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Pet_Healthw.php">Pet Health</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Pet_Newsw.php">Pet News</a>
+          </li>
           <li class="nav-item">
             <a class="nav-link" href="About_Usw.php">About US</a>
           </li>
@@ -305,7 +311,7 @@ black;">
 
        $sonucu=mysqli_query($baglan,$guncel);   
        if($sonucu){
-           echo"silindi";
+        header("Refresh:5");
        }else{
            echo "güncelleme hatası";
        }   
@@ -465,7 +471,7 @@ black;">
       
              $sonucu=mysqli_query($baglan,$guncel);   
              if($sonucu){
-                 echo"silindi";
+              header("Refresh:0");
              }else{
                  echo "güncelleme hatası";
              }   

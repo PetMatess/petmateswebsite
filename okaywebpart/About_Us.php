@@ -69,7 +69,7 @@
           </li>
         </ul>
         <form class="form-inline my-2 my-lg-0">
-          <button class="header-btn my-2 my-sm-0" type="submit">Log In</button>
+        <a class="nav-link header-btn my-2 my-sm-0" href="login.php"  >log in</a>
         </form>
       </div>
       </nav>

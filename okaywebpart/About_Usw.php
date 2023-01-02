@@ -63,7 +63,17 @@ include("userinfo.php");
           </li>
           <li class="nav-item">
             <a class="nav-link" href="Breedw.php">Breed</a>
-         
+            </li>
+          
+<li class="nav-item">
+            <a class="nav-link" href="Pet_Health.php">Pet Health</a>
+          </li>
+
+<li class="nav-item">
+            <a class="nav-link" href="Pet_Newsw.php">Pet News</a>
+          </li>
+
+          
           <li class="nav-item">
             <a class="nav-link" href="About_Usw.php">About US</a>
           </li>
