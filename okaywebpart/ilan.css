@@ -36,3 +36,15 @@ height: 30px;
 .cardcity{
     font-size: 15px;
 }
+
+.ilan-card{
+    width: 250px;
+    height: 400px;
+     box-shadow: 0 4px 21px -12px rgba(0, 0, 0, 0.66);
+     display: inline-block;
+     margin: 3% 2% 2% 5%;
+}
+
+.card-text{
+    height: 300px ;
+}

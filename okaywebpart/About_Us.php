@@ -57,7 +57,13 @@
           </li>
           <li class="nav-item">
             <a class="nav-link" href="Breed.php">Breed</a>
-          
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Pet_Health.php">Pet Health</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Pet_News.php">Pet News</a>
+          </li>
           <li class="nav-item">
             <a class="nav-link" href="About_us.php">About Us</a>
           </li>

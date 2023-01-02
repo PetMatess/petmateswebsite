@@ -231,7 +231,7 @@ include("userinfo.php");
 
 date_default_timezone_set('Europe/Istanbul');
 $time_now = date('Y.m.d H:i:s');
-echo $time_now;
+
 
 
 

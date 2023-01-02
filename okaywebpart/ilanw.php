@@ -82,7 +82,6 @@ include("userinfo.php");
             <a class="nav-link" href="About_Usw.php">About US</a>
           </li>
         </ul>
-
         <img src=<?php
         
         
@@ -202,10 +201,10 @@ $diff = date_diff(date_create($dogumTarihi), date_create($bugun));
 
        
 
-        <div class='col-md-3'>
-        <div class='' style='border-radius: 50px 50px 0px 0px; background-color: #F9F9F9;' onclick='selectedId(this)' >
-        <a href="<?php echo "detail.php?advert_id=".$cek['advert_id'];?>" >
-        <img class='card-img-top  cardimg' src=<?php
+       <div class='col-md-3 mb-5 ilan-card'>
+      <div class='' style='border-radius: 50px 50px 0px 0px; height:400px;  background-color: #F9F9F9; ' onclick='selectedId(this)' >
+      <a href="<?php echo "detail.php?advert_id=".$cek['advert_id'];?>" >
+      <img class='card-img-top  cardimg' src=<?php
         
         
         if ($cek['first_picture'] != null) {
@@ -215,14 +214,14 @@ $diff = date_diff(date_create($dogumTarihi), date_create($bugun));
         }
         
         ?> alt='Card image cap'>
-        </a><div class='card-body'>
-        <div class='d-flex justify-content-between align-items-center'>
-        <div>
-        <h5 class='cardtitle'><?php echo $cek['pet_name'] ?></h5>
-
-        <p class='cardcity'><?php echo $cek['advert_city_name'] ?></p>
+      </a><div class='card-body card-text'>
+      <div class='d-flex justify-content-between align-items-center' >
+      <div class='col mb-5' >
        
-        </div>
+      <h5 class='cardtitle'><?php echo $cek['pet_name'] ?></h5>
+    
+      <p class='cardcity'><?php echo $cek['advert_city_name'] ?></p>
+      </div>
         <div>
         <form action="" method="post">
                   <button
@@ -298,10 +297,10 @@ $diff = date_diff(date_create($dogumTarihi), date_create($bugun));
 
        
 
-        <div class='col-md-3'>
-        <div class='' style='border-radius: 50px 50px 0px 0px; background-color: #F9F9F9;' onclick='selectedId(this)' >
-        <a href="<?php echo "detail.php?advert_id=".$cek['advert_id'];?>" >
-        <img class='card-img-top  cardimg' src=<?php
+<div class='col-md-3 mb-5 ilan-card'>
+      <div class='' style='border-radius: 50px 50px 0px 0px; height:400px;  background-color: #F9F9F9; ' onclick='selectedId(this)' >
+      <a href="<?php echo "detail.php?advert_id=".$cek['advert_id'];?>" >
+      <img class='card-img-top  cardimg' src=<?php
         
         
         if ($cek['first_picture'] != null) {
@@ -311,14 +310,14 @@ $diff = date_diff(date_create($dogumTarihi), date_create($bugun));
         }
         
         ?> alt='Card image cap'>
-        </a><div class='card-body'>
-        <div class='d-flex justify-content-between align-items-center'>
-        <div>
-        <h5 class='cardtitle'><?php echo $cek['pet_name'] ?></h5>
-
-        <p class='cardcity'><?php echo $cek['advert_city_name'] ?></p>
-        
-        </div>
+      </a><div class='card-body card-text'>
+      <div class='d-flex justify-content-between align-items-center' >
+      <div class='col mb-5' >
+       
+      <h5 class='cardtitle'><?php echo $cek['pet_name'] ?></h5>
+    
+      <p class='cardcity'><?php echo $cek['advert_city_name'] ?></p>
+      </div>
         <div>
         <form action="" method="post">
                   <button
@@ -394,10 +393,10 @@ if($sonuc->num_rows>0){
 
        
 
-            <div class='col-md-3'>
-            <div class='' style='border-radius: 50px 50px 0px 0px; background-color: #F9F9F9;' onclick='selectedId(this)' >
-            <a href="<?php echo "detail.php?advert_id=".$cek['advert_id'];?>" >
-            <img class='card-img-top  cardimg' src=<?php
+<div class='col-md-3 mb-5 ilan-card'>
+      <div class='' style='border-radius: 50px 50px 0px 0px; height:400px;  background-color: #F9F9F9; ' onclick='selectedId(this)' >
+      <a href="<?php echo "detail.php?advert_id=".$cek['advert_id'];?>" >
+      <img class='card-img-top  cardimg' src=<?php
         
         
         if ($cek['first_picture'] != null) {
@@ -407,15 +406,15 @@ if($sonuc->num_rows>0){
         }
         
         ?> alt='Card image cap'>
-            </a><div class='card-body'>
-            <div class='d-flex justify-content-between align-items-center'>
-            <div>
-            <h5 class='cardtitle'><?php echo $cek['pet_name'] ?></h5>
-
-            <p class='cardcity'><?php echo $cek['advert_city_name'] ?></p>
-            
-            </div>
-            <div>
+      </a><div class='card-body card-text'>
+      <div class='d-flex justify-content-between align-items-center' >
+      <div class='col mb-5' >
+       
+      <h5 class='cardtitle'><?php echo $cek['pet_name'] ?></h5>
+    
+      <p class='cardcity'><?php echo $cek['advert_city_name'] ?></p>
+      </div>
+        <div>
             <form action="" method="post">
                   <button
                   style="width:40px 
@@ -492,29 +491,28 @@ $diff = date_diff(date_create($dogumTarihi), date_create($bugun));
       ?>
 
        
-
-      <div class='col-md-3'>
-      <div class='' style='border-radius: 50px 50px 0px 0px; background-color: #F9F9F9;' onclick='selectedId(this)' >
+<div class='col-md-3 mb-5 ilan-card'>
+      <div class='' style='border-radius: 50px 50px 0px 0px; height:400px;  background-color: #F9F9F9; ' onclick='selectedId(this)' >
       <a href="<?php echo "detail.php?advert_id=".$cek['advert_id'];?>" >
-      <img class='card-img-top  cardimg'src=<?php
+      <img class='card-img-top  cardimg' src=<?php
         
         
         if ($cek['first_picture'] != null) {
           echo "uploads/".$cek['first_picture'];
         }else{
-          echo "img/Logo2(1).png";
+          echo "petmates_icons/petmates_logo.png";
         }
         
         ?> alt='Card image cap'>
-      </a><div class='card-body'>
-      <div class='d-flex justify-content-between align-items-center'>
-      <div>
+      </a><div class='card-body card-text'>
+      <div class='d-flex justify-content-between align-items-center' >
+      <div class='col mb-5' >
+       
       <h5 class='cardtitle'><?php echo $cek['pet_name'] ?></h5>
-
-      <p class='cardcity'><?php echo $cek['advert_city_name'] ?></p>
     
+      <p class='cardcity'><?php echo $cek['advert_city_name'] ?></p>
       </div>
-      <div>
+        <div>
       <form action="" method="post">
                   <button
                   style="width:40px 
@@ -588,30 +586,28 @@ if($sonuc->num_rows>0){
 
        
 
-      <div class='col-md-3'>
-  
-      <div  class='' style='border-radius: 50px 50px 0px 0px; background-color: #F9F9F9;' onclick='selectedId(this)' >
-        <a href="<?php echo "detail.php?advert_id=".$cek['advert_id'];?>" >
-        <img class='card-img-top  cardimg' src=<?php
+<div class='col-md-3 mb-5 ilan-card'>
+      <div class='' style='border-radius: 50px 50px 0px 0px; height:400px;  background-color: #F9F9F9; ' onclick='selectedId(this)' >
+      <a href="<?php echo "detail.php?advert_id=".$cek['advert_id'];?>" >
+      <img class='card-img-top  cardimg' src=<?php
         
         
         if ($cek['first_picture'] != null) {
           echo "uploads/".$cek['first_picture'];
         }else{
-           echo "img/Logo2(1).png";
+          echo "petmates_icons/petmates_logo.png";
         }
         
-        ?> alt='Card image cap'></a>
-          <div class='card-body'>
-              <div class='d-flex justify-content-between align-items-center'>
-                  <div>
-                    <h5 class='cardtitle'><?php echo $cek['pet_name'] ?></h5>
-
-                    <p class='cardcity'><?php echo $cek['advert_city_name'] ?></p>
-                   
-                  </div>
-                  <div>
-                  
+        ?> alt='Card image cap'>
+      </a><div class='card-body card-text'>
+      <div class='d-flex justify-content-between align-items-center' >
+      <div class='col mb-5' >
+       
+      <h5 class='cardtitle'><?php echo $cek['pet_name'] ?></h5>
+    
+      <p class='cardcity'><?php echo $cek['advert_city_name'] ?></p>
+      </div>
+        <div>
                   <form action="" method="post">
                   <button
                   style="width:40px 
@@ -738,7 +734,25 @@ else{
 
     </ul>
   </footer>
-    
+     <?php 
+ function likeit($advertId) {
+  
+
+    include("connect.php");
+  
+    echo"eklendi";
+      $ekli ="insert into user_fav_adverts(user_id, advert_id) values
+      ('".$user_id."','".$id."')";
+       $sonuc=mysqli_query($baglan,$ekli);
+       if($sonuc){  
+        echo("ok");
+       }else{
+        echo("no");
+       }
+      
+      }
+      
+?>
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
@@ -776,25 +790,7 @@ document.getElementById("likebutton").addEventListener("click", function() {
 });
 
   </script>
-   <?php 
- function likeit($advertId) {
   
-
-    include("connect.php");
-  
-    echo"eklendi";
-      $ekli ="insert into user_fav_adverts(user_id, advert_id) values
-      ('".$user_id."','".$id."')";
-       $sonuc=mysqli_query($baglan,$ekli);
-       if($sonuc){  
-        echo("ok");
-       }else{
-        echo("no");
-       }
-      
-      }
-      
-?>
 
 
   <script src="Card.js"></script>
@@ -817,13 +813,14 @@ document.getElementById("likebutton").addEventListener("click", function() {
     // Get the element with id="defaultOpen" and click on it
     document.getElementById("defaultOpen").click();
     </script>
-   <script>
+     <script>
          
          let subMenu = document.getElementById("subMenu");
+     
          function toggleMenu() {
              subMenu.classList.toggle("open-menu");
          }
-  </script>
+     </script>
      
   </body>
 </html>
