@@ -463,8 +463,7 @@ black;">
           //$sec="select CID FROM blood_center where B_Name='".$_POST["B_Name"]."'";
           //$result=$baglan->query($sec);
           //$cek=$result->fetch_assoc();
-            echo "butona basıldı";
-      
+           
           
       
             $guncel ="DELETE FROM user_fav_adverts WHERE advert_id = '".$cek['advert_id']."' AND user_id= '".$user_id."';";
