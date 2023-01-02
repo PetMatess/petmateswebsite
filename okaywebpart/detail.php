@@ -60,7 +60,7 @@ if($sonucuser->num_rows>0){
 	echo "$publisher_id";
     while($cekuser=$sonucuser->fetch_assoc()){
 		echo "çalıştı";
-		$user_img = $cekuser['user_img'];
+		$use_img = $cekuser['user_img'];
 		$user_email = $cekuser['email'];
 		$user_phone = $cekuser['phone'];
 		$user_name = $cekuser['name'];
